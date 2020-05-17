@@ -10,6 +10,12 @@ const ChallengeSchema = new mongoose.Schema({
     images: [String],
     github_url: String,
     brief: String,
+    dev_id: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Dev'
+    },
+}, {
+	timestamps: true,
 });
 
 module.exports = mongoose.model('Challenge', ChallengeSchema);
