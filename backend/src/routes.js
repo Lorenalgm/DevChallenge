@@ -1,10 +1,13 @@
-const { Router } = require('express');
+const express = require('express');
 
-const routes = Router();
+const DevController = require('./controllers/DevController');
+// const ChallengeController = require('./controllers/ChallengeController');
 
-routes.post('/challenges', (request, response) => {
-    console.log(request.body);
-    return response.json({message: 'Hi, Lorena'});
-});
+const routes = express.Router();
+
+// routes.post('/challenges', ChallengeController.index);
+
+routes.get('/devs', DevController.index);
+routes.post('/devs', DevController.store);
 
 module.exports = routes;
