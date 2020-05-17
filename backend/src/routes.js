@@ -1,11 +1,12 @@
 const express = require('express');
 
 const DevController = require('./controllers/DevController');
-// const ChallengeController = require('./controllers/ChallengeController');
+const ChallengeController = require('./controllers/ChallengeController');
 
 const routes = express.Router();
 
-// routes.post('/challenges', ChallengeController.index);
+routes.get('/challenges', ChallengeController.index);
+routes.post('/challenges', ChallengeController.store);
 
 routes.get('/devs', DevController.index);
 routes.post('/devs', DevController.store);
