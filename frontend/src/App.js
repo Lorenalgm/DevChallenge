@@ -1,16 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
+import logo from './assets/logo.svg';
 import './App.css';
+import api from './services/api';
 
 function App() {
-  return (
+  const [challenges, setChallenges] = useState([]);
 
+  useEffect(() => {
+    async function loadChallenges() {
+      const response = await api.get('/challenges');
+      console.log(response.data);
+      setChallenges(response.data);
+    }
+
+    loadChallenges();
+  }, []);
+
+  return (
     <body>
       <header>
         <nav>
           <ul>
             <li><span>2020</span></li>
-            <li>lorem gipsi</li>
+            <li>Challenges</li>
           </ul>
         </nav>
         <div className="title">
@@ -20,53 +32,26 @@ function App() {
 
       <section className="challenges">
 
-        <div className="challenge-card">
-          <div className="card_img_container">
-            <img src="https://camo.githubusercontent.com/bc0b99ef98eb029c7d33314f58d31501959f402b/68747470733a2f2f7472656c6c6f2d6174746163686d656e74732e73332e616d617a6f6e6177732e636f6d2f3539306661383936643264323565353035383364653632302f343534783233302f62346630616338303630323865326636323236353963666466366638323031622f44656570696e5f53637265656e73686f745f73656c6563696f6e61725f2543332541317265615f32303230303531363230353230312e706e67" alt=""></img>
+        {challenges.map(challenge => (
+          <div className="challenge-card" key={challenge._id}>
+            <div className="card_img_container">
+              <img src={challenge.background} alt=""></img>
+            </div>
+            <div className="card_content">
+              <p className="card_title">{challenge.name}</p>
+              <p>{challenge.description}</p>
+            </div>
+            <div className="card_tech">
+              <p className="tech">{challenge.techs.join(', ')}</p>
+              <p className="level">{challenge.level}</p>
+            </div>
           </div>
-          <div className="card_content">
-            <p className="card_title">FisiotherApp</p>
-            <p>Build an app to help pacients with fisiotherapy exercise! :)</p>
-          </div>
-          <div className="card_tech">
-            <p className="tech">React Native, CSS</p>
-            <p className="level">Nível 2</p>
-          </div>
-        </div>
-
-        <div className="challenge-card">
-          <div className="card_img_container">
-            <img src="https://camo.githubusercontent.com/bc0b99ef98eb029c7d33314f58d31501959f402b/68747470733a2f2f7472656c6c6f2d6174746163686d656e74732e73332e616d617a6f6e6177732e636f6d2f3539306661383936643264323565353035383364653632302f343534783233302f62346630616338303630323865326636323236353963666466366638323031622f44656570696e5f53637265656e73686f745f73656c6563696f6e61725f2543332541317265615f32303230303531363230353230312e706e67" alt=""></img>
-          </div>
-          <div className="card_content">
-            <p className="card_title">FisiotherApp</p>
-            <p>Build an app to help pacients with fisiotherapy exercise! :)</p>
-          </div>
-          <div className="card_tech">
-            <p className="tech">React Native, CSS</p>
-            <p className="level">Nível 2</p>
-          </div>
-        </div>
-
-        <div className="challenge-card">
-          <div className="card_img_container">
-            <img src="https://camo.githubusercontent.com/bc0b99ef98eb029c7d33314f58d31501959f402b/68747470733a2f2f7472656c6c6f2d6174746163686d656e74732e73332e616d617a6f6e6177732e636f6d2f3539306661383936643264323565353035383364653632302f343534783233302f62346630616338303630323865326636323236353963666466366638323031622f44656570696e5f53637265656e73686f745f73656c6563696f6e61725f2543332541317265615f32303230303531363230353230312e706e67" alt=""></img>
-          </div>
-          <div className="card_content">
-            <p className="card_title">FisiotherApp</p>
-            <p>Build an app to help pacients with fisiotherapy exercise! :)</p>
-          </div>
-          <div className="card_tech">
-            <p className="tech">React Native, CSS</p>
-            <p className="level">Nível 2</p>
-          </div>
-        </div>
-
+        ))}
 
       </section>
 
 
-      <div className="modal-overlay">
+      {/* <div className="modal-overlay">
         <div className="modal">
           <a className="close-modal">
             <i className="material-icons">
@@ -78,7 +63,7 @@ function App() {
             <img src=""></img>
           </div>
         </div>
-      </div>
+      </div> */}
 
 
 
