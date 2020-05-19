@@ -6,3 +6,50 @@ header{
     margin-right: 10%;
     margin-top: 2%;
 }
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+header ul li {
+ margin-left: 20px;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 130px;
+    margin-bottom: 130px;
+}
+
+.banner h1 {
+    color: #ffff;
+    font-size: 60px;
+}
+
+.banner h2 {
+    color: #F4CF0A;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.banner button {
+    color: #ffff;
+    background-color: #5C0D78;
+    width: 250px;
+    height: 50px;
+    border: 1px solid #000000;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.banner button:hover {
+    background-color: #490861;
+}
