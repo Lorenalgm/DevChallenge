@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-// import logo from '../../assets/logo.svg';
 import './styles.css';
 import api from '../../services/api';
+import Header from '../../components/Header';
 
 export default function Challenges() {
   const [challenges, setChallenges] = useState([]);
@@ -18,30 +18,19 @@ export default function Challenges() {
 
   return (
     <body>
-      <header>
-        <nav>
-          <ul>
-            <li><span>2020</span></li>
-            <li>Challenges</li>
-          </ul>
-        </nav>
-        <div className="title">
-          <h1>Dev<span>Challenge</span></h1>
-        </div>
-      </header>
-
+      <Header />
       <section className="challenges">
 
         {challenges.map(challenge => (
           <div className="challenge-card" key={challenge._id}>
-            <div className="card_img_container">
+            <div className="card-image-container">
               <img src={challenge.background} alt=""></img>
             </div>
-            <div className="card_content">
-              <p className="card_title">{challenge.name}</p>
+            <div className="card-content">
+              <h1 className="card-title">{challenge.name}</h1>
               <p>{challenge.description}</p>
             </div>
-            <div className="card_tech">
+            <div className="card-tech">
               <p className="tech">{challenge.techs.join(', ')}</p>
               <p className="level">{challenge.level}</p>
             </div>

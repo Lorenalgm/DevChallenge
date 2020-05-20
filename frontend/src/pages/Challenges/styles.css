@@ -1,46 +1,45 @@
-:root {
-  --color-yellow: #FFF500;
-  --color-black: #110E0E;
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 2%;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+header div {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffff;
 }
 
-body {
-  background-color: var(--color-black);
+header div span{
+ color: var(--color-yellow);
+}
+
+header ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  font-size: 20px;
+  color: #ffff;
+}
+
+header ul li:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.active {
+  color: var(--color-yellow);
+}
+
+header ul li {
+margin-left: 20px;
 }
 
 span {
   color: var(--color-yellow);
-}
-   header {
-   color: white;
-  }
-nav ul{
-  display: flex;
-  justify-content: space-between;
-  font-size: 40px;
-  font-weight: bold;
-
-}
-nav li {
-  list-style-type: none;
-  margin: 40px 80px;
- 
-}
-
-.title {
-  font-size: 2em;
-  margin: 20px 80px;
-  border-bottom: 3px solid var(--color-yellow);
-
-}
-
-.title h1 {
-  margin-bottom: 10px ;
 }
 
 .challenges {
@@ -53,45 +52,43 @@ nav li {
 }
 
 .challenge-card{
-  background-color: white;
+  background-color: #242020;
   border-radius: 10px;
+  cursor: pointer;
 
 }
 
-.card_img_container img {
+.card-image-container img {
   width: 100%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
-.card_content, 
-.card_tech {
+.card-content p {
+  padding: 5px;
+  text-align: left;
+  color: #ffff;
   padding: 15px;
 }
 
-.card_content p {
-  padding: 5px;
-  text-align: justify;
-}
-
-
-.card_title {
+.card-title {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 15px;
+  color: #ffff;
+  padding: 15px;
 }
 
-.card_tech{
+.card-tech{
   display: grid;
   grid-template-columns: 2fr 1fr;
   padding-top: 5px;
-
+  padding: 15px;
 }
 .tech {
-  padding: 5px 20px;
+  color: var(--color-yellow);
   font-weight: bold;
 }
-
 
 .level {
   background-color: var(--color-yellow);
@@ -99,38 +96,5 @@ nav li {
   padding: 5px 20px;
   border-radius: 20px;
   text-align: center;
-}
-
-
-.modal-overlay {
-  background: rgba(0, 0, 0, 0.7);
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.modal {
-  background-color: white;
-  width: 90%;
-  height: 90%;
-  margin: 5vh auto;
-  position: relative;
-}
-
-.modal .close-modal{
-  color: black;
-  position: absolute;
-  right: 8px;
-  top: 8px;
-  cursor: pointer;
-  
-}
-
-/*-------=MODAL.ACTIVE --000 */
-.modal-overlay.active {
-  opacity: 1;
-  visibility: visible;
+  font-weight: bold;
 }
