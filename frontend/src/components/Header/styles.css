@@ -1,0 +1,39 @@
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+}
+
+header div {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffff;
+}
+
+header div span{
+   color: #F4CF0A;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    font-size: 20px;
+    color: #ffff;
+}
+
+header ul li:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.active {
+    color: #F4CF0A;
+ }
+
+header ul li {
+ margin-left: 20px;
+}
