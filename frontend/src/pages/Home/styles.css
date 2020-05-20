@@ -7,11 +7,32 @@ header{
     margin-top: 2%;
 }
 
+header div {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+header div span{
+   color: #F4CF0A;
+}
+
 header ul {
     display: flex;
     flex-direction: row;
     list-style-type: none;
+    font-size: 20px;
 }
+
+header ul li:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+
+
+.active {
+    color: #F4CF0A;
+ }
 
 header ul li {
  margin-left: 20px;
@@ -22,8 +43,8 @@ header ul li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 130px;
-    margin-bottom: 130px;
+    margin-top: 160px;
+    margin-bottom: 160px;
 }
 
 .banner h1 {
@@ -42,14 +63,100 @@ header ul li {
     color: #ffff;
     background-color: #5C0D78;
     width: 250px;
-    height: 50px;
+    height: 60px;
     border: 1px solid #000000;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 20px;
     border-radius: 50px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .banner button:hover {
     background-color: #490861;
 }
+
+.typewriter h1 {
+    color: #fff;
+    overflow: hidden; 
+    border-right: .15em solid #5C0D78; 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    letter-spacing: .02em; 
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #5C0D78 }
+  }
+
+  .techs {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .techs div {
+      width: 300px;
+      height: 300px;
+      background-color: #2C2929;
+      margin: 50px;
+      border-radius: 10px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .techs div:hover{
+        transition: 0.7s;
+        background-color: #242020;
+        /* border: 1px solid #F4CF0A; */
+    }
+
+    .techs div h2 {
+        color: #ffff;
+        margin-top: 20px;
+    }
+
+    .techs div .icon{
+        color: #F4CF0A;
+        width: 60px;
+        height: 60px;
+    }
+
+    .steps {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 60px;
+    }
+
+    .steps div {
+        margin: 90px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .steps div h2 {
+        color: #F4CF0A;
+        margin-top: 20px;
+    }
+
+    .steps div .icon-steps {
+        color: #ffff;
+        width: 60px;
+        height: 60px;
+    }

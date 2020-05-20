@@ -2,47 +2,51 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMobileAlt, faLaptopCode, faFileCode, faSearch, faCode, faShareSquare } from '@fortawesome/free-solid-svg-icons'
 import './styles.css';
+
 export default function Home() {
     return (
         <body>
-            <header>
-                <div>DevChallenge</div>
+            <header>                
+                <div>Dev<span>Challenge</span></div>
                 <ul>
-                    <li>Home</li>
+                    <li className="active">Home</li>
                     <li>Challenges</li>
                 </ul>
             </header>
             <section className="banner">
-                <h1>Improve your skills</h1>
+                <div className="typewriter">
+                    <h1>Improve your skills</h1>
+                </div>
+                {/* <h1>Improve your skills</h1> */}
                 <h2>with front-end, back-end and mobile challenges</h2>
                 <button>Let's code!</button>
             </section>
             <section className="techs">
                 <div>
-                    <FontAwesomeIcon icon={faFileCode} />
-                    Front-end
+                    <FontAwesomeIcon className="icon" icon={faFileCode} />
+                    <h2>Front-end</h2>
                 </div>
                 <div>
-                    <FontAwesomeIcon icon={faLaptopCode} />
-                    Back-end
+                    <FontAwesomeIcon className="icon" icon={faLaptopCode} />
+                    <h2>Back-end</h2>
                 </div>
                 <div>
-                    <FontAwesomeIcon icon={faMobileAlt} />
-                    Mobile
+                    <FontAwesomeIcon className="icon" icon={faMobileAlt} />
+                    <h2>Mobile</h2>
                 </div>
             </section>
             <section className="steps">
                 <div>
-                    <FontAwesomeIcon icon={faSearch} />
-                    Choose
+                    <FontAwesomeIcon className="icon-steps" icon={faSearch} />
+                    <h2>Choose</h2>
                 </div>
                 <div>
-                    <FontAwesomeIcon icon={faCode} />
-                    Code
+                    <FontAwesomeIcon className="icon-steps" icon={faCode} />
+                    <h2>Code</h2>
                 </div>
                 <div>
-                    <FontAwesomeIcon icon={faShareSquare} />
-                    Share
+                    <FontAwesomeIcon className="icon-steps" icon={faShareSquare} />
+                    <h2>Share</h2>
                 </div>
             </section>
         </body>);
