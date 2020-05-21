@@ -1,6 +1,7 @@
 .banner {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin-top: 160px;
@@ -61,8 +62,10 @@
   .techs {
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
+
   }
 
   .techs div {
@@ -74,6 +77,7 @@
       cursor: pointer;
       display: flex;
       flex-direction: column;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
     }
@@ -97,6 +101,7 @@
 
     .steps {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         padding: 60px;
@@ -120,3 +125,11 @@
         width: 60px;
         height: 60px;
     }
+
+    /* @media only screen and (max-device-width: 900px) {
+        .banner { width:100%; } 
+        }
+
+        @media only screen and (max-device-width: 700px) {
+            .banner { width:400px; } 
+            } */
