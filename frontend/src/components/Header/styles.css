@@ -1,3 +1,6 @@
+.link {
+    text-decoration: none;
+}
 header{
     display: flex;
     flex-wrap: wrap;
@@ -38,3 +41,4 @@ header ul li:hover {
 header ul li {
  margin-left: 20px;
 }
+

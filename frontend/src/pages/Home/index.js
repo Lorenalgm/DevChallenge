@@ -19,18 +19,24 @@ export default function Home() {
                 </Link>
             </section>
             <section className="techs">
+                        <Link className="challenge-link" to="/challenges">
                     <div>
-                        <FontAwesomeIcon className="icon" icon={faFileCode} />
-                        <h2>Front-end</h2>
+                            <FontAwesomeIcon className="icon" icon={faFileCode} />
+                            <h2>Front-end</h2>
                     </div>
+                        </Link>
+                        <Link className="challenge-link" to="/challenges">
                     <div>
                         <FontAwesomeIcon className="icon" icon={faLaptopCode} />
                         <h2>Back-end</h2>
                     </div>
+                        </Link>
+                        <Link className="challenge-link" to="/challenges">
                     <div>
-                        <FontAwesomeIcon className="icon" icon={faMobileAlt} />
-                        <h2>Mobile</h2>
+                            <FontAwesomeIcon className="icon" icon={faMobileAlt} />
+                            <h2>Mobile</h2>
                     </div>
+                        </Link>        
             </section>
             <section className="steps">
                 <div>

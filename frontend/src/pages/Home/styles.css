@@ -99,6 +99,10 @@
         height: 60px;
     }
 
+    .challenge-link{
+        text-decoration: none;
+    }
+
     .steps {
         display: flex;
         flex-wrap: wrap;
