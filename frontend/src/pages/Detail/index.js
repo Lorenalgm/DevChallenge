@@ -9,20 +9,25 @@ export default function Detail(props) {
   return (
     <body>
       <Header />
-      <div>
-        <img src={challenge.background} alt="Challenge" />
-        <h1>{challenge.type}</h1>
-        <h1>{challenge.github_url}</h1>
-        <h1>{challenge.level}</h1>
-        <h1>{challenge.techs}</h1>
-        <h1>{challenge.images}</h1>
-      </div>
-      <div>
-        <h1>{challenge.name}</h1>
-        <h1>{challenge.description}</h1>
-        <h1>{challenge.brief}</h1>
-        <div>
-          <h1>{challenge.dev_id}</h1>
+      <div className="container">
+        <div className="left-container">
+          <img src={challenge.background} alt="Challenge" />
+          <button className="start-challenge" src={challenge.github_url}>Start challenge</button>
+          <button className="more">More</button>
+          {/* <div>{challenge.images}</div> */}
+          <div className="stack">
+            <div>{challenge.level}</div>
+            <div>{challenge.techs}</div>
+            <div>{challenge.type}</div>
+          </div>
+        </div>
+        <div className="principal-container">
+          <h1>{challenge.name}</h1>
+          <h2>{challenge.description}</h2>
+          <p>{challenge.brief}</p>
+          <div>
+            {/* <h1>{challenge.dev_id}</h1> */}
+          </div>
         </div>
       </div>
     </body>
