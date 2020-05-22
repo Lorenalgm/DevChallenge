@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './styles.css';
 import api from '../../services/api';
 import Header from '../../components/Header';
+import { Link } from 'react-router-dom';
 
 export default function Challenges() {
   const [challenges, setChallenges] = useState([]);
@@ -23,9 +24,14 @@ export default function Challenges() {
 
         {challenges.map(challenge => (
           <div className="challenge-card" key={challenge._id}>
-            <div className="card-image-container">
-              <img src={challenge.background} alt=""></img>
-            </div>
+            <Link to={{
+              pathname: `detail/${challenge._id}`,
+              challenge: challenge
+            }} >
+              <div className="card-image-container">
+                <img src={challenge.background} alt=""></img>
+              </div>
+            </Link>
             <div className="card-content">
               <h1 className="card-title">{challenge.name}</h1>
               <p>{challenge.description}</p>

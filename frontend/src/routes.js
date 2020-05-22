@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
 import Challenges from './pages/Challenges';
-import Challenge from './pages/Challenge';
+import Detail from './pages/Detail';
 
 function Routes() {
     return(
@@ -11,7 +11,7 @@ function Routes() {
             <Switch>
                 <Route path="/" exact component={Home} />
                 <Route path="/challenges" component={Challenges} />
-                <Route path="/challenges/:id" component={Challenge} />
+                <Route path="/detail/:id" component={Detail} />
             </Switch>
         </BrowserRouter>
     )
