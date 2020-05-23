@@ -2,7 +2,7 @@ const Challenge = require('../models/Challenge');
 
 module.exports = {
     async index(request, response) {
-        const challenges = await Challenge.find();
+        const challenges = await Challenge.find().populate('dev_id');
 
         return response.json(challenges);
     },
