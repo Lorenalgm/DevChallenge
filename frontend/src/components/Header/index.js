@@ -9,12 +9,12 @@ export default function Header() {
             <div>Dev<span>Challenge</span></div>
           </Link>
         <ul>
-          {/* <Link className="link" to="/"> */}
+          <Link className="link" to="/">
           <li>Home</li>
-          {/* </Link> */}
-          {/* <Link className="link" to="/challenges"> */}
+          </Link>
+          <Link className="link" to="/challenges">
             <li>Challenges</li>
-          {/* </Link> */}
+          </Link>
         </ul>
       </header>
   )
