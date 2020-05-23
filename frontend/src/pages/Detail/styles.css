@@ -65,12 +65,7 @@
 .principal-container{
     display: flex;
     flex-direction: column;
-}
-
-.principal-container h1, h2{
-    display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .principal-container h1{
@@ -86,3 +81,50 @@
     padding: 20px;
 }
 
+.dev-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #2C2929;
+    border-radius: 1em;
+    margin: 1em;
+    height: 5em;
+    width: 20em;
+    justify-content: center;
+}
+
+.dev-container img {
+    height: 50px;
+    width: 50px;
+    border-radius: 2em;
+}
+
+.dev-information{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.dev-name{
+    font-size: 18px;
+    color: #ffff;
+}
+
+.dev-position{
+    font-weight: bold;
+    font-size: 12px;
+    color: #ffff;
+}
+
+.dev-social-media {
+    display: flex;
+    flex-direction: column;
+}
+
+.icon{
+    text-decoration: none;
+    color: #ffff;
+    padding: 2px;
+}
