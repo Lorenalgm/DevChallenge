@@ -51,6 +51,10 @@ span {
 
 }
 
+.link {
+  text-decoration: none;
+}
+
 .challenge-card{
   background-color: #242020;
   border-radius: 10px;
@@ -97,4 +101,5 @@ span {
   border-radius: 20px;
   text-align: center;
   font-weight: bold;
+  color: #000000;
 }

@@ -29,14 +29,13 @@ export default function Challenges() {
         <section className="challenges">
               {challenges.map(challenge => (
                 <div className="challenge-card" key={challenge._id}>
-                  <Link to={{
+                  <Link className="link" to={{
                     pathname: `detail/${challenge._id}`,
                     challenge: challenge
                   }} >
                     <div className="card-image-container">
                       <img src={challenge.background} alt=""></img>
                     </div>
-                  </Link>
                   <div className="card-content">
                     <h1 className="card-title">{challenge.name}</h1>
                     <p>{challenge.description}</p>
@@ -45,6 +44,7 @@ export default function Challenges() {
                     <p className="tech">{challenge.techs.join(', ')}</p>
                     <p className="level">{challenge.level}</p>
                   </div>
+                  </Link>
                 </div>
               ))}
         </section>
