@@ -41,6 +41,53 @@ You can help by contributing with new challenges or improving the website
 <br><br>
 Você pode ajudar contribuindo com novos desafios ou com melhorias no site!  
 
+# Setup
+
+### Front-end
+
+1. <a target="_blank" href="https://github.com/Lorenalgm/DevChallenge/archive/master.zip">Download </a> or clone the DevChallenge repository
+```sh 
+git clone git@github.com:Lorenalgm/DevChallenge.git
+```
+2. Open the project in the editor of your choice. I recommend Visual Studio Code
+3. In your terminal, install the necessary packages:
+```sh 
+yarn
+```
+or 
+```sh 
+npm install
+```
+4. Great! Now you can go to frontend folder and start the server:
+```sh 
+cd frontend
+```
+```sh 
+yarn start
+```
+5. Open your browser! Dechallenge is available at http://localhost:3000/ :)
+
+
+### Back-end
+
+1. <a target="_blank" href="https://github.com/Lorenalgm/DevChallengeAPI/archive/master.zip">Download </a> or clone the DevChallenge repository
+```sh 
+git@github.com:Lorenalgm/DevChallengeAPI.git
+```
+2. Open the project in the editor of your choice. I recommend Visual Studio Code
+3. In your terminal, install the necessary packages:
+```sh 
+yarn
+```
+or 
+```sh 
+npm install
+```
+4. Great! Now you can start the server:
+```sh 
+yarn dev
+```
+5. Dechallenge backend is available! Now you can see the data in the frontend. If you want to test DevChallenge api, I recommend that you use Insomnia. The backend is available at http://localhost:3333/
 
 
 # Techs:
