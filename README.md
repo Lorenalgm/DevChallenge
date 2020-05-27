@@ -1,3 +1,7 @@
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+
 <br />
 <p align="center">
     <a href="https://devchallenge.now.sh/">
@@ -25,7 +29,7 @@
   * [Tecnologias](#tecnologias)
 * [Como Utilizar](#como-utilizar)
 * [Como Contribuir](#como-contribuir)
-  * [Requisítos](#requisítos)
+  * [Requisitos](#requisitos)
   * [Instalar](#instalar)
 * [Contato](#contato)
 
@@ -37,7 +41,7 @@ O DevChallenge é um projeto que visa contrubuir com a evolução de desenvolved
 <img src="https://trello-attachments.s3.amazonaws.com/590fa7f5a8ab015d0cf88052/590fa896d2d25e50583de620/e4e0650f52c6cff260083dbdc3b25891/dev.gif" width="720" height="380">
 </p>
 
-### Techs:
+### Tecnologias:
 - Nodejs
 - Reactjs
 
@@ -114,3 +118,11 @@ yarn dev
 ## Contato
 Site: https://devchallenge.now.sh/ <br>
 Linkedin: https://www.linkedin.com/in/lorenagmontes/
+
+[forks-shield]: https://img.shields.io/github/forks/Lorenalgm/DevChallenge.svg?style=flat-square
+[forks-url]: https://github.com/Lorenalgm/DevChallenge/network/members
+[stars-shield]: https://img.shields.io/github/stars/Lorenalgm/DevChallenge.svg?style=flat-square
+[stars-url]: https://github.com/Lorenalgm/DevChallenge/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Lorenalgm/DevChallenge.svg?style=flat-square
+[issues-url]: https://github.com/Lorenalgm/DevChallenge/issues
+
