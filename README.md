@@ -46,7 +46,7 @@ O DevChallenge é um projeto que visa contrubuir com a evolução de desenvolved
 2 - Leia as instruções no readme.md<br>
 3 - Comece a codar!<br>
 4 - Compartilhe seu resultado com a comunidade :)
-<br>br>
+<br><br>
 1 - Use a <a href="https://devchallenge.now.sh/">DevChallenge</a> template with the starter code<br>
 2 - Read the instructions in readme.md<br>
 3 - Start coding!<br>
