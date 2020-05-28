@@ -4,20 +4,17 @@
     justify-content: center;
     margin-top: 5%;
 }
-
 .left-container{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-
 .left-container img {
     border-radius: 7%;
     height: 15em;
     width: 25em;
 }
-
 .left-container .start-challenge {
     color: #ffff;
     background-color: #5C0D78;
@@ -35,11 +32,9 @@
     justify-content: center;
     align-items: center;
 }
-
 .left-container .start-challenge:hover {
     background-color: #490861;
 }
-
 .left-container .more {
     color: #ffff;
     background-color: #2C2929;
@@ -52,26 +47,61 @@
     cursor: pointer;
     transition: 0.3s;
 }
-
 .left-container .more:hover {
     background-color: #383535;
 }
-
-.stack{
-    display: flex;
-    flex-direction: row;
+.stack {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    padding:0.5em;
 }
-
+.challenge-level {
+    background-color: #5C0D78;
+    filter: brightness(90%);
+    width: 9em;
+    padding: 5px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 3em;
+}
+.challenge-techs {
+    filter: brightness(60%);
+    width: 9em;
+    padding: 5px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 3em;
+}
+.challenge {
+    display: flex;
+    width: 30em;
+    margin-left: 20em;
+}
+.challenge-type {
+    filter: brightness(90%);
+    width: 10em;
+    padding: 5px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+}
 .principal-container{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .principal-container h1{
     color: var(--color-yellow);
+    text-align: center;
 }
-
 .principal-container h2 {
     color: #ffff;
     padding: 10px;
@@ -80,7 +110,6 @@
     color: #ffff;
     padding: 20px;
 }
-
 .dev-container{
     display: flex;
     flex-direction: row;
@@ -92,13 +121,11 @@
     width: 20em;
     justify-content: center;
 }
-
 .dev-container img {
     height: 50px;
     width: 50px;
     border-radius: 2em;
 }
-
 .dev-information{
     display: flex;
     flex-direction: column;
@@ -106,23 +133,19 @@
     align-items: center;
     margin: 10px;
 }
-
 .dev-name{
     font-size: 18px;
     color: #ffff;
 }
-
 .dev-position{
     font-weight: bold;
     font-size: 12px;
     color: #ffff;
 }
-
 .dev-social-media {
     display: flex;
     flex-direction: column;
 }
-
 .icon{
     text-decoration: none;
     color: #ffff;
