@@ -10,10 +10,10 @@ export default function Header() {
           </Link>
         <ul>
           <Link className="link" to="/">
-          <li>Home</li>
+          <li>Início</li>
           </Link>
           <Link className="link" to="/challenges">
-            <li>Challenges</li>
+            <li>Desafios</li>
           </Link>
         </ul>
       </header>

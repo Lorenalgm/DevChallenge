@@ -18,11 +18,11 @@ export default function Home() {
         }
 
         try{
-            const response = await api.post('newsletter', data);
+            await api.post('newsletter', data);
 
-            alert('Done! You will be the first to know about the new challenges :)')
+            alert('Feito! Você será o primeiro a saber sobre novos desafios :)')
         }catch(err){
-            alert('Oops, something went wrong! Can you try again? :c')
+            alert('Opa, algo deu errado! Pode tentar novamente? :c')
         }
     }
 
@@ -31,11 +31,11 @@ export default function Home() {
             <Header />
             <section className="banner">
                 <div className="typewriter">
-                    <h1>Improve your skills</h1>
+                    <h1>Melhore suas habilidades</h1>
                 </div>
-                <h2>with front-end, back-end and mobile challenges</h2>
+                <h2>Com desafios de front-end, back-end e mobile</h2>
                 <Link to="/challenges">
-                    <button>Let's code!</button>
+                    <button>Bora codar!</button>
                 </Link>
             </section>
             <section className="techs">
@@ -61,15 +61,15 @@ export default function Home() {
             <section className="steps">
                 <div>
                     <FontAwesomeIcon className="icon-steps" icon={faSearch} />
-                    <h2>Choose</h2>
+                    <h2>Escolha</h2>
                 </div>
                 <div>
                     <FontAwesomeIcon className="icon-steps" icon={faCode} />
-                    <h2>Code</h2>
+                    <h2>Desenvolva</h2>
                 </div>
                 <div>
                     <FontAwesomeIcon className="icon-steps" icon={faShareSquare} />
-                    <h2>Share</h2>
+                    <h2>Compartilhe</h2>
                 </div>
             </section>
             <section className="newsletter">
@@ -84,8 +84,8 @@ export default function Home() {
                     </Player>
                 </div>
                 <div>
-                    <h1>Get notified about new challenges!</h1>
-                    <p>Sign up to be the first to know about new challenges :)</p>
+                    <h1>Seja notificado sobre novos desafios!</h1>
+                    <p>Inscreva-se para ser o primeiro a saber sobre novos desafios :)</p>
                     <form onSubmit={handleSubscribe}>
                         <input 
                             type="email" 
@@ -93,7 +93,7 @@ export default function Home() {
                             value={email} 
                             onChange={e => setEmail(e.target.value)}
                         />
-                        <button type="submit">Subscribe</button>
+                        <button type="submit">Inscrever</button>
                     </form>
                 </div>
             </section>
