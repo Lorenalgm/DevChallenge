@@ -86,7 +86,7 @@ export default function Home() {
                 <div>
                     <h1>Seja notificado sobre novos desafios!</h1>
                     <p>Inscreva-se para ser o primeiro a saber sobre novos desafios :)</p>
-                    <form onSubmit={handleSubscribe}>
+                    <form  className="newsletter-form" onSubmit={handleSubscribe}>
                         <input 
                             type="email" 
                             placeholder="E-mail" 
