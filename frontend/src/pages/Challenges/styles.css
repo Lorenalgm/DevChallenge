@@ -43,12 +43,12 @@ span {
 }
 
 .challenges {
-  max-width: 1000px;
-  margin: 50px auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 35px;
-
+  margin-top: 3%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .link {
@@ -56,31 +56,35 @@ span {
 }
 
 .challenge-card{
+  height: 21em;
+  width: 20em;
   background-color: #242020;
   border-radius: 10px;
   cursor: pointer;
-
+  margin-bottom: 2em;
+  margin-right: 1em;
 }
 
 .card-image-container img {
-  width: 100%;
+  height: 12em;
+  width: 20em;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
 .card-content p {
-  padding: 5px;
   text-align: left;
   color: #ffff;
-  padding: 15px;
+  text-align: center;
 }
 
 .card-title {
   font-size: 20px;
   font-weight: bold;
-  margin-bottom: 15px;
   color: #ffff;
-  padding: 15px;
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 .card-tech{
