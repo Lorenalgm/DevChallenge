@@ -18,6 +18,9 @@ export default function Header() {
             <Link className="link" to="/challenges">
               <li>Desafios</li>
             </Link>
+            <Link className="link" to="/devs">
+              <li>Ninjas</li>
+            </Link>
           </ul>
         </div>
       </header>
