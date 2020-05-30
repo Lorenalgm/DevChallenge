@@ -228,14 +228,21 @@
     .principal-container{
         align-items: center;
         justify-content: center;
+        max-width: 100%;
     }
 
     .principal-container .challenge {
-        margin-top: 3%;
+        margin-top: 7%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         margin-left: 0;
+        max-width: 100%; 
+    }
+
+    .principal-container h2 {
+        text-align: center;
+        margin-bottom: 4%;
     }
 
     .content{
@@ -243,8 +250,8 @@
         text-align: left;
         align-items: center;
         justify-content: center;
-        margin-left: 15%;
-        margin-right: 15%;
+        margin-left: 10%;
+        margin-right: 10%;
         margin-bottom: 1%;
     }
 
