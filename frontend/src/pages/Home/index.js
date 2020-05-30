@@ -80,8 +80,7 @@ export default function Home() {
                         loop={true}
                         src="https://assets5.lottiefiles.com/private_files/lf30_WdTEui.json"
                         style={{ height: '300px', width: '300px' }}
-                    >
-                    </Player>
+                    />
                 </div>
                 <div>
                     <h1>Seja notificado sobre novos desafios!</h1>
