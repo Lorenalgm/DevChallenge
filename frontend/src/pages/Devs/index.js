@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
-import "./styles.css";
-import api from "../../services/api";
-import Header from "../../components/Header";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import React, { useEffect, useState } from 'react';
+import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import './styles.css';
+import api from '../../services/api';
+import Header from '../../components/Header';
 
 export default function Challenges() {
     const [devs, setDevs] = useState([]);
@@ -11,7 +12,7 @@ export default function Challenges() {
 
     useEffect(() => {
         async function loadChallenges() {
-            const response = await api.get("/devs");
+            const response = await api.get('/devs');
             // console.log(response.data);
             setDevs(response.data);
 

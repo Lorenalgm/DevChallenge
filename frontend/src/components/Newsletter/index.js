@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { Player } from "@lottiefiles/react-lottie-player";
-import api from "../../services/api";
+import React, { useState } from 'react';
+import { Player } from '@lottiefiles/react-lottie-player';
+import api from '../../services/api';
 
 export default function Newsletter() {
-    const [email, setEmail] = useState("");
+    const [email, setEmail] = useState('');
 
     async function handleSubscribe(e) {
         e.preventDefault();
@@ -13,13 +13,13 @@ export default function Newsletter() {
         };
 
         try {
-            await api.post("newsletter", data);
+            await api.post('newsletter', data);
 
-            alert(
-                "Feito! Você será o primeiro a saber sobre novos desafios :)"
+            window.alert(
+                'Feito! Você será o primeiro a saber sobre novos desafios :)'
             );
         } catch (err) {
-            alert("Opa, algo deu errado! Pode tentar novamente? :c");
+            window.alert('Opa, algo deu errado! Pode tentar novamente? :c');
         }
     }
 
@@ -31,7 +31,7 @@ export default function Newsletter() {
                     controls={false}
                     loop={true}
                     src="https://assets5.lottiefiles.com/private_files/lf30_WdTEui.json"
-                    style={{ height: "300px", width: "300px" }}
+                    style={{ height: '300px', width: '300px' }}
                 />
             </div>
             <div>

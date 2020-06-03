@@ -1,7 +1,7 @@
-import React from "react";
-import Icon from "react-web-vector-icons";
+import React from 'react';
+import Icon from 'react-web-vector-icons';
 
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 export default function CategoryListItem({ category }) {
     return (

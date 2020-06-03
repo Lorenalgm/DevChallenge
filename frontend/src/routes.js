@@ -7,7 +7,7 @@ import Detail from './pages/Detail';
 import Devs from './pages/Devs';
 
 function Routes() {
-    return(
+    return (
         <BrowserRouter>
             <Switch>
                 <Route path="/" exact component={Home} />
@@ -16,7 +16,7 @@ function Routes() {
                 <Route path="/devs" component={Devs} />
             </Switch>
         </BrowserRouter>
-    )
+    );
 }
 
 export default Routes;
