@@ -30,11 +30,13 @@
     font-size: 20px;
     border-radius: 50px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.4s;
 }
 
 .banner button:hover {
     background-color: #490861;
+    animation: all 2s ease-in;
+    transform: scale(1.2);
 }
 
 .typewriter h1 {
@@ -83,7 +85,7 @@
     }
     
     .techs div:hover{
-        transition: 0.7s;
+        transition: 0.25s;
         background-color: #242020;
         /* border: 1px solid #F4CF0A; */
     }
