@@ -1,30 +1,13 @@
-import React, { useEffect, useState } from "react";
-import {
-    faMobileAlt,
-    faLaptopCode,
-    faFileCode,
-    faSearch,
-    faCode,
-    faShareSquare,
-} from "@fortawesome/free-solid-svg-icons";
+import React from "react";
 import CategoryListItem from "../CategoryListItem";
-import { getCategories } from "../../services/challenges.service";
 
-// const categories = [
-//     { title: "Front-end", icon: faFileCode },
-//     { title: "Back-end", icon: faLaptopCode },
-//     { title: "Mobile", icon: faMobileAlt },
-// ];
+const categories = [
+    { name: "Front-end", icon: "desktop" },
+    { name: "Back-end", icon: "code" },
+    { name: "Mobile", icon: "mobile" },
+];
 
 export default function CategoriesList() {
-    const [categories, setCategories] = useState([]);
-    useEffect(() => {
-        async function loadCategories() {
-            const request = await getCategories();
-            setCategories(request);
-        }
-        loadCategories();
-    }, []);
     return (
         <section className="techs">
             {categories.map((category) => (

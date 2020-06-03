@@ -1,5 +1,5 @@
 import React from "react";
-import Icon, { FontAwesome } from "react-web-vector-icons";
+import Icon from "react-web-vector-icons";
 
 import { Link } from "react-router-dom";
 
