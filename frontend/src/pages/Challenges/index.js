@@ -24,7 +24,7 @@ export default function Challenges() {
     return (
         <body>
             <Header />
-            {loading && <ChallengesSkeleton />}
+            {loading && <ChallengesSkeleton cards={6} />}
             {!loading && (
                 <section className="challenges">
                     {challenges.map((challenge) => (

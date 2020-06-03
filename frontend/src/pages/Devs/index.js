@@ -27,7 +27,6 @@ export default function Challenges() {
             <Header />
 
             <div className="container">
-                {/* {loading && <ChallengesSkeleton />} */}
                 {!loading && (
                     <section className="devs">
                         {devs.map((dev) => (
