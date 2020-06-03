@@ -1,30 +1,30 @@
-import React from 'react';
-import Skeleton, {SkeletonTheme} from 'react-loading-skeleton';
-import './styles.css'
+import React from "react";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import * as S from "./styled";
 
-export default function ChallengesSkeleton(){
-    return(
+export default function ChallengesSkeleton() {
+    return (
         <SkeletonTheme color="#202020" highlightColor="#444">
-            <section className="challenges-skeleton">
-                <div className="challenge-skeleton">
+            <S.Section>
+                <S.ChallengeSkeleton>
                     <Skeleton height={`100%`} width={`100%`} />
-                </div>
-                <div className="challenge-skeleton">
+                </S.ChallengeSkeleton>
+                <S.ChallengeSkeleton>
                     <Skeleton height={`100%`} width={`100%`} />
-                </div>
-                <div className="challenge-skeleton">
+                </S.ChallengeSkeleton>
+                <S.ChallengeSkeleton>
                     <Skeleton height={`100%`} width={`100%`} />
-                </div>
-                <div className="challenge-skeleton">
+                </S.ChallengeSkeleton>
+                <S.ChallengeSkeleton>
                     <Skeleton height={`100%`} width={`100%`} />
-                </div>
-                <div className="challenge-skeleton">
+                </S.ChallengeSkeleton>
+                <S.ChallengeSkeleton>
                     <Skeleton height={`100%`} width={`100%`} />
-                </div>
-                <div className="challenge-skeleton">
+                </S.ChallengeSkeleton>
+                <S.ChallengeSkeleton>
                     <Skeleton height={`100%`} width={`100%`} />
-                </div>
-            </section>
+                </S.ChallengeSkeleton>
+            </S.Section>
         </SkeletonTheme>
     );
 }
