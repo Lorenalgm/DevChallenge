@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 import * as S from "./styled";
 
 export default function Header() {
