@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Player } from '@lottiefiles/react-lottie-player';
 import api from '../../services/api';
+import ToastNotification from '../../utils/toast';
 
 export default function Newsletter() {
     const [email, setEmail] = useState('');
@@ -14,12 +15,15 @@ export default function Newsletter() {
 
         try {
             await api.post('newsletter', data);
-
-            window.alert(
+            ToastNotification.notify(
+                'success',
                 'Feito! Você será o primeiro a saber sobre novos desafios :)'
             );
         } catch (err) {
-            window.alert('Opa, algo deu errado! Pode tentar novamente? :c');
+            ToastNotification.notify(
+                'error',
+                'Opa, algo deu errado! Pode tentar novamente? :c'
+            );
         }
     }
 

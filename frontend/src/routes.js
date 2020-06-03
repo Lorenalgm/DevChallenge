@@ -5,10 +5,12 @@ import Home from './pages/Home';
 import Challenges from './pages/Challenges';
 import Detail from './pages/Detail';
 import Devs from './pages/Devs';
+import { ToastContainer } from 'react-toastify';
 
 function Routes() {
     return (
         <BrowserRouter>
+            <ToastContainer />
             <Switch>
                 <Route path="/" exact component={Home} />
                 <Route path="/challenges" component={Challenges} />
