@@ -11,12 +11,12 @@ import Banner from "../../components/Banner";
 
 export default function Home() {
     return (
-        <body>
+        <>
             <Header />
             <Banner />
             <CategoriesList />
             <Steps />
             <Newsletter />
-        </body>
+        </>
     );
 }
