@@ -10,7 +10,7 @@ export default function Challenges() {
 
     useEffect(() => {
         async function loadChallenges() {
-            const response = await api.get("/challenges");
+            const response = await api.get('/challenges');
             // console.log(response.data);
             setChallenges(response.data);
 
@@ -23,8 +23,8 @@ export default function Challenges() {
     return (
         <body>
             <Header />
-            {loading && <ChallengesSkeleton />}
             {!loading && (
+                {loading && <ChallengesSkeleton cards={6} />}
                 <S.Section>
                     {challenges.map((challenge) => (
                         <S.ChallengeCard key={challenge._id}>
@@ -54,4 +54,5 @@ export default function Challenges() {
             )}
         </body>
     );
+            
 }

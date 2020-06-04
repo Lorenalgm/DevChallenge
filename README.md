@@ -31,7 +31,7 @@
 * [Como Contribuir](#como-contribuir)
   * [Requisitos](#requisitos)
   * [Instalar](#instalar)
-* [Contato](#contato)
+* [Comunidade](#comunidade)
 
 ## Sobre o Projeto
 O DevChallenge é um projeto que visa contrubuir com a evolução de desenvolvedores, disponibilizando desafios para que possam praticar, melhorar suas skills e criarem seus portfólios :)
@@ -115,7 +115,9 @@ yarn dev
 ```
 5. O backend do Dechallenge backend está disponível! Agora você pode ver os dados no frontend. Se você quiser testar a API do DevChallenge, eu recomendo que utilize o Insomnia. O backend estará disponível em http://localhost:3333/
 
-## Contato
+## Comunidade
+Nosso objetivo é ajudar cada vez mais na evolução de desenvolvedores! Por isso, temos uma comunidade exclusiva do DevChallenge no Discord. Bora? https://discord.gg/yvYXhGj <br>
+<br>
 Site: https://devchallenge.now.sh/ <br>
 Linkedin: https://www.linkedin.com/in/lorenagmontes/
 
