@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import api from "../../services/api";
-import Header from "../../components/Header";
-import ChallengesSkeleton from "../../components/ChallengesSkeleton";
-import * as S from "./styled";
+import React, { useEffect, useState } from 'react';
+import api from '../../services/api';
+import Header from '../../components/Header';
+import ChallengesSkeleton from '../../components/ChallengesSkeleton';
+import * as S from './styled';
 
 export default function Challenges() {
     const [challenges, setChallenges] = useState([]);
@@ -23,8 +23,8 @@ export default function Challenges() {
     return (
         <body>
             <Header />
+            {loading && <ChallengesSkeleton cards={6} />}
             {!loading && (
-                {loading && <ChallengesSkeleton cards={6} />}
                 <S.Section>
                     {challenges.map((challenge) => (
                         <S.ChallengeCard key={challenge._id}>
@@ -43,7 +43,7 @@ export default function Challenges() {
                                 </S.CardContent>
                                 <S.CardTechs>
                                     <p className="tech">
-                                        {challenge.techs.join(", ")}
+                                        {challenge.techs.join(', ')}
                                     </p>
                                     <p className="level">{challenge.level}</p>
                                 </S.CardTechs>
@@ -54,5 +54,4 @@ export default function Challenges() {
             )}
         </body>
     );
-            
 }

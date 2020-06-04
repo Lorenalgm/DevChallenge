@@ -1,21 +1,6 @@
-.container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 6%;
-    flex: 1;
-}
-
-.left-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
 .left-container .start-challenge {
     color: #ffff;
-    background-color: #5C0D78;
+    background-color: #5c0d78;
     width: 20em;
     height: 3em;
     border: 1px solid #000000;
@@ -34,52 +19,18 @@
     background-color: #490861;
 }
 
-.stack {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1em;
-}
-.challenge-level {
-    background-color: #5C0D78;
-    filter: brightness(90%);
-    width: 9em;
-    padding: 5px;
-    border-radius: 20px;
-    text-align: center;
-    font-weight: bold;
-    color: #fff;
-}
-.challenge-techs {
-    filter: brightness(60%);
-    width: 9em;
-    border-radius: 20px;
-    text-align: center;
-    font-weight: bold;
-    color: #fff;
-}
 .challenge {
     display: flex;
     width: 30em;
     margin-left: 20em;
 }
 
-.challenge-type {
-    filter: brightness(90%);
-    width: 10em;
-    border-radius: 20px;
-    text-align: center;
-    font-weight: bold;
-    color: #fff;
-}
-.principal-container{
+.principal-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.principal-container h1{
+.principal-container h1 {
     color: var(--color-yellow);
     text-align: center;
 }
@@ -99,7 +50,7 @@
     margin-bottom: 1%;
 }
 
-.challenge-include{
+.challenge-include {
     display: flex;
     flex-direction: column;
 }
@@ -120,7 +71,7 @@
     color: greenyellow;
 }
 
-.challenge-start{
+.challenge-start {
     display: flex;
     flex-direction: column;
 }
@@ -141,11 +92,11 @@
     color: #ffff;
 }
 
-.dev-container{
+.dev-container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: #2C2929;
+    background-color: #2c2929;
     border-radius: 1em;
     margin: 1em;
     height: 5em;
@@ -157,18 +108,18 @@
     width: 50px;
     border-radius: 2em;
 }
-.dev-information{
+.dev-information {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 10px;
 }
-.dev-name{
+.dev-name {
     font-size: 18px;
     color: #ffff;
 }
-.dev-position{
+.dev-position {
     font-weight: bold;
     font-size: 12px;
     color: #ffff;
@@ -177,14 +128,14 @@
     display: flex;
     flex-direction: column;
 }
-.icon{
+.icon {
     text-decoration: none;
     color: #ffff;
     padding: 2px;
 }
 
-@media all and (max-width: 800px){
-    .container{
+@media all and (max-width: 800px) {
+    .container {
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -193,19 +144,19 @@
         margin-top: 5%;
     }
 
-    .left-container{
+    .left-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    
+
     .stack {
         margin-top: 2em;
     }
 
     .left-container .start-challenge {
-       width: 15em;
+        width: 15em;
         height: 3em;
         margin: 0;
         margin-top: 5%;
@@ -213,7 +164,7 @@
     }
 
     .challenge-level {
-        background-color: #5C0D78;
+        background-color: #5c0d78;
         filter: brightness(90%);
         width: 6em;
     }
@@ -225,7 +176,7 @@
         width: 5em;
     }
 
-    .principal-container{
+    .principal-container {
         align-items: center;
         justify-content: center;
         max-width: 100%;
@@ -237,7 +188,7 @@
         justify-content: center;
         align-items: center;
         margin-left: 0;
-        max-width: 100%; 
+        max-width: 100%;
     }
 
     .principal-container h2 {
@@ -245,7 +196,7 @@
         margin-bottom: 4%;
     }
 
-    .content{
+    .content {
         margin-left: 2%;
         text-align: left;
         align-items: center;
@@ -254,5 +205,4 @@
         margin-right: 10%;
         margin-bottom: 1%;
     }
-
 }

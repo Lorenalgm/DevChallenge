@@ -4,7 +4,7 @@ import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
-import './styles.css';
+import * as S from './styled';
 import Header from '../../components/Header';
 
 export default function Detail(props) {
@@ -13,13 +13,13 @@ export default function Detail(props) {
     return (
         <body>
             <Header />
-            <div className="container">
-                <div className="left-container">
-                    <div className="stack">
+            <S.Container>
+                <S.LeftColumn>
+                    <S.Infos>
                         <div className="challenge-techs">{challenge.techs}</div>
                         <div className="challenge-level">{challenge.level}</div>
                         <div className="challenge-type">{challenge.type}</div>
-                    </div>
+                    </S.Infos>
                     <AwesomeSlider bullets={false} mobileTouch={true}>
                         <div data-src={challenge.background} />
                         {/* <div><img src={challenge.background} alt="Challenge" /></div> */}
@@ -33,7 +33,7 @@ export default function Detail(props) {
                     >
                         Iniciar desafio
                     </a>
-                </div>
+                </S.LeftColumn>
                 <div className="principal-container">
                     <div className="challenge">
                         <h1>{challenge.name}</h1>
@@ -123,7 +123,7 @@ export default function Detail(props) {
                         </div>
                     </div>
                 </div>
-            </div>
+            </S.Container>
         </body>
     );
 }

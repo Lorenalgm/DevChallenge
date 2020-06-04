@@ -1,6 +1,6 @@
 import React from 'react';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
-import './styles.css';
+import * as S from './styled';
 
 export default function ChallengesSkeleton({ cards = 3 }) {
     var arr = [];
@@ -11,13 +11,13 @@ export default function ChallengesSkeleton({ cards = 3 }) {
 
     return (
         <SkeletonTheme color="#202020" highlightColor="#444">
-            <section className="challenges-skeleton">
+            <S.Section>
                 {arr.map(() => (
-                    <div className="challenge-skeleton">
+                    <S.ChallengeSkeleton>
                         <Skeleton height={'100%'} width={'100%'} />
-                    </div>
+                    </S.ChallengeSkeleton>
                 ))}
-            </section>
+            </S.Section>
         </SkeletonTheme>
     );
 }
