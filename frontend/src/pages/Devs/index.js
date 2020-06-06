@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import './styles.css';
+import * as S from './styled';
+
 import api from '../../services/api';
 import Header from '../../components/Header';
+import Dev from '../../components/Dev';
 
 export default function Challenges() {
     const [devs, setDevs] = useState([]);
@@ -23,63 +23,28 @@ export default function Challenges() {
     }, []);
 
     return (
-        <body>
+        <>
             <Header />
 
-            <div className="container">
+            <S.Container>
                 {!loading && (
                     <section className="devs">
                         {devs.map((dev) => (
-                            <div className="dev-container" key={dev._id}>
-                                <img src={dev.avatar} alt="Dev" />
-                                <div className="dev-information">
-                                    <span className="dev-name">{dev.name}</span>
-                                    <span className="dev-position">
-                                        {dev.position}
-                                    </span>
-                                </div>
-                                <div className="dev-social-media">
-                                    {dev.github && (
-                                        <a
-                                            className="icon"
-                                            rel="noopener noreferrer"
-                                            target="_blank"
-                                            href={`https://github.com/${dev.github}`}
-                                        >
-                                            <FontAwesomeIcon
-                                                icon={faGithubSquare}
-                                            />
-                                        </a>
-                                    )}
-                                    {dev.linkedin && (
-                                        <a
-                                            className="icon"
-                                            rel="noopener noreferrer"
-                                            target="_blank"
-                                            href={`https://www.linkedin.com/${dev.linkedin}`}
-                                        >
-                                            <FontAwesomeIcon
-                                                icon={faLinkedin}
-                                            />
-                                        </a>
-                                    )}
-                                </div>
-                            </div>
+                            <Dev info={dev} />
                         ))}
                     </section>
                 )}
-                <div className="help">
+                <S.Help>
                     <h3>Deseja contribuir?</h3>
-                    <a
+                    <S.Button
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="new-challenge"
                         href="https://lgoesmontes.typeform.com/to/xKHESI"
                     >
                         Submeter novo desafio
-                    </a>
-                </div>
-            </div>
-        </body>
+                    </S.Button>
+                </S.Help>
+            </S.Container>
+        </>
     );
 }

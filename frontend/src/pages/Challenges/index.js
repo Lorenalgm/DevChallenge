@@ -21,7 +21,7 @@ export default function Challenges() {
     }, []);
 
     return (
-        <body>
+        <>
             <Header />
             {loading && <ChallengesSkeleton cards={6} />}
             {!loading && (
@@ -52,6 +52,6 @@ export default function Challenges() {
                     ))}
                 </S.Section>
             )}
-        </body>
+        </>
     );
 }

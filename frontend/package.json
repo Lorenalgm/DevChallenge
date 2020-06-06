@@ -21,7 +21,8 @@
     "react-scripts": "3.4.1",
     "react-toastify": "^6.0.5",
     "react-web-vector-icons": "^1.0.2",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.1.1",
+    "styled-media-query": "^2.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
