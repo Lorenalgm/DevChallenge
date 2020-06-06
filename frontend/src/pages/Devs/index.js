@@ -56,7 +56,7 @@ export default function Challenges() {
                                             className="icon"
                                             rel="noopener noreferrer"
                                             target="_blank"
-                                            href={`https://www.linkedin.com/in/${dev.linkedin}`}
+                                            href={`https://www.linkedin.com/${dev.linkedin}`}
                                         >
                                             <FontAwesomeIcon
                                                 icon={faLinkedin}
