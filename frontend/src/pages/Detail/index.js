@@ -20,7 +20,7 @@ export default function Detail(props) {
                         <div className="challenge-level">{challenge.level}</div>
                         <div className="challenge-type">{challenge.type}</div>
                     </div>
-                    <AwesomeSlider bullets={false} mobileTouch={true}>
+                    <AwesomeSlider className="slider" bullets={false} mobileTouch={true}>
                         <div data-src={challenge.background} />
                         {/* <div><img src={challenge.background} alt="Challenge" /></div> */}
                     </AwesomeSlider>

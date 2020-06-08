@@ -1,4 +1,4 @@
-.container {
+body .container {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -32,6 +32,11 @@
 }
 .left-container .start-challenge:hover {
     background-color: #490861;
+}
+
+.slider {
+    width: 22em;
+    height: 22em;
 }
 
 .stack {
@@ -184,7 +189,7 @@
 }
 
 @media all and (max-width: 800px){
-    .container{
+    body .container{
         flex-direction: column;
         align-items: center;
         justify-content: center;
