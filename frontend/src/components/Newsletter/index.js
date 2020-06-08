@@ -3,8 +3,6 @@ import { Player } from '@lottiefiles/react-lottie-player';
 import api from '../../services/api';
 import ToastNotification from '../../utils/toast';
 
-import * as S from './styled';
-
 export default function Newsletter() {
     const [email, setEmail] = useState('');
 
@@ -30,7 +28,7 @@ export default function Newsletter() {
     }
 
     return (
-        <S.NewsletterContainer>
+        <section className="newsletter">
             <div>
                 <Player
                     autoplay={true}
@@ -41,14 +39,12 @@ export default function Newsletter() {
                 />
             </div>
             <div>
-                <S.NewsletterTitle>
-                    Seja notificado sobre novos desafios!
-                </S.NewsletterTitle>
-                <S.NewsletterParagraph>
+                <h1>Seja notificado sobre novos desafios!</h1>
+                <p>
                     Inscreva-se para ser o primeiro a saber sobre novos desafios
                     :)
-                </S.NewsletterParagraph>
-                <S.NewsletterForm onSubmit={handleSubscribe}>
+                </p>
+                <form className="newsletter-form" onSubmit={handleSubscribe}>
                     <input
                         type="email"
                         placeholder="E-mail"
@@ -56,8 +52,8 @@ export default function Newsletter() {
                         onChange={(e) => setEmail(e.target.value)}
                     />
                     <button type="submit">Inscrever</button>
-                </S.NewsletterForm>
+                </form>
             </div>
-        </S.NewsletterContainer>
+        </section>
     );
 }
