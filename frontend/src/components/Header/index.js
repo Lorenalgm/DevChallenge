@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import * as S from "./styled";
+import React from 'react';
 
-export default function Header() {
+import * as S from './styled';
+
+export default function Header(props) {
     return (
         <S.Header>
             <S.Title>
@@ -27,7 +27,7 @@ export default function Header() {
                     </li>
                     <li>
                         <S.StyledLink activeClassName="is-active" to="/devs">
-                            Ninjas
+                            Comunidade
                         </S.StyledLink>
                     </li>
                 </ul>

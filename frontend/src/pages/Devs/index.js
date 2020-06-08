@@ -1,10 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import './styles.css';
+import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import {
+    faLightbulb,
+    faCodeBranch,
+    faComment,
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import * as S from './styled';
+
 import api from '../../services/api';
 import Header from '../../components/Header';
-import ChallengesSkeleton from '../../components/ChallengesSkeleton';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import Dev from '../../components/Dev';
 
 export default function Challenges() {
     const [devs, setDevs] = useState([]);
@@ -23,40 +30,72 @@ export default function Challenges() {
     }, []);
 
     return (
-        <body>
+        <>
             <Header />
-            
-            <div className="container">
-                {/* {loading && <ChallengesSkeleton />} */}
-                {!loading &&
-                    <section className="devs">
-                        {devs.map(dev => (
-                            <div className="dev-container" key={dev._id}>
-                                <img src={dev.avatar} alt="Dev" />
-                                <div className="dev-information">
-                                    <span className="dev-name">{dev.name}</span>
-                                    <span className="dev-position">{dev.position}</span>
-                                </div>
-                                <div className="dev-social-media">
-                                    {dev.github &&
-                                        <a className="icon" rel="noopener noreferrer" target="_blank" href={`https://github.com/${dev.github}`}>
-                                            <FontAwesomeIcon icon={faGithubSquare} />
-                                        </a>}
-                                    {dev.linkedin &&
-                                        <a className="icon" rel="noopener noreferrer" target="_blank" href={`https://www.linkedin.com/in/${dev.linkedin}`}>
-                                            <FontAwesomeIcon icon={faLinkedin} />
-                                        </a>}
-                                </div>
-                            </div>
-                        ))}
-                    </section>
-                }
-                <div className="help">
-                    <h3>Deseja contribuir?</h3>
-                    <a target="_blank" rel="noopener noreferrer" className="new-challenge" href="https://lgoesmontes.typeform.com/to/xKHESI">Submeter novo desafio</a>
-                </div>
-            </div>
 
-        </body>
-    )
+            {!loading && (
+                <S.Container>
+                    <S.OptionsContainer>
+                        <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://lgoesmontes.typeform.com/to/xKHESI"
+                            alt="Criar novo desafio"
+                        >
+                            <S.Option>
+                                <S.OptionIcon
+                                    className="icon"
+                                    icon={faLightbulb}
+                                />
+
+                                <S.OptionTitle>
+                                    Submeter<br></br>novo desafio
+                                </S.OptionTitle>
+                            </S.Option>
+                        </a>
+                        <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://discord.gg/yvYXhGj"
+                            alt="Abrir convite no discord"
+                        >
+                            <S.Option>
+                                <S.OptionIcon
+                                    className="icon"
+                                    icon={faComment}
+                                />
+                                <S.OptionTitle>
+                                    Participar<br></br>da comunidade
+                                </S.OptionTitle>
+                            </S.Option>
+                        </a>
+                        <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://github.com/Lorenalgm/DevChallenge"
+                            alt="Abrir projeto no github"
+                        >
+                            <S.Option>
+                                <S.OptionIcon
+                                    className="icon"
+                                    icon={faCodeBranch}
+                                />
+                                <S.OptionTitle>
+                                    Contribuir<br></br>open source
+                                </S.OptionTitle>
+                            </S.Option>
+                        </a>
+                    </S.OptionsContainer>
+                    <S.DevsContainer>
+                        <S.DevsTitle>Últimas contribuições</S.DevsTitle>
+                        <S.Devs>
+                            {devs.map((dev) => (
+                                <Dev info={dev} />
+                            ))}
+                        </S.Devs>
+                    </S.DevsContainer>
+                </S.Container>
+            )}
+        </>
+    );
 }
