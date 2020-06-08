@@ -18,10 +18,10 @@ export default function Detail(props) {
                 <S.LeftColumn>
                     <S.Infos>
                         <S.InfosTechs>{challenge.techs}</S.InfosTechs>
-                        <S.InfosLevel>{challenge.level}</S.InfosLevel>
                         <S.InfosType>{challenge.type}</S.InfosType>
+                        <S.InfosLevel>{challenge.level}</S.InfosLevel>
                     </S.Infos>
-                    <AwesomeSlider bullets={false} mobileTouch={true}>
+                    <AwesomeSlider className="slider" bullets={false} mobileTouch={true}>
                         <div data-src={challenge.background} />
                         {/* <div><img src={challenge.background} alt="Challenge" /></div> */}
                     </AwesomeSlider>
