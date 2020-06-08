@@ -1,15 +1,22 @@
 import React from 'react';
-import Icon from 'react-web-vector-icons';
 
+import * as S from './styled';
+import Icon from 'react-web-vector-icons';
 import { Link } from 'react-router-dom';
+import media from 'styled-media-query';
 
 export default function CategoryListItem({ category }) {
     return (
-        <Link className="challenge-link" to="/challenges">
-            <div>
-                <Icon name={category.icon} font="FontAwesome" />
-                <h2>{category.name}</h2>
-            </div>
-        </Link>
+        <S.Anchor className="challenge-link" to="/challenges">
+            <S.Tech>
+                <Icon
+                    name={category.icon}
+                    color="#f4cf0a"
+                    size={50}
+                    font="FontAwesome"
+                />
+                <S.TechName>{category.name}</S.TechName>
+            </S.Tech>
+        </S.Anchor>
     );
 }
