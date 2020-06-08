@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
 
-import Icon from 'react-web-vector-icons';
 import { Link } from 'react-router-dom';
 
 export const Tech = styled.div`
@@ -28,17 +27,6 @@ export const Tech = styled.div`
         transition: 0.7s;
         background-color: #242020;
     }
-`;
-
-export const TechIcon = styled(Icon)`
-    color: #f4cf0a !important;
-    font-size: 60px !important;
-    height: 60px;
-
-    ${media.lessThan('medium')`
-        height: 3em;
-        width: 3em;
-    `}
 `;
 
 export const TechName = styled.h2`
