@@ -2,13 +2,12 @@ import styled from 'styled-components';
 
 export const DevContainer = styled.div`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    width: 13em;
+    height: 10em;
     align-items: center;
-    background-color: #2c2929;
     border-radius: 1em;
     margin: 1em;
-    height: 5em;
-    width: 20em;
     justify-content: center;
 
     img {
@@ -32,18 +31,17 @@ export const DevName = styled.span`
 `;
 
 export const DevPosition = styled.span`
-    font-weight: bold;
+    font-weight: 700;
     font-size: 12px;
-    color: #ffff;
+    color: var(--color-yellow);
 `;
 
 export const DevSocialContainer = styled.div`
     display: flex;
-    flex-direction: column;
 `;
 
 export const AnchorIcon = styled.a`
     text-decoration: none;
-    color: #ffff;
+    color: #fff;
     padding: 2px;
 `;

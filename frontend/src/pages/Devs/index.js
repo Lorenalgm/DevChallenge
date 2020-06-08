@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faLightbulb, faCodeBranch, faComment } from '@fortawesome/free-solid-svg-icons';
+import {
+    faLightbulb,
+    faCodeBranch,
+    faComment,
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import * as S from './styled';
@@ -30,72 +34,68 @@ export default function Challenges() {
             <Header />
 
             {!loading && (
-                <div className="container">
-                    <div className="section-options">
-                        <a target="_blank" rel="noopener noreferrer" href="https://lgoesmontes.typeform.com/to/xKHESI" alt="Criar novo desafio">
-                            <div>
-                                <FontAwesomeIcon className="icon" icon={faLightbulb} />
+                <S.Container>
+                    <S.OptionsContainer>
+                        <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://lgoesmontes.typeform.com/to/xKHESI"
+                            alt="Criar novo desafio"
+                        >
+                            <S.Option>
+                                <S.OptionIcon
+                                    className="icon"
+                                    icon={faLightbulb}
+                                />
 
-                                <h2>Submeter<br></br>novo desafio</h2>
-                            </div>
+                                <S.OptionTitle>
+                                    Submeter<br></br>novo desafio
+                                </S.OptionTitle>
+                            </S.Option>
                         </a>
-                        <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/yvYXhGj" alt="Abrir convite no discord">
-                            <div>
-                                <FontAwesomeIcon className="icon" icon={faComment} />
-                                <h2>Participar<br></br>da comunidade</h2>
-                            </div>
+                        <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://discord.gg/yvYXhGj"
+                            alt="Abrir convite no discord"
+                        >
+                            <S.Option>
+                                <S.OptionIcon
+                                    className="icon"
+                                    icon={faComment}
+                                />
+                                <S.OptionTitle>
+                                    Participar<br></br>da comunidade
+                                </S.OptionTitle>
+                            </S.Option>
                         </a>
-                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/Lorenalgm/DevChallenge" alt="Abrir projeto no github">
-                            <div>
-                                <FontAwesomeIcon className="icon" icon={faCodeBranch} />
-                                <h2>Contribuir<br></br>open source</h2>
-                            </div>
+                        <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://github.com/Lorenalgm/DevChallenge"
+                            alt="Abrir projeto no github"
+                        >
+                            <S.Option>
+                                <S.OptionIcon
+                                    className="icon"
+                                    icon={faCodeBranch}
+                                />
+                                <S.OptionTitle>
+                                    Contribuir<br></br>open source
+                                </S.OptionTitle>
+                            </S.Option>
                         </a>
-                    </div>
-                    <section className="devs-container">
-                        <h1>Últimas contribuições</h1>
-                        <section className="devs">
+                    </S.OptionsContainer>
+                    <S.DevsContainer>
+                        <S.DevsTitle>Últimas contribuições</S.DevsTitle>
+                        <S.Devs>
                             {devs.map((dev) => (
-                                <div className="dev-individual-container" key={dev._id}>
-                                    <img src={dev.avatar} alt="Dev" />
-                                    <div className="dev-information">
-                                        <span className="dev-name">{dev.name}</span>
-                                        <span className="dev-position">
-                                            {dev.position}
-                                        </span>
-                                    </div>
-                                    <div className="dev-social-media">
-                                        {dev.github && (
-                                            <a
-                                                className="icon"
-                                                rel="noopener noreferrer"
-                                                target="_blank"
-                                                href={`https://github.com/${dev.github}`}
-                                            >
-                                                <FontAwesomeIcon
-                                                    icon={faGithubSquare}
-                                                />
-                                            </a>
-                                        )}
-                                        {dev.linkedin && (
-                                            <a
-                                                className="icon"
-                                                rel="noopener noreferrer"
-                                                target="_blank"
-                                                href={`https://www.linkedin.com/${dev.linkedin}`}
-                                            >
-                                                <FontAwesomeIcon
-                                                    icon={faLinkedin}
-                                                />
-                                            </a>
-                                        )}
-                                    </div>
-                                </div>
+                                <Dev info={dev} />
                             ))}
-                        </section>
-                    </section>
-                </div>
+                        </S.Devs>
+                    </S.DevsContainer>
+                </S.Container>
             )}
-        </body>
+        </>
     );
 }

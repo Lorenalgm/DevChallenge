@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as S from './styled';
 
 export default function Dev(props) {
-    console.log(props);
     const { info } = props;
 
     return (
