@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import './styles.css';
 import api from '../../services/api';
 import Header from '../../components/Header';
 import ChallengesSkeleton from '../../components/ChallengesSkeleton';
-import * as S from './styled';
 
 export default function Challenges() {
     const [challenges, setChallenges] = useState([]);
@@ -21,37 +22,43 @@ export default function Challenges() {
     }, []);
 
     return (
-        <>
+        <body>
             <Header />
             {loading && <ChallengesSkeleton cards={6} />}
             {!loading && (
-                <S.Section>
+                <section className="challenges">
                     {challenges.map((challenge) => (
-                        <S.ChallengeCard key={challenge._id}>
-                            <S.Anchor
+                        <div className="challenge-card" key={challenge._id}>
+                            <Link
+                                className="link"
                                 to={{
                                     pathname: `detail/${challenge._id}`,
                                     challenge: challenge,
                                 }}
                             >
-                                <S.CardImage>
-                                    <img src={challenge.background} alt="" />
-                                </S.CardImage>
-                                <S.CardContent>
-                                    <h1>{challenge.name}</h1>
+                                <div className="card-image-container">
+                                    <img
+                                        src={challenge.background}
+                                        alt=""
+                                    ></img>
+                                </div>
+                                <div className="card-content">
+                                    <h1 className="card-title">
+                                        {challenge.name}
+                                    </h1>
                                     <p>{challenge.description}</p>
-                                </S.CardContent>
-                                <S.CardTechs>
+                                </div>
+                                <div className="card-tech">
                                     <p className="tech">
                                         {challenge.techs.join(', ')}
                                     </p>
                                     <p className="level">{challenge.level}</p>
-                                </S.CardTechs>
-                            </S.Anchor>
-                        </S.ChallengeCard>
+                                </div>
+                            </Link>
+                        </div>
                     ))}
-                </S.Section>
+                </section>
             )}
-        </>
+        </body>
     );
 }

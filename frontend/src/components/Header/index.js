@@ -2,7 +2,7 @@ import React from 'react';
 
 import * as S from './styled';
 
-export default function Header(props) {
+export default function Header() {
     return (
         <S.Header>
             <S.Title>
