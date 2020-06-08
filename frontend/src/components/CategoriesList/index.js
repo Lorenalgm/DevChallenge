@@ -1,6 +1,8 @@
 import React from 'react';
 import CategoryListItem from '../CategoryListItem';
 
+import * as S from './styled';
+
 const categories = [
     { _id: 1, name: 'Front-end', icon: 'desktop' },
     { _id: 2, name: 'Back-end', icon: 'code' },
@@ -9,10 +11,10 @@ const categories = [
 
 export default function CategoriesList() {
     return (
-        <section className="techs">
+        <S.Techs>
             {categories.map((category) => (
                 <CategoryListItem category={category} key={category._id} />
             ))}
-        </section>
+        </S.Techs>
     );
 }

@@ -6,21 +6,23 @@ import {
     faShareSquare,
 } from '@fortawesome/free-solid-svg-icons';
 
+import * as S from './styled';
+
 export default function Steps() {
     return (
-        <section className="steps">
-            <div>
-                <FontAwesomeIcon className="icon-steps" icon={faSearch} />
+        <S.StepsContainer>
+            <S.Step>
+                <S.Icon icon={faSearch} />
                 <h2>Escolha</h2>
-            </div>
-            <div>
-                <FontAwesomeIcon className="icon-steps" icon={faCode} />
+            </S.Step>
+            <S.Step>
+                <S.Icon icon={faCode} />
                 <h2>Desenvolva</h2>
-            </div>
-            <div>
-                <FontAwesomeIcon className="icon-steps" icon={faShareSquare} />
+            </S.Step>
+            <S.Step>
+                <S.Icon icon={faShareSquare} />
                 <h2>Compartilhe</h2>
-            </div>
-        </section>
+            </S.Step>
+        </S.StepsContainer>
     );
 }

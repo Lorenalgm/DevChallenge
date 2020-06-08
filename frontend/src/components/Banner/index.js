@@ -1,16 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import * as S from './styled';
+
 export default function Banner() {
     return (
-        <section className="banner">
-            <div className="typewriter">
-                <h1>Melhore suas habilidades</h1>
-            </div>
-            <h2>Com desafios de front-end, back-end e mobile</h2>
+        <S.BannerContainer>
+            <S.Typewriter>
+                <S.BannerTitle>Melhore suas habilidades</S.BannerTitle>
+            </S.Typewriter>
+            <S.BannerSubtitle>
+                Com desafios de front-end, back-end e mobile
+            </S.BannerSubtitle>
             <Link to="/challenges">
-                <button type="button">Bora codar!</button>
+                <S.BannerButton type="button">Bora codar!</S.BannerButton>
             </Link>
-        </section>
+        </S.BannerContainer>
     );
 }
