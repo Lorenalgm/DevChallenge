@@ -13,7 +13,7 @@ export default function Detail(props) {
     return (
         <body>
             <Header />
-            <div className="container">
+            <div className="container-detail">
                 <div className="left-container">
                     <div className="stack">
                         <div className="challenge-techs">{challenge.techs}</div>

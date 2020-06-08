@@ -1,4 +1,4 @@
-body .container {
+.container-detail {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -189,7 +189,7 @@ body .container {
 }
 
 @media all and (max-width: 800px){
-    body .container{
+    body .container-detail{
         flex-direction: column;
         align-items: center;
         justify-content: center;
