@@ -27,7 +27,7 @@ export default function Header() {
                     </li>
                     <li>
                         <S.StyledLink activeClassName="is-active" to="/devs">
-                            Ninjas
+                            Comunidade
                         </S.StyledLink>
                     </li>
                 </ul>
