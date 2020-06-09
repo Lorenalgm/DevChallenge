@@ -1,4 +1,5 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
+import media from 'styled-media-query';
 
 export const GlobalStyles = createGlobalStyle`
     @font-face {
@@ -45,4 +46,12 @@ export const GlobalStyles = createGlobalStyle`
         background-color: var(--color-black);
     }
 
+`;
+
+export const Container = styled.div`
+    margin: 0 140px;
+
+    ${media.lessThan('medium')`
+        margin: 0 40px;
+    `}
 `;

@@ -5,9 +5,7 @@ export const Header = styled.header`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 2%;
+    padding-top: 30px;
 
     @media (max-width: 800px) {
         display: flex;

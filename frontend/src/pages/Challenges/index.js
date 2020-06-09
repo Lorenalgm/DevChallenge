@@ -22,7 +22,6 @@ export default function Challenges() {
 
     return (
         <>
-            <Header />
             {loading && <ChallengesSkeleton cards={6} />}
             {!loading && (
                 <S.Section>

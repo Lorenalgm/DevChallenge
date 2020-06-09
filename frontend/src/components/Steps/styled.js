@@ -5,16 +5,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const StepsContainer = styled.section`
     display: flex;
-    align-items: center;
+    align-items: stretch;
+    align-content: stretch;
     justify-content: center;
-    padding: 60px;
+    padding: 80px 225px;
+
     ${media.lessThan('medium')`
         padding: 0;
-    `}
+    `};
 `;
 
 export const Step = styled.div`
-    margin: 90px;
+    flex: 30% 0 1;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -31,8 +31,6 @@ export default function Challenges() {
 
     return (
         <>
-            <Header />
-
             {!loading && (
                 <S.Container>
                     <S.OptionsContainer>

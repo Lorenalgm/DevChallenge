@@ -3,13 +3,21 @@ import media from 'styled-media-query';
 
 import { Link } from 'react-router-dom';
 
+export const Anchor = styled(Link)`
+    text-decoration: none;
+    flex: 1 1 auto;
+    margin: 30px;
+
+    ${media.lessThan('medium')`
+        margin: 12px 0;
+    `}
+`;
+
 export const Tech = styled.div`
-    width: 300px;
-    height: 300px;
     background-color: #2c2929;
-    margin: 50px;
     border-radius: 10px;
     cursor: pointer;
+    height: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -17,10 +25,7 @@ export const Tech = styled.div`
     justify-content: center;
 
     ${media.lessThan('medium')`
-        height: 8em;
-        width: 20em;
-        margin: 0;
-        margin-bottom: 1.4em;
+        padding: 30px 0;
     `}
 
     &:hover {
@@ -36,8 +41,4 @@ export const TechName = styled.h2`
     ${media.lessThan('medium')`
         margin-top: 0.6em;
     `}
-`;
-
-export const Anchor = styled(Link)`
-    text-decoration: none;
 `;

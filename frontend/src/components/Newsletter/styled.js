@@ -15,13 +15,13 @@ export const NewsletterContainer = styled.section`
         display: flex;
         flex-direction: column;
         align-items: left;
-        margin-left: 2em;
+        margin: 0 20px;
 
         ${media.lessThan('medium')`
             align-items: center;
             justify-content: center;
             text-align: center;
-            margin-left: 0;
+            margin: 0;
         `}
     }
 `;

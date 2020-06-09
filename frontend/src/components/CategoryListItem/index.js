@@ -7,7 +7,7 @@ import media from 'styled-media-query';
 
 export default function CategoryListItem({ category }) {
     return (
-        <S.Anchor className="challenge-link" to="/challenges">
+        <S.Anchor to="/challenges">
             <S.Tech>
                 <Icon
                     name={category.icon}

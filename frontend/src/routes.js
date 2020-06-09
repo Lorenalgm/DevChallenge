@@ -9,15 +9,12 @@ import { ToastContainer } from 'react-toastify';
 
 function Routes() {
     return (
-        <BrowserRouter>
-            <ToastContainer />
-            <Switch>
-                <Route path="/" exact component={Home} />
-                <Route path="/challenges" component={Challenges} />
-                <Route path="/detail/:id" component={Detail} />
-                <Route path="/devs" component={Devs} />
-            </Switch>
-        </BrowserRouter>
+        <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/challenges" component={Challenges} />
+            <Route path="/detail/:id" component={Detail} />
+            <Route path="/devs" component={Devs} />
+        </Switch>
     );
 }
 
