@@ -13,7 +13,7 @@ import api from '../../services/api';
 import Header from '../../components/Header';
 import Dev from '../../components/Dev';
 
-export default function Challenges() {
+export default function Community() {
     const [devs, setDevs] = useState([]);
     const [loading, setLoading] = useState(true);
 

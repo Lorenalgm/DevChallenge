@@ -26,7 +26,10 @@ export default function Header(props) {
                         </S.StyledLink>
                     </li>
                     <li>
-                        <S.StyledLink activeClassName="is-active" to="/devs">
+                        <S.StyledLink
+                            activeClassName="is-active"
+                            to="/community"
+                        >
                             Comunidade
                         </S.StyledLink>
                     </li>

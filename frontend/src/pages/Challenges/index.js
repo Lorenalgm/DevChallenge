@@ -11,7 +11,7 @@ export default function Challenges() {
     useEffect(() => {
         async function loadChallenges() {
             const response = await api.get('/challenges');
-            // console.log(response.data);
+            console.log(response.data);
             setChallenges(response.data);
 
             setLoading(false);

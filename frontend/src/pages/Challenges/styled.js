@@ -1,23 +1,21 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Section = styled.section`
-    margin-top: 3%;
+    margin-top: 30px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
 `;
 
 export const ChallengeCard = styled.div`
-    height: 21em;
-    width: 20em;
+    width: 30%;
     background-color: #242020;
     border-radius: 10px;
     cursor: pointer;
-    margin-bottom: 2em;
-    margin-right: 1em;
+    margin: 16px;
 `;
 
 export const Anchor = styled(Link)`
@@ -26,8 +24,8 @@ export const Anchor = styled(Link)`
 
 export const CardImage = styled.div`
     img {
-        height: 12em;
-        width: 20em;
+        width: 100%;
+        max-height: 250px;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
     }
