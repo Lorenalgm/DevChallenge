@@ -30,7 +30,7 @@ export default function Dev(props) {
                         className="icon"
                         rel="noopener noreferrer"
                         target="_blank"
-                        href={`https://www.linkedin.com/in/${info.linkedin}`}
+                        href={`https://www.linkedin.com/${info.linkedin}`}
                     >
                         <FontAwesomeIcon icon={faLinkedin} />
                     </S.AnchorIcon>
