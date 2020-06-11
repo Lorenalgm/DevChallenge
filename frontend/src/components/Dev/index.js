@@ -26,6 +26,7 @@ export default function Dev(props) {
                     </S.AnchorIcon>
                 )}
                 {info.linkedin && (
+
                     <S.AnchorIcon
                         className="icon"
                         rel="noopener noreferrer"
