@@ -103,7 +103,7 @@ export default function Detail(props) {
                                     className="icon"
                                     rel="noopener noreferrer"
                                     target="_blank"
-                                    href={`https://www.linkedin.com/in/${challenge.dev_id.linkedin}`}
+                                    href={`https://www.linkedin.com/${challenge.dev_id.linkedin}`}
                                 >
                                     <FontAwesomeIcon icon={faLinkedin} />
                                 </S.AnchorIcon>
