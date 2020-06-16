@@ -27,27 +27,26 @@ export default function Challenges() {
             {!loading && (
                 <S.Section>
                     {challenges.map((challenge) => (
-                        <S.ChallengeCard key={challenge._id}>
-                            <S.Anchor
-                                to={{
-                                    pathname: `detail/${challenge._id}`,
-                                    challenge: challenge,
-                                }}
-                            >
-                                <S.CardImage>
-                                    <img src={challenge.background} alt="" />
-                                </S.CardImage>
-                                <S.CardContent>
-                                    <h1>{challenge.name}</h1>
-                                    <p>{challenge.description}</p>
-                                </S.CardContent>
-                                <S.CardTechs>
-                                    <p className="tech">
-                                        {challenge.techs.join(', ')}
-                                    </p>
-                                    <p className="level">{challenge.level}</p>
-                                </S.CardTechs>
-                            </S.Anchor>
+                        <S.ChallengeCard
+                            key={challenge._id}
+                            to={{
+                                pathname: `detail/${challenge._id}`,
+                                challenge: challenge,
+                            }}
+                        >
+                            <S.CardImage>
+                                <img src={challenge.background} alt="" />
+                            </S.CardImage>
+                            <S.CardContent>
+                                <h1>{challenge.name}</h1>
+                                <p>{challenge.description}</p>
+                            </S.CardContent>
+                            <S.CardTechs>
+                                <p className="tech">
+                                    {challenge.techs.join(', ')}
+                                </p>
+                                <p className="level">{challenge.level}</p>
+                            </S.CardTechs>
                         </S.ChallengeCard>
                     ))}
                 </S.Section>

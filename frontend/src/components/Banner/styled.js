@@ -7,14 +7,12 @@ export const BannerContainer = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-top: 160px;
-    margin-bottom: 160px;
-    ${media.lessThan('medium')`
-        margin-top: 14%;
-        margin-bottom: 14%;
-        margin-left: 3%;
-        margin-right: 3%;
-    `}
+    min-height: calc(100vh - 69px);
+    padding: 12px;
+
+    @media (max-width: 800px) {
+        min-height: calc(100vh - 103px);
+    }
 `;
 
 export const BannerTitle = styled.h1`
@@ -60,6 +58,9 @@ export const Typewriter = styled.div`
         animation: typing 3.5s steps(30, end),
             blink-caret 0.5s step-end infinite;
 
+        ${media.lessThan('small')`
+            font-size: 1.25em !important;
+        `}
         ${media.lessThan('medium')`
             font-size: 1.8em;
         `}

@@ -17,6 +17,10 @@ export const GlobalStyles = createGlobalStyle`
         -moz-osx-font-smoothing: grayscale;
     }
 
+    html > body {
+        overflow-y: scroll;
+    }
+
     code {
         font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
             monospace;

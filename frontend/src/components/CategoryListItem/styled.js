@@ -3,11 +3,11 @@ import media from 'styled-media-query';
 
 import { Link } from 'react-router-dom';
 
-export const Tech = styled.div`
+export const Tech = styled(Link)`
     width: 300px;
     height: 300px;
     background-color: #2c2929;
-    margin: 50px;
+    margin: 0px 25px 50px 25px;
     border-radius: 10px;
     cursor: pointer;
     display: flex;
@@ -15,12 +15,12 @@ export const Tech = styled.div`
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
 
     ${media.lessThan('medium')`
         height: 8em;
-        width: 20em;
-        margin: 0;
-        margin-bottom: 1.4em;
+        max-width: 20em;
+        width: 100%;
     `}
 
     &:hover {
@@ -36,8 +36,4 @@ export const TechName = styled.h2`
     ${media.lessThan('medium')`
         margin-top: 0.6em;
     `}
-`;
-
-export const Anchor = styled(Link)`
-    text-decoration: none;
 `;

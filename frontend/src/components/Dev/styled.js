@@ -4,16 +4,15 @@ export const DevContainer = styled.div`
     display: flex;
     flex-direction: column;
     width: 13em;
-    height: 10em;
     align-items: center;
     border-radius: 1em;
-    margin: 1em;
+    margin: 0.75em;
     justify-content: center;
 
     img {
-        height: 50px;
-        width: 50px;
-        border-radius: 2em;
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
     }
 `;
 
@@ -31,9 +30,10 @@ export const DevName = styled.span`
 `;
 
 export const DevPosition = styled.span`
-    font-weight: 700;
+    font-weight: 400;
     font-size: 12px;
     color: var(--color-yellow);
+    text-align: center;
 `;
 
 export const DevSocialContainer = styled.div`

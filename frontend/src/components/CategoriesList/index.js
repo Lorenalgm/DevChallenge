@@ -4,16 +4,16 @@ import CategoryListItem from '../CategoryListItem';
 import * as S from './styled';
 
 const categories = [
-    { _id: 1, name: 'Front-end', icon: 'desktop' },
-    { _id: 2, name: 'Back-end', icon: 'code' },
-    { _id: 3, name: 'Mobile', icon: 'mobile' },
+    { name: 'Front-end', icon: 'desktop' },
+    { name: 'Back-end', icon: 'code' },
+    { name: 'Mobile', icon: 'mobile' },
 ];
 
 export default function CategoriesList() {
     return (
         <S.Techs>
-            {categories.map((category) => (
-                <CategoryListItem category={category} key={category._id} />
+            {categories.map((category, index) => (
+                <CategoryListItem category={category} key={index} />
             ))}
         </S.Techs>
     );

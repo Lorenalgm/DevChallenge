@@ -6,6 +6,7 @@ export const NewsletterContainer = styled.section`
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    padding: 12px;
 
     ${media.lessThan('medium')`
         flex-direction: column;
@@ -41,15 +42,12 @@ export const NewsletterTitle = styled.h1`
 export const NewsletterParagraph = styled.p`
     color: var(--color-yellow);
     font-size: 1em;
-
-    ${media.lessThan('medium')`
-        margin: 1em;
-    `}
 `;
 
 export const NewsletterForm = styled.form`
     display: flex;
     flex-direction: column;
+    width: 100%;
 
     ${media.lessThan('medium')`
         display: flex;
@@ -71,7 +69,8 @@ export const NewsletterForm = styled.form`
 
         ${media.lessThan('medium')`
             height: 3em;
-            width: 18em;
+            max-width: 18em;
+            width: 100%;
         `}
     }
 
@@ -88,8 +87,9 @@ export const NewsletterForm = styled.form`
         transition: 0.3s;
 
         ${media.lessThan('medium')`
-            width: 16em;
             height: 3em;
+            max-width: 16em;
+            width: 100%;
         `}
 
         &:hover {

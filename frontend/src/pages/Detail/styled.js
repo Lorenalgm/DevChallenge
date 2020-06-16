@@ -4,18 +4,20 @@ import media from 'styled-media-query';
 export const Container = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    margin: 6%;
+    justify-content: flex-start;
+    padding: 16px;
     flex: 1;
+    max-width: 1200px;
+    margin: 0px auto;
 
-    ${media.lessThan('medium')`
+    @media (max-width: 992px) {
         flex-direction: column;
         align-items: center;
         justify-content: center;
         width: 100%;
         margin: 0%;
         margin-top: 5%;
-    `}
+    }
 `;
 
 export const LeftColumn = styled.div`
@@ -23,13 +25,12 @@ export const LeftColumn = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 24px;
 
-    ${media.lessThan('medium')`
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    `}
+    @media (min-width: 992px) {
+        margin-bottom: 0px;
+        margin-right: 24px;
+    }
 `;
 
 export const Infos = styled.div`
@@ -117,6 +118,7 @@ export const FlexContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-grow: 1;
 
     ${media.lessThan('medium')`
         align-items: center;
@@ -127,8 +129,6 @@ export const FlexContainer = styled.div`
 
 export const TitleContainer = styled.div`
     display: flex;
-    width: 30em;
-    margin-left: 20em;
 
     h1 {
         color: var(--color-yellow);
@@ -139,7 +139,6 @@ export const TitleContainer = styled.div`
 export const ChallengeDescription = styled.div`
     color: #ffff;
     font-size: 1.2em;
-    padding: 10px;
 
     ${media.lessThan('medium')`
         text-align: center;
@@ -152,8 +151,8 @@ export const ChallengeContainer = styled.div`
     flex-direction: column;
     align-items: initial;
     justify-content: center;
-    margin-left: 6%;
-    margin-right: 6%;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 1%;
     p {
         color: #fff;
