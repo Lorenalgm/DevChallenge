@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import api from '../../services/api';
+import {useParams}  from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
@@ -7,9 +9,24 @@ import 'react-awesome-slider/dist/styles.css';
 import * as S from './styled';
 import Header from '../../components/Header';
 
-export default function Detail(props) {
-    console.log(props);
-    const { challenge } = props.location;
+export default function Detail() {
+    const [challenge, setChallenge] = useState([]);
+    const [dev, setDev] = useState([]);
+    const [images, setImages] = useState([]);
+    const {id} = useParams();
+
+    useEffect(() => {
+        async function loadChallenge() {
+
+            const response = await api.get(`/challenges/${id}`);
+            setChallenge(response.data[0]);
+            setDev(response.data[0].dev_id);
+            setImages(response.data[0].images);
+
+        }
+
+        loadChallenge();
+    }, [id]);
 
     return (
         <body>
@@ -20,10 +37,14 @@ export default function Detail(props) {
                         <S.InfosTechs>{challenge.techs}</S.InfosTechs>
                         <S.InfosType>{challenge.type}</S.InfosType>
                         <S.InfosLevel>{challenge.level}</S.InfosLevel>
+
                     </S.Infos>
                     <AwesomeSlider className="slider" bullets={false} mobileTouch={true}>
-                        <div data-src={challenge.background} />
+
                         {/* <div><img src={challenge.background} alt="Challenge" /></div> */}
+                        {images.map((image) => (
+                               <div><img src={image} alt="Challenge" /></div>
+                            ))}
                     </AwesomeSlider>
 
                     <S.ChallengeLink
@@ -80,30 +101,30 @@ export default function Detail(props) {
                     </S.ChallengeContainer>
 
                     <S.DevContainer>
-                        <img src={challenge.dev_id.avatar} alt="Dev" />
+                        <img src={dev.avatar} alt="Dev" />
                         <S.DevInformation>
-                            <S.DevName>{challenge.dev_id.name}</S.DevName>
+                            <S.DevName>{dev.name}</S.DevName>
                             <S.DevPosition>
-                                {challenge.dev_id.position}
+                                {dev.position}
                             </S.DevPosition>
                         </S.DevInformation>
                         <S.DevSocialContainer>
-                            {challenge.dev_id.github && (
+                            {dev.github && (
                                 <S.AnchorIcon
                                     className="icon"
                                     rel="noopener noreferrer"
                                     target="_blank"
-                                    href={`https://github.com/${challenge.dev_id.github}`}
+                                    href={`https://github.com/${dev.github}`}
                                 >
                                     <FontAwesomeIcon icon={faGithubSquare} />
                                 </S.AnchorIcon>
                             )}
-                            {challenge.dev_id.linkedin && (
+                            {dev.linkedin && (
                                 <S.AnchorIcon
                                     className="icon"
                                     rel="noopener noreferrer"
                                     target="_blank"
-                                    href={`https://www.linkedin.com/${challenge.dev_id.linkedin}`}
+                                    href={`https://www.linkedin.com/${dev.linkedin}`}
                                 >
                                     <FontAwesomeIcon icon={faLinkedin} />
                                 </S.AnchorIcon>

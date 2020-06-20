@@ -29,10 +29,7 @@ export default function Challenges() {
                     {challenges.map((challenge) => (
                         <S.ChallengeCard key={challenge._id}>
                             <S.Anchor
-                                to={{
-                                    pathname: `detail/${challenge._id}`,
-                                    challenge: challenge,
-                                }}
+                                to={`detail/${challenge._id}`}
                             >
                                 <S.CardImage>
                                     <img src={challenge.background} alt="" />
