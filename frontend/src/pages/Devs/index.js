@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import {
     faLightbulb,
     faCodeBranch,
     faComment,
 } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import * as S from './styled';
 

@@ -2,8 +2,6 @@ import React from 'react';
 
 import * as S from './styled';
 import Icon from 'react-web-vector-icons';
-import { Link } from 'react-router-dom';
-import media from 'styled-media-query';
 
 export default function CategoryListItem({ category }) {
     return (
