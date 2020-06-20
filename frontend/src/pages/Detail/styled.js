@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import media from 'styled-media-query';
 export const Container = styled.div`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    margin: 6%;
+    margin: 2%;
     flex: 1;
 
     ${media.lessThan('medium')`
@@ -18,69 +18,119 @@ export const Container = styled.div`
     `}
 `;
 
+export const Banner = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3em;
+
+    ${media.lessThan('medium')`
+        flex-wrap: wrap-reverse;
+    `}
+`;
+
 export const LeftColumn = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     justify-content: center;
+    width: 40%;
+    text-align: left;
 
     ${media.lessThan('medium')`
         display: flex;
+        width: 100%;
+        margin-top: 8%;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     `}
 `;
 
-export const Infos = styled.div`
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1em;
-`;
-
-export const InfosTechs = styled.div`
-    filter: brightness(60%);
-    width: 9em;
-    border-radius: 20px;
-    text-align: center;
-    font-weight: bold;
-    color: #fff;
-
-    ${media.lessThan('medium')`
-        width: 7em;
-    `}
-`;
-
-export const InfosLevel = styled.div`
-    background-color: #5c0d78;
-    filter: brightness(90%);
-    width: 9em;
-    padding: 5px;
-    border-radius: 20px;
-    text-align: center;
-    font-weight: bold;
-    color: #fff;
-
-    ${media.lessThan('medium')`
-        background-color: #5c0d78;
-        filter: brightness(90%);
-        width: 6em;
-    `}
-`;
 
 export const InfosType = styled.div`
     filter: brightness(90%);
     width: 10em;
     border-radius: 20px;
+    text-align: left;
+    font-weight: bold;
+    margin-left: 4%;
+    margin-bottom: 1%;
+    color: var(--color-purple);
+    ${media.lessThan('medium')`
+        margin: 0;
+        width: 5em;
+    `};
+`;
+
+
+export const TitleContainer = styled.div`
+    margin-left: 4%;
+    margin-bottom: 1%;
+    h1 {
+        color: var(--color-yellow);
+        text-align: left;
+    }
+
+    ${media.lessThan('medium')`
+        margin: 0;
+        margin-top: 4%;
+        text-align: center;
+    `}
+`;
+
+export const ChallengeDescription = styled.div`
+    color: #ffff;
+    font-size: 1.2em;
+    margin-left: 4%;
+    margin-bottom: 4%;
+
+    ${media.lessThan('medium')`
+        text-align: center;
+        margin-left: 0;
+        margin-top: 2%;
+        margin-bottom: 4%;
+    `}
+`;
+
+export const Infos = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: left;
+`;
+
+export const InfosLevel = styled.div`
+    background-color: #2C2929;
+    filter: brightness(90%);
+    width: 7em;
+    padding: 5px;
+    margin-left: 4%;
+    border-radius: 20px;
     text-align: center;
     font-weight: bold;
     color: #fff;
+
     ${media.lessThan('medium')`
-        width: 5em;
-    `};
+        width: 6em;
+        margin-left: 0;
+    `}
+`;
+
+export const InfosTechs = styled.div`
+    background-color: #2C2929;
+    filter: brightness(90%);
+    width: 7em;
+    padding: 5px;
+    margin-left: 4%;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+
+    ${media.lessThan('medium')`
+        width: 6em;
+        margin-left: 0;
+    `}
 `;
 
 export const ChallengeLink = styled.a`
@@ -113,6 +163,21 @@ export const ChallengeLink = styled.a`
     `}
 `;
 
+export const Demo = styled.div`
+    width: 50em;
+    height: 30em;
+
+    .slider{
+        width: 100%;
+        height: 100%;
+    }
+
+    ${media.lessThan('medium')`
+        width: 80%;
+        height: 100%;
+    `}
+`;
+
 export const FlexContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -125,57 +190,56 @@ export const FlexContainer = styled.div`
     `}
 `;
 
-export const TitleContainer = styled.div`
-    display: flex;
-    width: 30em;
-    margin-left: 20em;
-
-    h1 {
-        color: var(--color-yellow);
-        text-align: center;
-    }
+export const Content = styled.div`
+    margin-top: 3%;
 `;
 
-export const ChallengeDescription = styled.div`
-    color: #ffff;
-    font-size: 1.2em;
-    padding: 10px;
+export const ChallengeAbout = styled.div`
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 4%;
+    text-align: left;
+
+    h1 {
+        color: var(--color-purple);
+        font-size: 1.6em;
+    }
+
+    p {
+        margin-top: 1%;
+        color: #ffff;
+    }
 
     ${media.lessThan('medium')`
-        text-align: center;
-        margin-bottom: 4%;
+        align-items: center;
+        justify-content: center;
+        margin-left: 4%;
+        margin-right: 4%;
+        max-width: 95%;
     `}
 `;
 
+
 export const ChallengeContainer = styled.div`
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: initial;
+    align-items: center;
     justify-content: center;
-    margin-left: 6%;
-    margin-right: 6%;
-    margin-bottom: 1%;
+    line-height: 1.5em;
+    margin-bottom: 4%;
     p {
         color: #fff;
     }
 
     ${media.lessThan('medium')`
-        margin-left: 2%;
         text-align: left;
-        align-items: center;
-        justify-content: center;
-        margin-left: 10%;
-        margin-right: 10%;
-        margin-bottom: 1%;
-
-        p{
-            text-align: center;
-        }
+        flex-wrap: wrap;
     `}
 `;
 
 export const ChallengeInclude = styled.div`
     display: flex;
+    margin-right: 8%;
     flex-direction: column;
 
     h3 {
@@ -189,6 +253,10 @@ export const ChallengeInclude = styled.div`
         color: #ffff;
         padding: 0.2em;
     }
+
+    ${media.lessThan('medium')`
+        margin-right:0;
+    `}
 `;
 
 export const Icon = styled(FontAwesomeIcon)`
@@ -206,10 +274,16 @@ export const ChallengeStart = styled.div`
         font-size: 1.6em;
     }
 
-    span {
+    p {
         color: #ffff;
         padding: 0.2em;
     }
+
+    span{
+        color: var(--color-yellow);
+        font-weight: bold;
+    }
+
 `;
 
 export const DevContainer = styled.div`

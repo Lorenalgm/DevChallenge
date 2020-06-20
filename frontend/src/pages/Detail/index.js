@@ -32,40 +32,47 @@ export default function Detail() {
         <body>
             <Header />
             <S.Container>
-                <S.LeftColumn>
-                    <S.Infos>
-                        <S.InfosTechs>{challenge.techs}</S.InfosTechs>
+                <S.Banner>
+                    <S.LeftColumn>
                         <S.InfosType>{challenge.type}</S.InfosType>
-                        <S.InfosLevel>{challenge.level}</S.InfosLevel>
+                        <S.TitleContainer>
+                            <h1>{challenge.name}</h1>
+                        </S.TitleContainer>
+                        <S.ChallengeDescription>
+                            {challenge.description}
+                        </S.ChallengeDescription>
 
-                    </S.Infos>
-                    <AwesomeSlider className="slider" bullets={false} mobileTouch={true}>
+                        <S.Infos>
+                            <S.InfosLevel>{challenge.level}</S.InfosLevel>
+                            <S.InfosTechs>{challenge.techs}</S.InfosTechs>
+                        </S.Infos>
 
-                        {/* <div><img src={challenge.background} alt="Challenge" /></div> */}
-                        {images.map((image) => (
-                               <div><img src={image} alt="Challenge" /></div>
-                            ))}
-                    </AwesomeSlider>
+                        <S.ChallengeLink
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="start-challenge"
+                            href={challenge.github_url}
+                        >
+                            Iniciar desafio
+                        </S.ChallengeLink>
+                    </S.LeftColumn>
+                    <S.Demo>
+                        <AwesomeSlider className="slider" bullets={false} mobileTouch={true}>
+                            {images.map((image) => (
+                                <div><img src={image} alt="Challenge" /></div>
+                                ))}
+                        </AwesomeSlider>
+                    </S.Demo>
 
-                    <S.ChallengeLink
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="start-challenge"
-                        href={challenge.github_url}
-                    >
-                        Iniciar desafio
-                    </S.ChallengeLink>
-                </S.LeftColumn>
+                </S.Banner>
+
                 <S.FlexContainer>
-                    <S.TitleContainer>
-                        <h1>{challenge.name}</h1>
-                    </S.TitleContainer>
-                    <S.ChallengeDescription>
-                        {challenge.description}
-                    </S.ChallengeDescription>
-
-                    <S.ChallengeContainer>
+                    <S.Content>
+                    <S.ChallengeAbout>
+                        <h1>Sobre o desafio</h1>
                         <p>Seu desafio é {challenge.brief}.</p>
+                     </S.ChallengeAbout>
+                    <S.ChallengeContainer>
                         <S.ChallengeInclude>
                             <h3>O que está incluso?</h3>
                             <span>
@@ -87,19 +94,19 @@ export default function Detail() {
                         </S.ChallengeInclude>
                         <S.ChallengeStart>
                             <h3>Como iniciar?</h3>
-                            <span>
-                                1 - Clone o projeto com o código inicial
-                            </span>
-                            <span>
-                                2 - Leia as instruções disponíveis no readme
-                            </span>
-                            <span>3 - Inicie o desenvolvimento!</span>
-                            <span>
-                                4 - Compartilhe seus resultados com a comunidade
-                            </span>
+                            <p>
+                                <span>1 -</span> Clone o projeto com o código inicial
+                            </p>
+                            <p>
+                                <span>2 -</span> Leia as instruções disponíveis no readme
+                            </p>
+                            <p><span>3 -</span> Inicie o desenvolvimento!</p>
+                            <p>
+                            <span>4 -</span> Compartilhe seus resultados com a comunidade
+                            </p>
                         </S.ChallengeStart>
                     </S.ChallengeContainer>
-
+                    </S.Content>
                     <S.DevContainer>
                         <img src={dev.avatar} alt="Dev" />
                         <S.DevInformation>
