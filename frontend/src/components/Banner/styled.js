@@ -59,7 +59,7 @@ export const Typewriter = styled.div`
             blink-caret 0.5s step-end infinite;
 
         ${media.lessThan('small')`
-            font-size: 1.25em !important;
+            font-size: 1.5em !important;
         `}
         ${media.lessThan('medium')`
             font-size: 1.8em;
