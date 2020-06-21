@@ -57,7 +57,7 @@ export default function Detail() {
                         </S.ChallengeLink>
                     </S.LeftColumn>
                     <S.Demo>
-                        <AwesomeSlider className="slider" bullets={false} mobileTouch={true}>
+                        <AwesomeSlider className="slider" bullets={true} mobileTouch={true}>
                             {images.map((image) => (
                                 <div><img src={image} alt="Challenge" /></div>
                                 ))}
