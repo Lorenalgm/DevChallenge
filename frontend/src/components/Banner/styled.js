@@ -7,11 +7,14 @@ export const BannerContainer = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 69px);
-    padding: 12px;
+    padding: 120px 12px;
 
-    @media (max-width: 800px) {
+    @media (min-width: 576px) and (max-width: 800px) {
         min-height: calc(100vh - 103px);
+    }
+
+    @media (min-width: 800px) {
+        min-height: calc(100vh - 69px);
     }
 `;
 
