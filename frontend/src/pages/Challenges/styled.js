@@ -25,11 +25,18 @@ export const Anchor = styled(Link)`
 `;
 
 export const CardImage = styled.div`
+    overflow: hidden;
+
     img {
         height: 12em;
         width: 20em;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
+        transition: 300ms;
+    }
+
+    img:hover {
+        transform: scale(1.05);
     }
 `;
 
