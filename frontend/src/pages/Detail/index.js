@@ -75,22 +75,32 @@ export default function Detail() {
                     <S.ChallengeContainer>
                         <S.ChallengeInclude>
                             <h3>O que está incluso?</h3>
-                            <span>
-                                <S.Icon icon={faCheck} /> Readme com instruções
-                                de requisitos, cores e fontes
-                            </span>
-                            <span>
-                                <S.Icon icon={faCheck} /> Imagens para adicionar
-                                no projeto
-                            </span>
-                            <span>
-                                <S.Icon icon={faCheck} /> Modelo com o design
-                                para utilizar como referência
-                            </span>
-                            <span>
-                                <S.Icon icon={faCheck} /> Arquivo contendo o
-                                texto que será utilizado
-                            </span>
+
+                            {challenge.type === 'Backend'?
+                                <span>
+                                    <S.Icon icon={faCheck} /> Readme com instruções
+                                    de requisitos e as rotas da aplicação
+                                </span>
+                            :
+                                <>
+                                    <span>
+                                    <S.Icon icon={faCheck} /> Readme com instruções
+                                    de requisitos, cores e fontes
+                                    </span>
+                                    <span>
+                                        <S.Icon icon={faCheck} /> Imagens para adicionar
+                                        no projeto
+                                    </span>
+                                    <span>
+                                        <S.Icon icon={faCheck} /> Modelo com o design
+                                        para utilizar como referência
+                                    </span>
+                                    <span>
+                                        <S.Icon icon={faCheck} /> Arquivo contendo o
+                                        texto que será utilizado
+                                    </span>
+                                </>
+                            }
                         </S.ChallengeInclude>
                         <S.ChallengeStart>
                             <h3>Como iniciar?</h3>
