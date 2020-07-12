@@ -15,7 +15,7 @@
     A website for developers to improve their skills by doing front-end and back-end challenges
        <br />
     <br />
-     <a href="https://devchallenge.now.sh/">DevChallenge</a>    
+     <a href="https://www.devchallenge.com.br/">DevChallenge</a>    
   </p>
 
 ## Índice
@@ -34,7 +34,7 @@ O <a href="https://www.devchallenge.com.br/" alt="DevChallenge">DevChallenge</a>
 
 ### Demo:
 <p align="center">
-<img src="https://i.ibb.co/DRJcdZm/novosdesafioss.gif" width="720" height="380">
+<img src="https://i.ibb.co/nLGdpF4/novosdesafioss.gif" alt="DevChallenge" width="720" height="380">
 </p>
 
 ### Tecnologias:
@@ -98,7 +98,7 @@ O backend está disponível no repositório: <a href="https://github.com/Lorenal
 ## Comunidade
 Nosso objetivo é ajudar cada vez mais na evolução de desenvolvedores! Por isso, temos uma comunidade exclusiva do DevChallenge no Discord. Bora? https://discord.gg/yvYXhGj <br>
 <br>
-Site: https://devchallenge.now.sh/ <br>
+Site: https://www.devchallenge.com.br/ <br>
 Linkedin: https://www.linkedin.com/company/devchallenge/<br>
 Twitter: https://twitter.com/dev_challenge<br>
 Instagram: https://www.instagram.com/devchallenge/<br>
