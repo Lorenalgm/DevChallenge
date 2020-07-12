@@ -17,10 +17,6 @@
     <br />
      <a href="https://devchallenge.now.sh/">DevChallenge</a>    
   </p>
-  
-<p align="center">
-<img src="https://trello-attachments.s3.amazonaws.com/590fa7f5a8ab015d0cf88052/590fa896d2d25e50583de620/0cba4e38c63264f8b7e2fd027e8e87ee/devmockup_(1).png" width="580" height="380">
-</p>
 
 ## Índice
 
@@ -34,16 +30,17 @@
 * [Comunidade](#comunidade)
 
 ## Sobre o Projeto
-O DevChallenge é um projeto que visa contrubuir com a evolução de desenvolvedores, disponibilizando desafios para que possam praticar, melhorar suas skills e criarem seus portfólios :)
+O <a href="https://www.devchallenge.com.br/" alt="DevChallenge">DevChallenge</a> é um projeto que visa contrubuir com a evolução de desenvolvedores, disponibilizando desafios para que possam praticar, melhorar suas skills e criarem seus portfólios :)
 
 ### Demo:
 <p align="center">
-<img src="https://trello-attachments.s3.amazonaws.com/590fa7f5a8ab015d0cf88052/590fa896d2d25e50583de620/e4e0650f52c6cff260083dbdc3b25891/dev.gif" width="720" height="380">
+<img src="https://i.ibb.co/DRJcdZm/novosdesafioss.gif" width="720" height="380">
 </p>
 
 ### Tecnologias:
-- Nodejs
-- Reactjs
+- Backend: Nodejs
+- Frontend: Reactjs
+- Banco: MongoDB
 
 ## Como Utilizar
 1 - Use um template do <a href="https://devchallenge.now.sh/">DevChallenge</a> com o código inicial<br>
@@ -64,8 +61,7 @@ Você pode ajudar com o projeto:<br>
 You can help by contributing with new challenges or improving the website
 
 ### Requisitos
-1. Editor de sua preferência. Indico o Visual Studio Code
-2. Nodejs
+1. Nodejs
 
 ### Instalar
 
@@ -96,30 +92,16 @@ yarn start
 
 <b>Back-end</b>
 
-1. Faça o <a target="_blank" href="https://github.com/Lorenalgm/DevChallengeAPI/archive/master.zip">Download </a> ou clone o repositório do DevChallenge
-```sh 
-git@github.com:Lorenalgm/DevChallengeAPI.git
-```
-2. Abra o projeto no seu editor
-3. No seu terminal, instale os pacotes necessários:
-```sh 
-yarn 
-``` 
-ou 
-```sh 
-npm install 
-```
-4. Boa! Agora você pode iniciar o servidor:
-```sh 
-yarn dev
-```
-5. O backend do Dechallenge backend está disponível! Agora você pode ver os dados no frontend. Se você quiser testar a API do DevChallenge, eu recomendo que utilize o Insomnia. O backend estará disponível em http://localhost:3333/
+O backend está disponível no repositório: <a href="https://github.com/Lorenalgm/DevChallengeAPI" alt="DevChallengeAPI">DevChallengeAPI</a>
+
 
 ## Comunidade
 Nosso objetivo é ajudar cada vez mais na evolução de desenvolvedores! Por isso, temos uma comunidade exclusiva do DevChallenge no Discord. Bora? https://discord.gg/yvYXhGj <br>
 <br>
 Site: https://devchallenge.now.sh/ <br>
-Linkedin: https://www.linkedin.com/in/lorenagmontes/
+Linkedin: https://www.linkedin.com/company/devchallenge/<br>
+Twitter: https://twitter.com/dev_challenge<br>
+Instagram: https://www.instagram.com/devchallenge/<br>
 
 [forks-shield]: https://img.shields.io/github/forks/Lorenalgm/DevChallenge.svg?style=flat-square
 [forks-url]: https://github.com/Lorenalgm/DevChallenge/network/members
