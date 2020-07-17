@@ -23,8 +23,9 @@ export const Tech = styled.div`
         margin-bottom: 1.4em;
     `}
 
+    transition: 0.25s;
+
     &:hover {
-        transition: 0.7s;
         background-color: #242020;
     }
 `;

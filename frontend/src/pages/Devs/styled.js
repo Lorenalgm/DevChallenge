@@ -42,6 +42,13 @@ export const Option = styled.div`
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+
+    transition: .25s;
+
+    &:hover {
+        transform: scale(1.05);
+        background-color: #242020;
+    }
 `;
 
 export const OptionIcon = styled(FontAwesomeIcon)`

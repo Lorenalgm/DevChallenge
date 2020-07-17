@@ -4,10 +4,9 @@ import { Link } from "react-router-dom";
 export const Section = styled.section`
     margin-top: 3%;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 `;
 
 export const ChallengeCard = styled.div`
@@ -17,7 +16,16 @@ export const ChallengeCard = styled.div`
     border-radius: 10px;
     cursor: pointer;
     margin-bottom: 2em;
-    margin-right: 1em;
+    position: relative;
+
+    overflow: hidden;
+
+    transition: .25s;
+
+    &:hover {
+        transform: scale(1.05);
+        background-color: #333333;
+    }
 `;
 
 export const Anchor = styled(Link)`
@@ -41,27 +49,29 @@ export const CardImage = styled.div`
 `;
 
 export const CardContent = styled.div`
+    padding: 0 15px;
+    color: #ffff;
+    text-align: center;
+
     h1 {
         font-size: 20px;
         font-weight: bold;
-        color: #ffff;
+        
         text-align: center;
         margin-top: 2%;
         margin-bottom: 2%;
-    }
-
-    p {
-        text-align: left;
-        color: #ffff;
-        text-align: center;
     }
 `;
 
 export const CardTechs = styled.div`
     display: grid;
     grid-template-columns: 2fr 1fr;
-    padding-top: 5px;
-    padding: 15px;
+    padding: 0 15px;
+
+    position: absolute;
+    bottom: 15px;
+
+    align-items: center;
 
     .tech {
         color: var(--color-yellow);
@@ -72,9 +82,11 @@ export const CardTechs = styled.div`
         background-color: var(--color-yellow);
         filter: brightness(90%);
         padding: 5px 20px;
-        border-radius: 20px;
+        border-radius: 25px;
         text-align: center;
         font-weight: bold;
         color: #000000;
+        align-items: center;
+        max-height: 30px;
     }
 `;
