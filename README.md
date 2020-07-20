@@ -87,7 +87,7 @@ cd frontend
 ```sh 
 yarn start
 ```
-5. Abra seu navegador! O Dechallenge estará disponvel em http://localhost:3000/ :)
+5. Abra seu navegador! O DevChallenge estará disponvel em http://localhost:3000/ :)
 
 
 <b>Back-end</b>
