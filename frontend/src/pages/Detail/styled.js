@@ -56,7 +56,7 @@ export const InfosType = styled.div`
     font-weight: bold;
     margin-left: 4%;
     margin-bottom: 1%;
-    color: var(--color-purple);
+    color: var(--purple);
     ${media.lessThan('medium')`
         margin: 0;
         width: 5em;
@@ -68,7 +68,7 @@ export const TitleContainer = styled.div`
     margin-left: 4%;
     margin-bottom: 1%;
     h1 {
-        color: var(--color-yellow);
+        color: var(--yellow);
         text-align: left;
     }
 
@@ -80,7 +80,7 @@ export const TitleContainer = styled.div`
 `;
 
 export const ChallengeDescription = styled.div`
-    color: #ffff;
+    color: var(--white);
     font-size: 1.2em;
     margin-left: 4%;
     margin-bottom: 4%;
@@ -100,7 +100,7 @@ export const Infos = styled.div`
 `;
 
 export const InfosLevel = styled.div`
-    background-color: #2C2929;
+    background-color: var(--gray);
     filter: brightness(90%);
     width: 7em;
     padding: 5px;
@@ -108,8 +108,7 @@ export const InfosLevel = styled.div`
     border-radius: 20px;
     text-align: center;
     font-weight: bold;
-    color: #fff;
-
+    color: var(--white);
     ${media.lessThan('medium')`
         width: 6em;
         margin-left: 0;
@@ -117,7 +116,7 @@ export const InfosLevel = styled.div`
 `;
 
 export const InfosTechs = styled.div`
-    background-color: #2C2929;
+    background-color: var(--gray);
     filter: brightness(90%);
     width: 7em;
     padding: 5px;
@@ -125,8 +124,7 @@ export const InfosTechs = styled.div`
     border-radius: 20px;
     text-align: center;
     font-weight: bold;
-    color: #fff;
-
+    color: var(--white);
     ${media.lessThan('medium')`
         width: 6em;
         margin-left: 0;
@@ -134,11 +132,10 @@ export const InfosTechs = styled.div`
 `;
 
 export const ChallengeLink = styled.a`
-    color: #ffff;
-    background-color: #5c0d78;
+    color: var(--white);
+    background-color: var(--purple);
     width: 20em;
     height: 3em;
-    border: 1px solid #000000;
     font-weight: bold;
     font-size: 20px;
     border-radius: 50px;
@@ -151,7 +148,7 @@ export const ChallengeLink = styled.a`
     align-items: center;
 
     &:hover {
-        background-color: #490861;
+        background-color: var(--dark-purple);
     }
 
     ${media.lessThan('medium')`
@@ -201,13 +198,13 @@ export const ChallengeAbout = styled.div`
     text-align: left;
 
     h1 {
-        color: var(--color-purple);
+        color: var(--purple);
         font-size: 1.6em;
     }
 
     p {
         margin-top: 1%;
-        color: #ffff;
+        color: var(--white);
     }
 
     ${media.lessThan('medium')`
@@ -228,7 +225,7 @@ export const ChallengeContainer = styled.div`
     line-height: 1.5em;
     margin-bottom: 4%;
     p {
-        color: #fff;
+        color: var(--white);
     }
 
     ${media.lessThan('medium')`
@@ -243,14 +240,14 @@ export const ChallengeInclude = styled.div`
     flex-direction: column;
 
     h3 {
-        color: var(--color-purple);
+        color: var(--purple);
         margin-top: 0.3em;
         padding: 0.2em;
         font-size: 1.6em;
     }
 
     span {
-        color: #ffff;
+        color: var(--white);
         padding: 0.2em;
     }
 
@@ -260,7 +257,7 @@ export const ChallengeInclude = styled.div`
 `;
 
 export const Icon = styled(FontAwesomeIcon)`
-    color: greenyellow;
+    color: var(--green);
 `;
 
 export const ChallengeStart = styled.div`
@@ -268,19 +265,19 @@ export const ChallengeStart = styled.div`
     flex-direction: column;
 
     h3 {
-        color: var(--color-purple);
+        color: var(--purple);
         padding: 0.2em;
         margin-top: 0.3em;
         font-size: 1.6em;
     }
 
     p {
-        color: #ffff;
+        color: var(--white);
         padding: 0.2em;
     }
 
     span{
-        color: var(--color-yellow);
+        color: var(--yellow);
         font-weight: bold;
     }
 
@@ -290,7 +287,7 @@ export const DevContainer = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: #2c2929;
+    background-color: var(--gray);
     border-radius: 1em;
     margin: 1em;
     height: 5em;
@@ -314,13 +311,13 @@ export const DevInformation = styled.div`
 
 export const DevName = styled.span`
     font-size: 18px;
-    color: #ffff;
+    color: var(--white);
 `;
 
 export const DevPosition = styled.span`
     font-weight: bold;
     font-size: 12px;
-    color: #ffff;
+    color: var(--white);
 `;
 
 export const DevSocialContainer = styled.div`
@@ -330,6 +327,6 @@ export const DevSocialContainer = styled.div`
 
 export const AnchorIcon = styled.a`
     text-decoration: none;
-    color: #ffff;
+    color: var(--white);
     padding: 2px;
 `;

@@ -10,7 +10,7 @@ export default function ChallengesSkeleton({ cards = 3 }) {
     }
 
     return (
-        <SkeletonTheme color="#202020" highlightColor="#444">
+        <SkeletonTheme color="#202020" highlightColor="#232323">
             <S.Section>
                 {arr.map(() => (
                     <S.ChallengeSkeleton>

@@ -27,10 +27,9 @@ export const NewsletterContainer = styled.section`
 `;
 
 export const NewsletterTitle = styled.h1`
-    color: #ffff;
+    color: var(--white);
     font-size: 2em;
     margin-bottom: 0.1em;
-    color: #ffff;
 
     ${media.lessThan('medium')`
         font-size: 1.3em;
@@ -39,7 +38,7 @@ export const NewsletterTitle = styled.h1`
 `;
 
 export const NewsletterParagraph = styled.p`
-    color: var(--color-yellow);
+    color: var(--yellow);
     font-size: 1em;
 
     ${media.lessThan('medium')`
@@ -65,7 +64,6 @@ export const NewsletterForm = styled.form`
         margin-top: 1em;
         margin-bottom: 1em;
         border-radius: 0.5em;
-        border: 1px solid #ffff;
         padding: 20px;
         font-size: 18px;
 
@@ -76,11 +74,10 @@ export const NewsletterForm = styled.form`
     }
 
     button {
-        color: #ffff;
-        background-color: #5c0d78;
+        color: var(--white);
+        background-color: var(--purple);
         width: 350px;
         height: 60px;
-        border: 1px solid #000000;
         font-weight: bold;
         font-size: 20px;
         border-radius: 50px;
@@ -93,7 +90,7 @@ export const NewsletterForm = styled.form`
         `}
 
         &:hover {
-            background-color: #490861;
+            background-color: var(--dark-purple);
         }
     }
 `;

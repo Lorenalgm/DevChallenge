@@ -27,7 +27,7 @@ export const Step = styled.div`
     `}
 
     h2 {
-        color: #f4cf0a;
+        color: var(--yellow);
         margin-top: 20px;
 
         ${media.lessThan('medium')`
@@ -37,7 +37,7 @@ export const Step = styled.div`
 `;
 
 export const Icon = styled(FontAwesomeIcon)`
-    color: #fff;
+    color: var(--white);
     width: 60px !important;
     height: 60px;
 

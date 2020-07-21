@@ -21,9 +21,9 @@ export const Header = styled.header`
 export const Title = styled.div`
     font-size: 30px;
     font-weight: bold;
-    color: #fff;
+    color: var(--white);
     span {
-        color: #f4cf0a;
+        color: var(--yellow);
     }
 `;
 
@@ -33,7 +33,7 @@ export const Menu = styled.div`
         flex-direction: row;
         list-style-type: none;
         font-size: 20px;
-        color: #ffff;
+        color: var(--white);
 
         li {
             margin-left: 0;
@@ -59,9 +59,9 @@ export const Menu = styled.div`
 
 export const StyledLink = styled(NavLink)`
     text-decoration: none;
-    color: #fff;
+    color: var(--white);
 
     &.is-active {
-        color: #f4cf0a;
+        color: var(--yellow);
     }
 `;

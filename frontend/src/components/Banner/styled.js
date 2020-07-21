@@ -18,12 +18,12 @@ export const BannerContainer = styled.div`
 `;
 
 export const BannerTitle = styled.h1`
-    color: #ffff;
+    color: var(--white);
     font-size: 60px;
 `;
 
 export const BannerSubtitle = styled.h2`
-    color: #f4cf0a;
+    color: var(--yellow);
     font-size: 20px;
     margin-top: 10px;
     margin-bottom: 20px;
@@ -34,11 +34,10 @@ export const BannerSubtitle = styled.h2`
 `;
 
 export const BannerButton = styled.button`
-    color: #ffff;
-    background-color: #5c0d78;
+    color: var(--white);
+    background-color: var(--purple);
     width: 250px;
     height: 60px;
-    border: 1px solid #000000;
     font-weight: bold;
     font-size: 20px;
     border-radius: 50px;
@@ -46,15 +45,15 @@ export const BannerButton = styled.button`
     transition: 0.3s;
 
     &:hover {
-        background-color: #490861;
+        background-color: var(--dark-purple);
     }
 `;
 
 export const Typewriter = styled.div`
     h1 {
-        color: #fff;
+        color: var(--white);
         overflow: hidden;
-        border-right: 0.15em solid #5c0d78;
+        border-right: 0.15em solid var(--purple);
         white-space: nowrap;
         letter-spacing: 0.02em;
         animation: typing 3.5s steps(30, end),
@@ -79,7 +78,7 @@ export const Typewriter = styled.div`
             border-color: transparent;
         }
         50% {
-            border-color: #5c0d78;
+            border-color: var(--purple);
         }
     }
 `;

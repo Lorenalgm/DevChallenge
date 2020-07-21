@@ -27,13 +27,13 @@ export const DevInformation = styled.div`
 
 export const DevName = styled.span`
     font-size: 18px;
-    color: #ffff;
+    color: var(--white);
 `;
 
 export const DevPosition = styled.span`
     font-weight: 700;
     font-size: 12px;
-    color: var(--color-yellow);
+    color: var(--yellow);
 `;
 
 export const DevSocialContainer = styled.div`
@@ -42,6 +42,6 @@ export const DevSocialContainer = styled.div`
 
 export const AnchorIcon = styled.a`
     text-decoration: none;
-    color: #fff;
+    color: var(--white);
     padding: 2px;
 `;

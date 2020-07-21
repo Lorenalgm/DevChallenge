@@ -42,16 +42,23 @@ export const Option = styled.div`
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+
+    transition: .25s;
+
+    &:hover {
+        transform: scale(1.05);
+        background-color: var(--dark-gray);
+    }
 `;
 
 export const OptionIcon = styled(FontAwesomeIcon)`
-    color: #f4cf0a !important;
+    color: var(--yellow) !important;
     font-size: 60px !important;
     height: 60px;
 `;
 
 export const OptionTitle = styled.h2`
-    color: #fff;
+    color: var(--white);
     margin-top: 20px;
     text-align: center;
 `;
@@ -63,7 +70,7 @@ export const Help = styled.div`
     align-items: center;
 
     h3 {
-        color: #ffff;
+        color: var(--white);
         font-size: 18px;
         font-weight: normal;
         margin-bottom: 0.5em;
@@ -71,11 +78,10 @@ export const Help = styled.div`
 `;
 
 export const Button = styled.a`
-    color: #ffff;
-    background-color: #5c0d78;
+    color: var(--white);
+    background-color: var(--purple);
     width: 15em;
     height: 3em;
-    border: 1px solid #000000;
     font-weight: bold;
     font-size: 18px;
     border-radius: 50px;
@@ -87,7 +93,7 @@ export const Button = styled.a`
     align-items: center;
 
     &:hover {
-        background-color: #490861;
+        background-color: var(--dark-purple);
     }
 `;
 
@@ -97,7 +103,7 @@ export const DevsContainer = styled.div`
 
 export const DevsTitle = styled.h1`
     text-align: center;
-    color: #fff;
+    color: var(--white);
 `;
 
 export const Devs = styled.div`
