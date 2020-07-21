@@ -9,9 +9,15 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     :root {
-        --color-yellow: #f4cf0a;
-        --color-black: #110e0e;
-        --color-purple: #5c0d78;
+        --yellow: #f4cf0a;
+        --black: #110e0e;
+        --white: #ffffff;
+        --purple: #5c0d78;
+        --dark-purple: #490861;
+        --gray: #2c2929;
+        --pale-gray: #333333;
+        --dark-gray: #242020;
+        --green: #adff2f;
     }
 
     * {
@@ -32,17 +38,17 @@ export const GlobalStyles = createGlobalStyle`
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
 
-        background-color: var(--color-black);
+        background-color: var(--black);
 
         ::-webkit-scrollbar-track {
-            background-color: #2c2929;
+            background-color: var(--gray);
         }
         ::-webkit-scrollbar {
             width: 6px;
             background: none;
         }
         ::-webkit-scrollbar-thumb {
-            background: #242020;
+            background: var(--dark-gray);
             border-radius: 3px;
         }
     }
@@ -52,11 +58,18 @@ export const GlobalStyles = createGlobalStyle`
             monospace;
     }
 
-
     header,
     body,
     input,
     button {
         font-family: "Roboto", Arial, Helvetica, sans-serif;
+    }
+
+    button,
+    input {
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        border: none;
     }
 `;

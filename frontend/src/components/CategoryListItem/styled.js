@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 export const Tech = styled.div`
     width: 300px;
     height: 300px;
-    background-color: #2c2929;
+    background-color: var(--gray);
     margin: 50px;
     border-radius: 10px;
     cursor: pointer;
@@ -19,19 +19,18 @@ export const Tech = styled.div`
     ${media.lessThan('medium')`
         height: 8em;
         width: 20em;
-        margin: 0;
-        margin-bottom: 1.4em;
+        margin: 1.4em;
     `}
 
     transition: 0.25s;
 
     &:hover {
-        background-color: #242020;
+        background-color: var(--dark-gray);
     }
 `;
 
 export const TechName = styled.h2`
-    color: #ffff;
+    color: var(--white);
     margin-top: 20px;
 
     ${media.lessThan('medium')`

@@ -5,27 +5,20 @@ export const Section = styled.section`
     margin-top: 3%;
     display: flex;
     flex-wrap: wrap;
+    max-width: 100vw;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
 `;
 
 export const ChallengeCard = styled.div`
     height: 21em;
     width: 20em;
-    background-color: #242020;
+    background-color: var(--dark-gray);
     border-radius: 10px;
     cursor: pointer;
-    margin-bottom: 2em;
+    margin: 0 .5em 2em .5em;
     position: relative;
-
     overflow: hidden;
-
-    transition: .25s;
-
-    &:hover {
-        transform: scale(1.05);
-        background-color: #333333;
-    }
 `;
 
 export const Anchor = styled(Link)`
@@ -34,25 +27,25 @@ export const Anchor = styled(Link)`
 
 export const CardImage = styled.div`
     overflow: hidden;
+    height: 12em;
+    width: 20em;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 
-    img {
-        height: 12em;
-        width: 20em;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        transition: 300ms;
+    img{
+        transition: .3s;
     }
-
-    img:hover {
-        transform: scale(1.05);
+    img:hover{
+        transform: scale(1.1);
     }
 `;
 
 export const CardContent = styled.div`
+    margin-top: 15px;
     padding: 0 15px;
-    color: #ffff;
+    color: var(--white);
     text-align: center;
-
+    
     h1 {
         font-size: 20px;
         font-weight: bold;
@@ -74,18 +67,18 @@ export const CardTechs = styled.div`
     align-items: center;
 
     .tech {
-        color: var(--color-yellow);
+        color: var(--yellow);
         font-weight: bold;
     }
 
     .level {
-        background-color: var(--color-yellow);
+        background-color: var(--yellow);
         filter: brightness(90%);
         padding: 5px 20px;
         border-radius: 25px;
         text-align: center;
         font-weight: bold;
-        color: #000000;
+        color: var(--black);
         align-items: center;
         max-height: 30px;
     }
