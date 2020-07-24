@@ -10,7 +10,7 @@ export default function Challenges({ location }) {
 
     useEffect(() => {
         async function loadChallenges() {
-            let response = '';
+            let response = [];
             if (location.state) {
               response = await api.get(`/challenges/?type=${location.state.type}`);
             } else {
