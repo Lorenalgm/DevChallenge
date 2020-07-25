@@ -4,13 +4,18 @@ import Header from '../../components/Header';
 import ChallengesSkeleton from '../../components/ChallengesSkeleton';
 import * as S from './styled';
 
-export default function Challenges() {
+export default function Challenges({ location }) {
     const [challenges, setChallenges] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         async function loadChallenges() {
-            const response = await api.get('/challenges');
+            let response = [];
+            if (location.state) {
+              response = await api.get(`/challenges/?type=${location.state.type}`);
+            } else {
+              response = await api.get('/challenges');
+            }
             // console.log(response.data);
             setChallenges(response.data);
 
@@ -18,7 +23,7 @@ export default function Challenges() {
         }
 
         loadChallenges();
-    }, []);
+    }, [location]);
 
     return (
         <>
@@ -29,7 +34,7 @@ export default function Challenges() {
                     {challenges.map((challenge) => (
                         <S.ChallengeCard key={challenge._id}>
                             <S.Anchor
-                                to={`detail/${challenge._id}`}
+                                to={`/detail/${challenge._id}`}
                             >
                                 <S.CardImage>
                                     <img src={challenge.background} alt="" />

@@ -1,11 +1,18 @@
 import React from 'react';
 
-import * as S from './styled';
 import Icon from 'react-web-vector-icons';
+import * as S from './styled';
 
 export default function CategoryListItem({ category }) {
+    const type = category.name.replace('-', '');
     return (
-        <S.Anchor className="challenge-link" to="/challenges">
+        <S.Anchor 
+          className="challenge-link"
+          to={{
+            pathname: `/challenges/${type.toLowerCase()}`,
+            state: { type },
+          }}
+        >
             <S.Tech>
                 <Icon
                     name={category.icon}
