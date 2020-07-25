@@ -99,9 +99,15 @@ O backend está disponível no repositório: <a href="https://github.com/Lorenal
 Nosso objetivo é ajudar cada vez mais na evolução de desenvolvedores! Por isso, temos uma comunidade exclusiva do DevChallenge no Discord. Bora? https://discord.gg/yvYXhGj <br>
 <br>
 Site: https://www.devchallenge.com.br/ <br>
-Linkedin: https://www.linkedin.com/company/devchallenge/<br>
-Twitter: https://twitter.com/dev_challenge<br>
-Instagram: https://www.instagram.com/devchallenge/<br>
+
+<table style="border-color:transparent">
+    <th>
+        <td><a href="https://discord.gg/yvYXhGj"><img src="https://cdn3.iconfinder.com/data/icons/discord/64/discord_20-512.png" width="30px" height="30px" alt="Discord">      </a></td>
+    <td><a href="https://www.linkedin.com/company/devchallenge/"><img src="https://image.flaticon.com/icons/svg/1384/1384014.svg" width="30px" height="30px"                alt="Linkedin"></a></td>
+    <td><a href="https://twitter.com/dev_challenge"><img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/43-twitter-512.png" width="30px" height="30px"        alt="Twitter"></a</td>
+    <td><a href="https://www.instagram.com/devchallenge/"><img src="https://cdn4.iconfinder.com/data/icons/picons-social/57/38-instagram-3-512.png" width="30px"            height="30px" alt="Instagram"></a></td>
+    </th>
+</table>
 
 [forks-shield]: https://img.shields.io/github/forks/Lorenalgm/DevChallenge.svg?style=flat-square
 [forks-url]: https://github.com/Lorenalgm/DevChallenge/network/members
