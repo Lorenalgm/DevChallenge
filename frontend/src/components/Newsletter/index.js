@@ -54,6 +54,7 @@ export default function Newsletter() {
                         placeholder="E-mail"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
+                        required
                     />
                     <button type="submit">Inscrever</button>
                 </S.NewsletterForm>
