@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import api from '../../services/api';
 import {useParams}  from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
+import DevCard from '../../components/DevCard';
+
 import * as S from './styled';
-import Header from '../../components/Header';
 
 export default function Detail() {
     const [challenge, setChallenge] = useState([]);
@@ -30,7 +29,6 @@ export default function Detail() {
 
     return (
         <body>
-            <Header />
             <S.Container>
                 <S.Banner>
                     <S.LeftColumn>
@@ -117,37 +115,13 @@ export default function Detail() {
                         </S.ChallengeStart>
                     </S.ChallengeContainer>
                     </S.Content>
-                    <S.DevContainer>
-                        <img src={dev.avatar} alt="Dev" />
-                        <S.DevInformation>
-                            <S.DevName>{dev.name}</S.DevName>
-                            <S.DevPosition>
-                                {dev.position}
-                            </S.DevPosition>
-                        </S.DevInformation>
-                        <S.DevSocialContainer>
-                            {dev.github && (
-                                <S.AnchorIcon
-                                    className="icon"
-                                    rel="noopener noreferrer"
-                                    target="_blank"
-                                    href={`https://github.com/${dev.github}`}
-                                >
-                                    <FontAwesomeIcon icon={faGithubSquare} />
-                                </S.AnchorIcon>
-                            )}
-                            {dev.linkedin && (
-                                <S.AnchorIcon
-                                    className="icon"
-                                    rel="noopener noreferrer"
-                                    target="_blank"
-                                    href={`https://www.linkedin.com/${dev.linkedin}`}
-                                >
-                                    <FontAwesomeIcon icon={faLinkedin} />
-                                </S.AnchorIcon>
-                            )}
-                        </S.DevSocialContainer>
-                    </S.DevContainer>
+                    <DevCard
+                        name={dev.name}
+                        position={dev.position}
+                        avatar={dev.avatar}
+                        github={dev.github}
+                        linkedin={dev.linkedin}
+                    />      
                 </S.FlexContainer>
             </S.Container>
         </body>

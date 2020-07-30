@@ -1,22 +1,21 @@
 import styled from "styled-components";
-import media from 'styled-media-query';
 
 export const Section = styled.section`
-    max-width: 1000px;
-    margin: 50px auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 35px;
-
-    ${media.lessThan('medium')`
-        grid-template-columns: 1fr;
-        margin: 40px;
-    `}
+    margin-top: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100vw;
+    align-items: center;
+    justify-content: center;
 `;
 
 export const ChallengeSkeleton = styled.div`
-    border-radius: 10px;
+    border-radius: 16px;
     cursor: pointer;
-    height: 300px;
-    width: 300px;
+
+    height: 430px;
+    width: 380px;
+    margin: 0 .5em 1em .5em;
+
+    overflow: hidden;
 `;

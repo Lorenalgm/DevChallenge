@@ -10,30 +10,39 @@ export const Section = styled.section`
     justify-content: center;
 `;
 
-export const ChallengeCard = styled.div`
-    height: 21em;
-    width: 20em;
-    background-color: var(--dark-gray);
-    border-radius: 10px;
+export const Anchor = styled(Link)`
+    text-decoration: none;
     cursor: pointer;
-    margin: 0 .5em 2em .5em;
+
+    color: var(--white);
+`;
+
+export const ChallengeCard = styled.div`
+    height: 430px;
+    width: 380px;
+
+    background-color: var(--secondary);
+    border-radius: 16px;
+    
+    margin: 0 .5em 1em .5em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     position: relative;
     overflow: hidden;
 `;
 
-export const Anchor = styled(Link)`
-    text-decoration: none;
-`;
-
 export const CardImage = styled.div`
     overflow: hidden;
-    height: 12em;
-    width: 20em;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    height: 200px;
+    width: 380px;
+    background-color: #2B3035;
 
     img{
         transition: .3s;
+        width: 100%
     }
     img:hover{
         transform: scale(1.1);
@@ -41,45 +50,60 @@ export const CardImage = styled.div`
 `;
 
 export const CardContent = styled.div`
-    margin-top: 15px;
-    padding: 0 15px;
+    margin-top: 16px;
     color: var(--white);
     text-align: center;
+
+    padding: 0 16px;
     
     h1 {
-        font-size: 20px;
-        font-weight: bold;
-        
-        text-align: center;
-        margin-top: 2%;
-        margin-bottom: 2%;
+        font-size: 28px;
+        margin-bottom: 12px;
+        font-weight: 500;
     }
 `;
 
 export const CardTechs = styled.div`
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    padding: 0 15px;
-
     position: absolute;
-    bottom: 15px;
-
-    align-items: center;
-
+    top: 16px;
+    padding: 0 16px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
     .tech {
         color: var(--yellow);
         font-weight: bold;
     }
 
     .level {
-        background-color: var(--yellow);
-        filter: brightness(90%);
+        background-color: var(--quaternary);
         padding: 5px 20px;
         border-radius: 25px;
         text-align: center;
         font-weight: bold;
-        color: var(--black);
+        color: var(--white);
         align-items: center;
-        max-height: 30px;
+        height: 30px;
     }
 `;
+
+export const Button = styled.button`
+    width: 300px;
+    height: 56px;
+
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    
+    background: var(--purple);
+    color: var(--white);
+    font-weight: bold;
+    font-size: 18px;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+`

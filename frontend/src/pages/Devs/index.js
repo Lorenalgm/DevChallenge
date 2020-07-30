@@ -8,8 +8,8 @@ import {
 import * as S from './styled';
 
 import api from '../../services/api';
-import Header from '../../components/Header';
-import Dev from '../../components/Dev';
+
+import DevCard from '../../components/DevCard';
 
 export default function Challenges() {
     const [devs, setDevs] = useState([]);
@@ -29,8 +29,6 @@ export default function Challenges() {
 
     return (
         <>
-            <Header />
-
             {!loading && (
                 <S.Container>
                     <S.OptionsContainer>
@@ -85,10 +83,16 @@ export default function Challenges() {
                         </a>
                     </S.OptionsContainer>
                     <S.DevsContainer>
-                        <S.DevsTitle>Últimas contribuições</S.DevsTitle>
+                        <h1>Últimas contribuições</h1>
                         <S.Devs>
                             {devs.map((dev) => (
-                                <Dev info={dev} />
+                                <DevCard
+                                    name={dev.name}
+                                    position={dev.position}
+                                    avatar={dev.avatar}
+                                    github={dev.github}
+                                    linkedin={dev.linkedin}
+                                />
                             ))}
                         </S.Devs>
                     </S.DevsContainer>

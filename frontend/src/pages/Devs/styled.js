@@ -33,10 +33,14 @@ export const OptionsContainer = styled.div`
 export const Option = styled.div`
     width: 300px;
     height: 300px;
-    background-color: #2c2929;
+
+    background-color: var(--secondary);
+
     margin: 20px;
     border-radius: 10px;
+
     cursor: pointer;
+
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -47,7 +51,7 @@ export const Option = styled.div`
 
     &:hover {
         transform: scale(1.05);
-        background-color: var(--dark-gray);
+        background-color: var(--dark-hover);
     }
 `;
 
@@ -77,39 +81,27 @@ export const Help = styled.div`
     }
 `;
 
-export const Button = styled.a`
-    color: var(--white);
-    background-color: var(--purple);
-    width: 15em;
-    height: 3em;
-    font-weight: bold;
-    font-size: 18px;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: 0.3s;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &:hover {
-        background-color: var(--dark-purple);
-    }
-`;
-
 export const DevsContainer = styled.div`
     margin-top: 4em;
-`;
-
-export const DevsTitle = styled.h1`
-    text-align: center;
     color: var(--white);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    >h1 {
+        margin-bottom: 1em;
+    }
 `;
 
 export const Devs = styled.div`
     display: flex;
     flex-direction: row;
-    margin-top: 3em;
-    justify-content: center;
+
+    justify-content: space-evenly;
     flex-wrap: wrap;
+
+    > div {
+        margin-bottom: 2em;
+    }
 `;
