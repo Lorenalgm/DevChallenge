@@ -3,11 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 export const Header = styled.header`
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 2%;
 
     @media (max-width: 800px) {
         display: flex;

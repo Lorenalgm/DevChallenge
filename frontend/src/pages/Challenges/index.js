@@ -27,7 +27,6 @@ export default function Challenges({ location }) {
 
     return (
         <>
-            <Header />
             {loading && <ChallengesSkeleton cards={6} />}
             {!loading && (
                 <S.Section>
@@ -37,19 +36,28 @@ export default function Challenges({ location }) {
                                 to={`/detail/${challenge._id}`}
                             >
                                 <S.CardImage>
+                                    <S.CardTechs>
+                                        <p className="tech">
+                                            {challenge.techs.join(', ')}
+                                        </p>
+                                        <p className="level">{challenge.level}</p>
+                                    </S.CardTechs>
                                     <img src={challenge.background} alt="" />
                                 </S.CardImage>
+                            </S.Anchor>
                                 <S.CardContent>
-                                    <h1>{challenge.name}</h1>
+                                    <S.Anchor
+                                    to={`/detail/${challenge._id}`}
+                                    >
+                                        <h1>{challenge.name}</h1>
+                                    </S.Anchor>
                                     <p>{challenge.description}</p>
                                 </S.CardContent>
-                                <S.CardTechs>
-                                    <p className="tech">
-                                        {challenge.techs.join(', ')}
-                                    </p>
-                                    <p className="level">{challenge.level}</p>
-                                </S.CardTechs>
-                            </S.Anchor>
+                                <S.Anchor
+                                    to={`/detail/${challenge._id}`}
+                                    >
+                                        <S.Button>Abrir desafio</S.Button>
+                                </S.Anchor>
                         </S.ChallengeCard>
                     ))}
                 </S.Section>

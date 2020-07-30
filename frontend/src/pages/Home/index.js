@@ -10,7 +10,6 @@ import Banner from '../../components/Banner';
 export default function Home() {
     return (
         <>
-            <Header />
             <Banner />
             <CategoriesList />
             <Steps />
