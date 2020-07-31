@@ -30,9 +30,9 @@ export default function Header(props) {
                         </S.StyledLink>
                     </li>
                     <li>
-                      <S.StyledLink activeClassName="is-active" to="/login">
-                        Entrar
-                      </S.StyledLink>
+                      <S.ButtonLink activeClassName="is-active" to="/login">
+                          Entrar
+                      </S.ButtonLink>
                     </li>
                 </ul>
             </S.Menu>

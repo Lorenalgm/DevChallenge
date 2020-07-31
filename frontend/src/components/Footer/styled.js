@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from 'styled-media-query';
 
 export const Container = styled.footer`
   width: 100%;
@@ -11,14 +12,20 @@ export const Container = styled.footer`
 
   display: flex;
   justify-content: space-between;
+
+  ${media.lessThan('small')`
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+  `}
 `;
 
 export const Social = styled.div`
-  display: flex;
+    display: flex;
   
-  > a ~ a {
-      margin-left: 20px;
-    } 
+    > a ~ a {
+        margin-left: 20px;
+      }
 `;
 
 export const Title = styled.div`
@@ -29,6 +36,10 @@ export const Title = styled.div`
   span {
       color: var(--yellow);
   }
+
+  ${media.lessThan('small')`
+      margin-bottom: 25px;
+  `}
 `;
 
 export const Anchor = styled.a`
