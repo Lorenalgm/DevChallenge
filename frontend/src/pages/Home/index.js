@@ -1,4 +1,7 @@
 import React from 'react';
+
+import Header from '../../components/Header';
+
 import CategoriesList from '../../components/CategoriesList';
 import Newsletter from '../../components/Newsletter';
 import Steps from '../../components/Steps';
