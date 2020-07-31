@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
     @font-face {
@@ -28,7 +29,7 @@ export const GlobalStyles = createGlobalStyle`
         --tertiary: #1A1C1F;
 
         --quaternary: rgba(84, 84, 84, 0.75);
-        --quinary: #393d42;
+        --quinary: #858585;
         --senary: #828386;
 
         --dark-hover: #23272C;
@@ -49,14 +50,13 @@ export const GlobalStyles = createGlobalStyle`
 
     html, body, #root {
         height: 100%;
+        min-height: 100%;
         max-width: 1440px;
 
         margin: 0 auto 0 auto;
     }
 
     body {
-        padding: 40px 80px 0 80px;
-
         background-color: var(--primary);
 
         ::-webkit-scrollbar-track {
@@ -80,4 +80,8 @@ export const GlobalStyles = createGlobalStyle`
 
         border: none;
     }
+`;
+
+export const Container = styled.main`
+      min-height: calc(100vh - 330px);
 `;
