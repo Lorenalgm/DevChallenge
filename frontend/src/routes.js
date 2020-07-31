@@ -7,7 +7,8 @@ import Home from './pages/Home';
 import Challenges from './pages/Challenges';
 import Detail from './pages/Detail';
 import Devs from './pages/Devs';
-import Header from './components/Header'
+import Login from './pages/Login';
+import Header from './components/Header';
 
 function Routes() {
     return (
@@ -22,6 +23,7 @@ function Routes() {
                 <Route path="/challenges/mobile" component={Challenges} />
                 <Route path="/detail/:id" component={Detail} />
                 <Route path="/devs" component={Devs} />
+                <Route path="/login" component={Login} />
             </Switch>
         </BrowserRouter>
     );
