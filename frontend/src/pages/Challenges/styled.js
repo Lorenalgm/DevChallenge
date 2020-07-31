@@ -106,4 +106,11 @@ export const Button = styled.button`
     border-radius: 50px;
 
     cursor: pointer;
+
+    transition: .25s;
+
+    &:hover{
+        width: 320px;
+        height: 60px;
+    }
 `

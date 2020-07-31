@@ -5,7 +5,7 @@ export const Container = styled.footer`
   max-width: 1440px;
   height: 330px;
 
-  padding: 40px 80px;
+  padding: 40px 100px;
 
   background-color: var(--tertiary);
 
@@ -22,7 +22,7 @@ export const Social = styled.div`
 `;
 
 export const Title = styled.div`
-  font-size: 30px;
+  font-size: 24px;
   font-weight: bold;
   color: var(--white);
 
@@ -33,7 +33,7 @@ export const Title = styled.div`
 
 export const Anchor = styled.a`
     text-decoration: none;
-    font-size: 28px;
+    font-size: 18px;
     color: var(--quinary);
 
     transition: .25s;

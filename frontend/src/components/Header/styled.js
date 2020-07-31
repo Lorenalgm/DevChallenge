@@ -52,6 +52,8 @@ export const Menu = styled.div`
           border-radius: 25px;
 
           text-align: center;
+
+          cursor: pointer;
         }
 
         @media (max-width: 800px) {
