@@ -27,21 +27,33 @@ export const Menu = styled.div`
     ul {
         display: flex;
         flex-direction: row;
+        align-items: center;
         list-style-type: none;
         font-size: 20px;
         color: var(--white);
 
         li {
-            margin-left: 0;
-        }
-
-        & li:not(:first-child) {
-            margin-left: 20px;
+          margin-left: 0;
+          margin-right: 20px;
         }
 
         li:hover {
             opacity: 0.8;
             cursor: pointer;
+        }
+
+        li:last-child {
+          background-color: var(--quaternary);
+          padding: 5px 20px;
+          border-radius: 25px;
+          text-align: center;
+          font-size: 20px;
+          color: var(--white);
+          width: 100px;
+
+          &.is-active {
+            color: var(--black);
+          }
         }
 
         @media (max-width: 800px) {
@@ -58,6 +70,6 @@ export const StyledLink = styled(NavLink)`
     color: var(--white);
 
     &.is-active {
-        color: var(--yellow);
+      color: var(--yellow);
     }
 `;
