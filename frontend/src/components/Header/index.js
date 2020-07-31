@@ -1,5 +1,4 @@
 import React from 'react';
-
 import * as S from './styled';
 
 export default function Header(props) {
@@ -29,6 +28,11 @@ export default function Header(props) {
                         <S.StyledLink activeClassName="is-active" to="/devs">
                             Comunidade
                         </S.StyledLink>
+                    </li>
+                    <li>
+                      <S.StyledLink activeClassName="is-active" to="/login">
+                        Entrar
+                      </S.StyledLink>
                     </li>
                 </ul>
             </S.Menu>

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import api from '../../services/api';
-import Header from '../../components/Header';
 import ChallengesSkeleton from '../../components/ChallengesSkeleton';
 import * as S from './styled';
 
