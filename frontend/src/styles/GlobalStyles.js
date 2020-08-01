@@ -83,5 +83,5 @@ export const GlobalStyles = createGlobalStyle`
 `;
 
 export const Container = styled.main`
-      min-height: calc(100vh - 330px);
+      min-height: calc(100vh - 250px);
 `;

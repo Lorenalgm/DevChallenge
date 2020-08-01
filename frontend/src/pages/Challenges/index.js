@@ -15,7 +15,7 @@ export default function Challenges({ location }) {
             } else {
               response = await api.get('/challenges');
             }
-            // console.log(response.data);
+            //console.log(response.data);
             setChallenges(response.data);
 
             setLoading(false);
@@ -36,10 +36,9 @@ export default function Challenges({ location }) {
                             >
                                 <S.CardImage>
                                     <S.CardTechs>
-                                        <p className="tech">
-                                            {challenge.techs.join(', ')}
-                                        </p>
                                         <p className="level">{challenge.level}</p>
+                                        
+                                        <p className="tech">{challenge.techs}</p>
                                     </S.CardTechs>
                                     <img src={challenge.background} alt="" />
                                 </S.CardImage>

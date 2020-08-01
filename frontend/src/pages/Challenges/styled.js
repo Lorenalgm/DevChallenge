@@ -72,11 +72,7 @@ export const CardTechs = styled.div`
     justify-content: space-between;
     z-index: 999;
     .tech {
-        color: var(--yellow);
-        font-weight: bold;
-    }
-
-    .level {
+       
         background-color: var(--quaternary);
         padding: 5px 20px;
         border-radius: 25px;
@@ -85,6 +81,11 @@ export const CardTechs = styled.div`
         color: var(--white);
         align-items: center;
         height: 30px;
+    }
+
+    .level {
+        color: var(--yellow);
+        font-weight: bold;
     }
 `;
 

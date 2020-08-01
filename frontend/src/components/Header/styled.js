@@ -4,8 +4,11 @@ import { NavLink } from 'react-router-dom';
 export const Header = styled.header`
     display: flex;
     justify-content: space-between;
+
     padding: 0px 80px 0 80px;
     margin-top: 40px;
+
+    font-weight: normal;
 
     @media (max-width: 800px) {
         display: flex;
@@ -44,18 +47,6 @@ export const Menu = styled.div`
             opacity: .8;
         }
 
-        li:last-child {
-          background-color: var(--quaternary);
-
-          width: 100px;
-          padding: 5px 20px;
-          border-radius: 25px;
-
-          text-align: center;
-
-          cursor: pointer;
-        }
-
         @media (max-width: 800px) {
             justify-content: center;
             text-align: center;
@@ -72,6 +63,23 @@ export const StyledLink = styled(NavLink)`
     cursor: pointer;
 
     &.is-active {
-      color: var(--yellow);
+        color: var(--yellow);
+    }
+`;
+
+export const ButtonLink = styled(NavLink)`
+    background-color: var(--quaternary);
+
+    width: 100px;
+    padding: 5px 20px;
+    border-radius: 25px;
+
+    text-align: center;
+    text-decoration: none;
+    color: var(--white);
+
+    &.is-active {
+        background-color: var(--yellow);
+        color: var(--tertiary);
     }
 `;
