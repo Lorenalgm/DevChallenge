@@ -10,6 +10,7 @@ import * as S from './styled';
 
 export default function Detail() {
     const [challenge, setChallenge] = useState([]);
+    const [techs, setTechs] = useState([]);
     const [dev, setDev] = useState([]);
     const [images, setImages] = useState([]);
     const {id} = useParams();
@@ -19,6 +20,7 @@ export default function Detail() {
 
             const response = await api.get(`/challenges/${id}`);
             setChallenge(response.data[0]);
+            setTechs(response.data[0].techs.toString().split(', '));
             setDev(response.data[0].dev_id);
             setImages(response.data[0].images);
 
@@ -42,7 +44,7 @@ export default function Detail() {
 
                         <S.Infos>
                             <S.InfosLevel>{challenge.level}</S.InfosLevel>
-                            <S.InfosTechs>{challenge.techs}</S.InfosTechs>
+                            {techs.map((item, id) => <S.InfosTechs key={id}>{item}</S.InfosTechs>)}
                         </S.Infos>
 
                         <S.ChallengeLink

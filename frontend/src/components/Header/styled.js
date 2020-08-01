@@ -1,8 +1,10 @@
 import styled from 'styled-components';
+import media from 'styled-media-query';
 import { NavLink } from 'react-router-dom';
 
 export const Header = styled.header`
     display: flex;
+    align-items: center;
     justify-content: space-between;
 
     padding: 0px 80px 0 80px;
@@ -10,13 +12,18 @@ export const Header = styled.header`
 
     font-weight: normal;
 
-    @media (max-width: 800px) {
+    ${media.between('medium', 'large')`
+        padding: 0px 60px 0 60px;
+    `}
+
+    ${media.lessThan('medium')`
         display: flex;
+        align-items: flex-start;
         flex-direction: column;
-        align-content: center;
-        text-align: center;
         justify-content: center;
-    }
+        padding: 0;
+        position: relative;
+    `}
 `;
 
 export const Title = styled.div`
@@ -27,6 +34,25 @@ export const Title = styled.div`
     span {
         color: var(--yellow);
     }
+
+    ${media.lessThan('medium')`
+        margin-left: 20px;
+    `}
+`;
+
+export const MenuMobile = styled.div`
+    display: none;
+
+    ${media.lessThan('medium')`
+        display: block;
+        position: absolute;
+        font-size: 25px;
+        color: var(--white);
+        top: 2;
+        right: 0;
+        margin-right: 20px;
+        cursor: pointer;
+    `}
 `;
 
 export const Menu = styled.div`
@@ -47,12 +73,23 @@ export const Menu = styled.div`
             opacity: .8;
         }
 
-        @media (max-width: 800px) {
-            justify-content: center;
-            text-align: center;
-            align-content: center;
+        ${media.lessThan('medium')`
+            background-color: var(--primary);
+            flex-direction: column;
+            width: 100%;
+            position: absolute;
+            justify-content: space-around;
+            height: 300px;
+            align-items: center;
             margin-top: 0.5em;
-        }
+            left: -100%;
+            transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
+            transition: transform 0.5s ease;
+            z-index: 1000;
+            li ~ li {
+              margin-left: 0;
+            }
+        `}
     }
 `;
 

@@ -95,40 +95,34 @@ export const ChallengeDescription = styled.div`
 
 export const Infos = styled.div`
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: left;
+    padding: 0 4%;
 `;
 
 export const InfosLevel = styled.div`
     background-color: var(--gray);
     filter: brightness(90%);
-    width: 7em;
-    padding: 5px;
-    margin-left: 4%;
+    padding: 7px 15px;
+    margin-right: 2%;
+    margin-bottom: 2%;
     border-radius: 20px;
     text-align: center;
     font-weight: bold;
     color: var(--white);
-    ${media.lessThan('medium')`
-        width: 6em;
-        margin-left: 0;
-    `}
 `;
 
 export const InfosTechs = styled.div`
     background-color: var(--gray);
     filter: brightness(90%);
-    width: 7em;
-    padding: 5px;
-    margin-left: 4%;
+    padding: 7px 15px;
+    margin-right: 2%;
+    margin-bottom: 2%;
     border-radius: 20px;
     text-align: center;
     font-weight: bold;
     color: var(--white);
-    ${media.lessThan('medium')`
-        width: 6em;
-        margin-left: 0;
-    `}
 `;
 
 export const ChallengeLink = styled.a`
@@ -172,6 +166,7 @@ export const Demo = styled.div`
     ${media.lessThan('medium')`
         width: 80%;
         height: 100%;
+        margin-bottom: 20px;
     `}
 `;
 
