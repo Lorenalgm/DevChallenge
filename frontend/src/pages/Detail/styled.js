@@ -102,7 +102,7 @@ export const Infos = styled.div`
 `;
 
 export const InfosLevel = styled.div`
-    background-color: var(--gray);
+    background-color: var(--quaternary);
     filter: brightness(90%);
     padding: 7px 15px;
     margin-right: 2%;
@@ -114,7 +114,7 @@ export const InfosLevel = styled.div`
 `;
 
 export const InfosTechs = styled.div`
-    background-color: var(--gray);
+    background-color: var(--quaternary);
     filter: brightness(90%);
     padding: 7px 15px;
     margin-right: 2%;
@@ -282,7 +282,7 @@ export const DevContainer = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: var(--gray);
+    background-color: var(--quaternary);
     border-radius: 1em;
     margin: 1em;
     height: 5em;

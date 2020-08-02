@@ -93,8 +93,14 @@ export const Buttons = styled.div`
 `;
 
 export const ButtonBox = styled.div`
+    flex: 4;
     display: flex;
     align-items: center;
+    transition: .5s;
+
+    &:hover{
+        flex: 5;
+    }
 
     ${media.lessThan('small')`
         justify-content: space-between;
@@ -104,29 +110,49 @@ export const ButtonBox = styled.div`
 export const SocialButton = styled.button`
     cursor: pointer;
     height: 2.5em;
-    width: 4em;
+    width: 6em;
     border-radius: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+
     &:first-child {
-        margin-right: 12px;
+        margin-right: 6px;
     }
 
     &:hover{
         background: var(--yellow);
+        width: 7em;
     }
 
     ${media.lessThan('small')`
         width: 45%;
-        margin: 0;
     `}
 `;
 
 export const Button = styled.button`
     cursor: pointer;
-    height: 2.5em;
-    width: 7em;
-    border-radius: 50px;
-    transition: .25s;
-    font-size: 18px;
+
+    color: var(--white);
+    background: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+
+    border-radius: 25px;
+    height: 42px;
+
+    flex: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+   
+    &:hover{
+        flex: 5;
+    }
 
     ${media.lessThan('small')`
         width: 45%;
@@ -134,13 +160,11 @@ export const Button = styled.button`
     `}
 
     &:first-child {
-        margin-right: 21px;
+        margin-right: 6px;
     }
 
     &.cadastro {
-        background-color: transparent;
         border: 2px solid var(--quaternary);
-        color: var(--white);
 
         &:hover{
             background-color: var(--quaternary);
@@ -149,8 +173,7 @@ export const Button = styled.button`
 
     &.login {
         background-color: var(--purple);
-        color: var(--white);
-
+        
         &:hover{
             background-color: var(--dark-purple);
         }

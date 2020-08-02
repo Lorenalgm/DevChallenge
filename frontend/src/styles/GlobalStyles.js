@@ -15,17 +15,16 @@ export const GlobalStyles = createGlobalStyle`
         --purple: #5c0d78;
 
 
-        --white: #E5E5E5;
+        --white: #FFFFFF;
 
         --black: #110e0e;
         --dark-purple: #490861;
-        --gray: #2c2929;
         --pale-gray: #333333;
         --dark-gray: #242020;
         --green: #adff2f;
 
-        --primary: #202225;
-        --secondary: #343A40;
+        --primary: #0e0f10;
+        --secondary: #191b1d;
         --tertiary: #1A1C1F;
 
         --quaternary: rgba(84, 84, 84, 0.75);
@@ -83,5 +82,5 @@ export const GlobalStyles = createGlobalStyle`
 `;
 
 export const Container = styled.main`
-      min-height: calc(100vh - 250px);
+      min-height: calc(100vh - 100px);
 `;

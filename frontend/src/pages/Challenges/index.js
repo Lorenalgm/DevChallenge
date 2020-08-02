@@ -6,6 +6,7 @@ import * as S from './styled';
 export default function Challenges({ location }) {
     const [challenges, setChallenges] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [techs, setTechs] = useState([]);
 
     useEffect(() => {
         async function loadChallenges() {
@@ -17,6 +18,7 @@ export default function Challenges({ location }) {
             }
             //console.log(response.data);
             setChallenges(response.data);
+            setTechs(response.data[0].techs.toString().split(', '));
 
             setLoading(false);
         }
@@ -38,7 +40,7 @@ export default function Challenges({ location }) {
                                     <S.CardTechs>
                                         <p className="level">{challenge.level}</p>
                                         
-                                        <p className="tech">{challenge.techs}</p>
+                                        {techs.map((item, id) => <p className="tech" key={id}>{item}</p>)}
                                     </S.CardTechs>
                                     <img src={challenge.background} alt="" />
                                 </S.CardImage>

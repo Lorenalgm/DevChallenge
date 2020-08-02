@@ -43,6 +43,10 @@ export const Title = styled.div`
 export const MenuMobile = styled.div`
     display: none;
 
+    transition: .25s;
+
+    
+
     ${media.lessThan('medium')`
         display: block;
         position: absolute;
@@ -52,6 +56,8 @@ export const MenuMobile = styled.div`
         right: 0;
         margin-right: 20px;
         cursor: pointer;
+
+        z-index: 9999;
     `}
 `;
 
@@ -82,8 +88,8 @@ export const Menu = styled.div`
             height: 300px;
             align-items: center;
             margin-top: 0.5em;
-            left: -100%;
-            transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
+            top: -100%;
+            transform: ${({ open }) => open ? 'translateY(-100%)' : 'translateY(0)'};
             transition: transform 0.5s ease;
             z-index: 1000;
             li ~ li {

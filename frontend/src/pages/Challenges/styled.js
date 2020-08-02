@@ -18,8 +18,8 @@ export const Anchor = styled(Link)`
 `;
 
 export const ChallengeCard = styled.div`
-    height: 430px;
-    width: 380px;
+    height: 350px;
+    width: 300px;
 
     background-color: var(--secondary);
     border-radius: 16px;
@@ -36,8 +36,8 @@ export const ChallengeCard = styled.div`
 
 export const CardImage = styled.div`
     overflow: hidden;
-    height: 200px;
-    width: 380px;
+    height: 150px;
+    width: 300px;
     background-color: #2B3035;
 
     img{
@@ -90,7 +90,7 @@ export const CardTechs = styled.div`
 `;
 
 export const Button = styled.button`
-    width: 300px;
+    width: 80%;
     height: 56px;
 
     position: absolute;
@@ -111,7 +111,6 @@ export const Button = styled.button`
     transition: .25s;
 
     &:hover{
-        width: 320px;
-        height: 60px;
+        width: 83%;
     }
 `

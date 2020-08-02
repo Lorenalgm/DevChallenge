@@ -2,7 +2,7 @@ import React from 'react';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import * as S from './styled';
 
-export default function ChallengesSkeleton({ cards = 3 }) {
+export default function ChallengesSkeleton({ cards = 4 }) {
     const arr = Array.from({ length: cards }, (_, i) => i + 1);
 
     return (

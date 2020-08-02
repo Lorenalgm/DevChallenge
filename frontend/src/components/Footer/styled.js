@@ -4,7 +4,7 @@ import media from 'styled-media-query';
 export const Container = styled.footer`
   width: 100%;
   max-width: 1440px;
-  height: 250px;
+  height: 100px;
 
   padding: 40px 100px;
 
