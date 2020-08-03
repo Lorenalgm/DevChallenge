@@ -6,9 +6,9 @@ import * as S from './styled';
 export default function Challenges({ location }) {
     const [challenges, setChallenges] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [techs, setTechs] = useState([]);
 
     useEffect(() => {
+        window.scrollTo(0,0);
         async function loadChallenges() {
             let response = [];
             if (location.state) {
@@ -16,9 +16,8 @@ export default function Challenges({ location }) {
             } else {
               response = await api.get('/challenges');
             }
-            //console.log(response.data);
+            // console.log(response.data);
             setChallenges(response.data);
-            setTechs(response.data[0].techs.toString().split(', '));
 
             setLoading(false);
         }
@@ -31,15 +30,16 @@ export default function Challenges({ location }) {
             {loading && <ChallengesSkeleton cards={6} />}
             {!loading && (
                 <S.Section>
-                    {challenges.map((challenge) => (
+                    {challenges.map((challenge) => {
+                      const techs = challenge.techs.toString().split(', ')
+                    const color = challenge.level === 'beginner' ? 'nephritis' :  challenge.level === 'intermediate' ? 'pumpkin' : 'pomegranate'
+                    return (
                         <S.ChallengeCard key={challenge._id}>
                             <S.Anchor
                                 to={`/detail/${challenge._id}`}
                             >
                                 <S.CardImage>
-                                    <S.CardTechs>
-                                        <p className="level">{challenge.level}</p>
-                                        
+                                    <S.CardTechs>      
                                         {techs.map((item, id) => <p className="tech" key={id}>{item}</p>)}
                                     </S.CardTechs>
                                     <img src={challenge.background} alt="" />
@@ -49,17 +49,18 @@ export default function Challenges({ location }) {
                                     <S.Anchor
                                     to={`/detail/${challenge._id}`}
                                     >
+                                        <S.Level color={color}>{challenge.level}</S.Level>
                                         <h1>{challenge.name}</h1>
                                     </S.Anchor>
-                                    <p>{challenge.description}</p>
-                                </S.CardContent>
+                                    <p>{challenge.description}</p>                                </S.CardContent>
                                 <S.Anchor
                                     to={`/detail/${challenge._id}`}
                                     >
                                         <S.Button>Abrir desafio</S.Button>
                                 </S.Anchor>
                         </S.ChallengeCard>
-                    ))}
+                    )
+                    })}
                 </S.Section>
             )}
         </>

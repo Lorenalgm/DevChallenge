@@ -16,8 +16,8 @@ export default function Detail() {
     const {id} = useParams();
 
     useEffect(() => {
-        async function loadChallenge() {
-
+            window.scrollTo(0,0);
+            async function loadChallenge() {
             const response = await api.get(`/challenges/${id}`);
             setChallenge(response.data[0]);
             setTechs(response.data[0].techs.toString().split(', '));
@@ -30,7 +30,7 @@ export default function Detail() {
     }, [id]);
 
     return (
-        <body>
+        <>
             <S.Container>
                 <S.Banner>
                     <S.LeftColumn>
@@ -59,7 +59,7 @@ export default function Detail() {
                     <S.Demo>
                         <AwesomeSlider className="slider" bullets={true} mobileTouch={true}>
                             {images.map((image) => (
-                                <div><img src={image} alt="Challenge" /></div>
+                                <div key={image}><img src={image} alt="Challenge" /></div>
                                 ))}
                         </AwesomeSlider>
                     </S.Demo>
@@ -126,6 +126,6 @@ export default function Detail() {
                     />      
                 </S.FlexContainer>
             </S.Container>
-        </body>
+        </>
     );
 }

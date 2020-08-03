@@ -23,6 +23,10 @@ export const GlobalStyles = createGlobalStyle`
         --dark-gray: #242020;
         --green: #adff2f;
 
+        --nephritis: #27ae60;
+        --pumpkin: #d35400;
+        --pomegranate: #c0392b;
+
         --primary: #0e0f10;
         --secondary: #191b1d;
         --tertiary: #1A1C1F;
