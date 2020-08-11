@@ -8,6 +8,7 @@ import Challenges from './pages/Challenges';
 import Detail from './pages/Detail';
 import Devs from './pages/Devs';
 import Login from './pages/Login';
+import Submit from './pages/Submit';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -29,6 +30,7 @@ function Routes() {
                     <Route path="/detail/:id" component={Detail} />
                     <Route path="/devs" component={Devs} />
                     <Route path="/login" component={Login} />
+                    <Route path="/submit" component={Submit} />
                 </Switch>
             </Container>
             <Footer />

@@ -76,12 +76,19 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     button,
-    input {
+    input,
+    textarea {
         appearance: none;
         -moz-appearance: none;
         -webkit-appearance: none;
 
         border: none;
+    }
+
+    textarea {
+        font-family: "Roboto", Arial, Helvetica, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 `;
 
