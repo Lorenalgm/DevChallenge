@@ -20,7 +20,7 @@ export default function Detail() {
             setChallenge(response.data[0]);
             setTechs(response.data[0].techs.toString().split(', '));
             setImages(response.data[0].images);
-        }
+        
 
         loadChallenge();
     }, [id]);
