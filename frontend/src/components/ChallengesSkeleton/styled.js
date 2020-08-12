@@ -13,8 +13,8 @@ export const ChallengeSkeleton = styled.div`
     border-radius: 16px;
     cursor: pointer;
 
-    height: 430px;
-    width: 380px;
+    height: 350px;
+    width: 300px;
     margin: 0 .5em 1em .5em;
 
     overflow: hidden;

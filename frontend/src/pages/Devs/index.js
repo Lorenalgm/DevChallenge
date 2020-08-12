@@ -89,6 +89,7 @@ export default function Challenges() {
                         <S.Devs>
                             {devs.map((dev) => (
                                 <DevCard
+                                    key={dev._id}
                                     name={dev.name}
                                     position={dev.position}
                                     avatar={dev.avatar}

@@ -11,15 +11,14 @@ import Header from '../../components/Header';
 
 export default function Detail() {
     const [challenge, setChallenge] = useState([]);
+    const [techs, setTechs] = useState([]);
     const [dev, setDev] = useState([]);
     const [images, setImages] = useState([]);
     const { id } = useParams();
 
     useEffect(() => {
-        async function loadChallenge() {
-            const response = await api.get(`/challenges/${id}`);
             setChallenge(response.data[0]);
-            setDev(response.data[0].dev_id);
+            setTechs(response.data[0].techs.toString().split(', '));
             setImages(response.data[0].images);
         }
 
@@ -27,8 +26,7 @@ export default function Detail() {
     }, [id]);
 
     return (
-        <body>
-            <Header />
+        <>
             <S.Container>
                 <S.Banner>
                     <S.LeftColumn>
@@ -42,7 +40,7 @@ export default function Detail() {
 
                         <S.Infos>
                             <S.InfosLevel>{challenge.level}</S.InfosLevel>
-                            <S.InfosTechs>{challenge.techs}</S.InfosTechs>
+                            {techs.map((item, id) => <S.InfosTechs key={id}>{item}</S.InfosTechs>)}
                         </S.Infos>
 
                         <S.ChallengeLink
@@ -61,10 +59,8 @@ export default function Detail() {
                             mobileTouch={true}
                         >
                             {images.map((image) => (
-                                <div>
-                                    <img src={image} alt="Challenge" />
-                                </div>
-                            ))}
+                                <div key={image}><img src={image} alt="Challenge" /></div>
+                                ))}
                         </AwesomeSlider>
                     </S.Demo>
                 </S.Banner>
@@ -137,6 +133,6 @@ export default function Detail() {
                     />
                 </S.FlexContainer>
             </S.Container>
-        </body>
+        </>
     );
 }
