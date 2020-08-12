@@ -2,18 +2,14 @@ import React from 'react';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import * as S from './styled';
 
-export default function ChallengesSkeleton({ cards = 3 }) {
-    var arr = [];
-
-    for (var i = 0; i < parseInt(cards); i++) {
-        arr.push('');
-    }
+export default function ChallengesSkeleton({ cards = 4 }) {
+    const arr = Array.from({ length: cards }, (_, i) => i + 1);
 
     return (
         <SkeletonTheme color="#1A1C1F" highlightColor="#1F2124">
             <S.Section>
-                {arr.map(() => (
-                    <S.ChallengeSkeleton>
+                {arr.map(item => (
+                    <S.ChallengeSkeleton  key={item}>
                         <Skeleton height={'100%'} width={'100%'} />
                     </S.ChallengeSkeleton>
                 ))}

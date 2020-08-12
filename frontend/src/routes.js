@@ -7,22 +7,39 @@ import Home from './pages/Home';
 import Challenges from './pages/Challenges';
 import Detail from './pages/Detail';
 import Devs from './pages/Devs';
-import Header from './components/Header'
+import Login from './pages/Login';
+import Submit from './pages/Submit';
+import UserChallenges from './pages/UserChallenges';
+import Dashboard from './pages/Dashboard';
+
+import Header from './components/Header';
+import Footer from './components/Footer';
+
+import { Container } from './styles/GlobalStyles';
 
 function Routes() {
     return (
         <BrowserRouter>
             <ToastContainer />
-            <Header />
-            <Switch>
-                <Route path="/" exact component={Home} />
-                <Route path="/challenges" component={Challenges} />
-                <Route path="/challenges/frontend" component={Challenges} />
-                <Route path="/challenges/backend" component={Challenges} />
-                <Route path="/challenges/mobile" component={Challenges} />
-                <Route path="/detail/:id" component={Detail} />
-                <Route path="/devs" component={Devs} />
-            </Switch>
+            <Container>
+                <Switch>
+                    <Route path="/" exact component={Home} />
+                    <Route path="/challenges" component={Challenges} />
+                    <Route path="/challenges/frontend" component={Challenges} />
+                    <Route path="/challenges/backend" component={Challenges} />
+                    <Route path="/challenges/mobile" component={Challenges} />
+                    <Route path="/detail/:id" component={Detail} />
+                    <Route path="/devs" component={Devs} />
+                    <Route path="/login" component={Login} />
+                    <Route path="/submit" component={Submit} />
+                    <Route path="/dashboard" component={Dashboard} />
+                    <Route
+                        path="/dashboard/myChallenges"
+                        component={UserChallenges}
+                    />
+                </Switch>
+            </Container>
+            <Footer />
         </BrowserRouter>
     );
 }

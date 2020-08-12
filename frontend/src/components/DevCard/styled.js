@@ -4,6 +4,7 @@ export const Card = styled.div`
     min-width: 300px;
     height: 90px;
 
+    box-sizing: border-box;
     padding: 0px 10px;
 
     background: var(--secondary);
