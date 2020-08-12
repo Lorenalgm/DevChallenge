@@ -8,13 +8,11 @@ import Challenges from './pages/Challenges';
 import Detail from './pages/Detail';
 import Devs from './pages/Devs';
 import Login from './pages/Login';
-import Header from './components/Header';
 
 function Routes() {
     return (
         <BrowserRouter>
             <ToastContainer />
-            <Header />
             <Switch>
                 <Route path="/" exact component={Home} />
                 <Route path="/challenges" component={Challenges} />
