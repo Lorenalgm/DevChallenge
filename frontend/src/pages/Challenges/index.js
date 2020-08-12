@@ -24,8 +24,7 @@ export default function Challenges({ location }) {
 
         loadChallenges();
     }, [location]);
-
-export default function Home() {
+    
     return (
         <>
             {loading && <ChallengesSkeleton cards={6} />}
