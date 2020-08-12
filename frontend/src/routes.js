@@ -9,17 +9,18 @@ import Detail from './pages/Detail';
 import Devs from './pages/Devs';
 import Login from './pages/Login';
 import Submit from './pages/Submit';
+import UserChallenges from './pages/UserChallenges';
+import Dashboard from './pages/Dashboard';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-import { Container } from './styles/GlobalStyles'
+import { Container } from './styles/GlobalStyles';
 
 function Routes() {
     return (
         <BrowserRouter>
             <ToastContainer />
-            <Header />
             <Container>
                 <Switch>
                     <Route path="/" exact component={Home} />
@@ -31,6 +32,11 @@ function Routes() {
                     <Route path="/devs" component={Devs} />
                     <Route path="/login" component={Login} />
                     <Route path="/submit" component={Submit} />
+                    <Route path="/dashboard" component={Dashboard} />
+                    <Route
+                        path="/dashboard/myChallenges"
+                        component={UserChallenges}
+                    />
                 </Switch>
             </Container>
             <Footer />

@@ -10,6 +10,7 @@ import * as S from './styled';
 import api from '../../services/api';
 
 import DevCard from '../../components/DevCard';
+import Header from '../../components/Header';
 
 export default function Challenges() {
     const [devs, setDevs] = useState([]);
@@ -29,6 +30,7 @@ export default function Challenges() {
 
     return (
         <>
+            <Header />
             {!loading && (
                 <S.Container>
                     <S.OptionsContainer>
