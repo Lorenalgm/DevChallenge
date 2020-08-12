@@ -8,6 +8,8 @@ import Challenges from './pages/Challenges';
 import Detail from './pages/Detail';
 import Devs from './pages/Devs';
 import Login from './pages/Login';
+import UserChallenges from './pages/UserChallenges';
+import Dashboard from './pages/Dashboard';
 
 function Routes() {
     return (
@@ -22,6 +24,11 @@ function Routes() {
                 <Route path="/detail/:id" component={Detail} />
                 <Route path="/devs" component={Devs} />
                 <Route path="/login" component={Login} />
+                <Route path="/dashboard" component={Dashboard} />
+                <Route
+                    path="/dashboard/myChallenges"
+                    component={UserChallenges}
+                />
             </Switch>
         </BrowserRouter>
     );
