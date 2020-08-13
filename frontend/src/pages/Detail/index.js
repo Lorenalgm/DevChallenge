@@ -29,6 +29,7 @@ export default function Detail() {
 
     return (
         <>
+            <Header />
             <S.Container>
                 <S.Banner>
                     <S.LeftColumn>
