@@ -17,8 +17,10 @@ export default function Detail() {
     const { id } = useParams();
 
     useEffect(() => {
+        async function loadChallenge() {
+            const response = await api.get(`/challenges/${id}`);
             setChallenge(response.data[0]);
-            setTechs(response.data[0].techs.toString().split(', '));
+            setDev(response.data[0].dev_id);
             setImages(response.data[0].images);
         }
 
@@ -27,6 +29,7 @@ export default function Detail() {
 
     return (
         <>
+            <Header />
             <S.Container>
                 <S.Banner>
                     <S.LeftColumn>
