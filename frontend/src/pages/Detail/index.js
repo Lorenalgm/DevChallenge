@@ -10,9 +10,9 @@ import * as S from './styled';
 import Header from '../../components/Header';
 
 export default function Detail() {
-    const [challenge, setChallenge] = useState([]);
+    const [challenge, setChallenge] = useState({});
     const [techs, setTechs] = useState([]);
-    const [dev, setDev] = useState([]);
+    const [dev, setDev] = useState({});
     const [images, setImages] = useState([]);
     const { id } = useParams();
 
@@ -22,6 +22,7 @@ export default function Detail() {
             setChallenge(response.data[0]);
             setDev(response.data[0].dev_id);
             setImages(response.data[0].images);
+            setTechs(response.data[0].techs);
         }
 
         loadChallenge();
@@ -43,7 +44,9 @@ export default function Detail() {
 
                         <S.Infos>
                             <S.InfosLevel>{challenge.level}</S.InfosLevel>
-                            {techs.map((item, id) => <S.InfosTechs key={id}>{item}</S.InfosTechs>)}
+                            {techs.map((item, id) => (
+                                <S.InfosTechs key={id}>{item}</S.InfosTechs>
+                            ))}
                         </S.Infos>
 
                         <S.ChallengeLink
@@ -62,8 +65,10 @@ export default function Detail() {
                             mobileTouch={true}
                         >
                             {images.map((image) => (
-                                <div key={image}><img src={image} alt="Challenge" /></div>
-                                ))}
+                                <div key={image}>
+                                    <img src={image} alt="Challenge" />
+                                </div>
+                            ))}
                         </AwesomeSlider>
                     </S.Demo>
                 </S.Banner>

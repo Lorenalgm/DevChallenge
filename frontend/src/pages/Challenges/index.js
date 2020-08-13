@@ -43,7 +43,9 @@ export default function Challenges({ location }) {
                                 : 'pomegranate';
                         return (
                             <S.ChallengeCard key={challenge._id}>
-                                <S.Anchor to={`/detail/${challenge._id}`}>
+                                <S.Anchor
+                                    to={`/challenge/${challenge._id}/detail`}
+                                >
                                     <S.CardImage>
                                         <S.CardTechs>
                                             {techs.map((item, id) => (
@@ -59,7 +61,9 @@ export default function Challenges({ location }) {
                                     </S.CardImage>
                                 </S.Anchor>
                                 <S.CardContent>
-                                    <S.Anchor to={`/detail/${challenge._id}`}>
+                                    <S.Anchor
+                                        to={`/challenge/${challenge._id}/detail`}
+                                    >
                                         <S.Level color={color}>
                                             {challenge.level}
                                         </S.Level>
@@ -67,7 +71,9 @@ export default function Challenges({ location }) {
                                     </S.Anchor>
                                     <p>{challenge.description}</p>{' '}
                                 </S.CardContent>
-                                <S.Anchor to={`/detail/${challenge._id}`}>
+                                <S.Anchor
+                                    to={`/challenge/${challenge._id}/detail`}
+                                >
                                     <S.Button>Abrir desafio</S.Button>
                                 </S.Anchor>
                             </S.ChallengeCard>

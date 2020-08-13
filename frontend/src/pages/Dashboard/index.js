@@ -3,7 +3,6 @@ import React from 'react';
 import DashboardDefault from '../../components/DashboardDefault';
 import StatusCard from '../../components/StatusCard';
 import { StatusCardWrapper } from './styled';
-import DevCard from '../../components/DevCard';
 
 function Dashboard() {
     return (

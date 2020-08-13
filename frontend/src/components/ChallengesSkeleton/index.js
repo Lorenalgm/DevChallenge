@@ -8,8 +8,8 @@ export default function ChallengesSkeleton({ cards = 4 }) {
     return (
         <SkeletonTheme color="#1A1C1F" highlightColor="#1F2124">
             <S.Section>
-                {arr.map(item => (
-                    <S.ChallengeSkeleton  key={item}>
+                {arr.map((item) => (
+                    <S.ChallengeSkeleton key={item}>
                         <Skeleton height={'100%'} width={'100%'} />
                     </S.ChallengeSkeleton>
                 ))}

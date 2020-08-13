@@ -6,12 +6,12 @@ import * as S from './styled';
 export default function CategoryListItem({ category }) {
     const type = category.name.replace('-', '');
     return (
-        <S.Anchor 
-          className="challenge-link"
-          to={{
-            pathname: `/challenges/${type.toLowerCase()}`,
-            state: { type },
-          }}
+        <S.Anchor
+            className="challenge-link"
+            to={{
+                pathname: `/challenges/${type.toLowerCase()}`,
+                state: { type },
+            }}
         >
             <S.Card>
                 <Icon
