@@ -9,6 +9,7 @@ export const Aside = styled.aside`
     align-items: center;
     flex-direction: column;
     text-align: center;
+    z-index: -1;
 
     width: 350px;
     background: var(--secondary);
