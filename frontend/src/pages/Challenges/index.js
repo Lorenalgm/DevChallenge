@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import api from '../../services/api';
 import ChallengesSkeleton from '../../components/ChallengesSkeleton';
+import Header from '../../components/Header';
 import * as S from './styled';
 
 export default function Challenges({ location }) {
@@ -27,6 +28,7 @@ export default function Challenges({ location }) {
     
     return (
         <>
+            <Header />
             {loading && <ChallengesSkeleton cards={6} />}
             {!loading && (
                 <S.Section>
