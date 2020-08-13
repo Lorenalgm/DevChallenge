@@ -4,7 +4,7 @@ import SidebarUser from '../SidebarUser';
 import Logo from '../Logo';
 import { DashboardContent, DbHeader } from './styled';
 
-function DashboardDefault() {
+function DashboardDefault(props) {
     return (
         <>
             <SidebarUser />
@@ -12,6 +12,7 @@ function DashboardDefault() {
                 <DbHeader>
                     <Logo />
                 </DbHeader>
+                {props.children}
             </DashboardContent>
         </>
     );

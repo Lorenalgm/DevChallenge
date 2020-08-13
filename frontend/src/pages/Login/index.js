@@ -16,11 +16,19 @@ export default function Login() {
                     <S.Box>
                         <S.Field>
                             <FontAwesomeIcon icon={faAt} color="grey" />
-                            <S.Input placeholder="Email" type="email" required />
+                            <S.Input
+                                placeholder="Email"
+                                type="email"
+                                required
+                            />
                         </S.Field>
                         <S.Field>
                             <FontAwesomeIcon icon={faLock} color="grey" />
-                            <S.Input placeholder="Senha" type="password" required />
+                            <S.Input
+                                placeholder="Senha"
+                                type="password"
+                                required
+                            />
                         </S.Field>
                     </S.Box>
                     <S.Buttons>
@@ -34,7 +42,9 @@ export default function Login() {
                         </S.ButtonBox>
 
                         <S.ButtonBox>
-                            <S.Button className="cadastro">Criar conta</S.Button>
+                            <S.Button className="cadastro">
+                                Criar conta
+                            </S.Button>
                             <S.Button className="login">Entrar</S.Button>
                         </S.ButtonBox>
                     </S.Buttons>

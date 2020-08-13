@@ -2,7 +2,10 @@ import styled from 'styled-components';
 
 export const DashboardContent = styled.div`
     display: flex;
-    padding-left: 300px;
+    flex-direction: column;
+    margin-left: 300px;
+    padding-left: 50px;
+    color: var(--white);
 `;
 
 export const DbHeader = styled.div`
