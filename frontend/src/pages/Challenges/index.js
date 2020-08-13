@@ -3,7 +3,6 @@ import api from '../../services/api';
 import ChallengesSkeleton from '../../components/ChallengesSkeleton';
 import Header from '../../components/Header';
 import * as S from './styled';
-import Header from '../../components/Header';
 
 export default function Challenges({ location }) {
     const [challenges, setChallenges] = useState([]);
