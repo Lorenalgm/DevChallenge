@@ -7,14 +7,18 @@ import * as S from './styled';
 export default function Challenges({ location }) {
     const [challenges, setChallenges] = useState([]);
     const [loading, setLoading] = useState(true);
-
+    function capitalize(s){
+        return s && s[0].toUpperCase() + s.slice(1);
+    }
     useEffect(() => {
         window.scrollTo(0, 0);
         async function loadChallenges() {
             let response = [];
-            if (location.state) {
+            let type = location.search.split('=')[1];
+            type = capitalize(type)
+            if (type) {
                 response = await api.get(
-                    `/challenges/?type=${location.state.type}`
+                    `/challenges/?type=${type}`
                 );
             } else {
                 response = await api.get('/challenges');
@@ -44,7 +48,7 @@ export default function Challenges({ location }) {
                         return (
                             <S.ChallengeCard key={challenge._id}>
                                 <S.Anchor
-                                    to={`/challenge/${challenge._id}/detail`}
+                                    to={`/challenges/${challenge._id}/details`}
                                 >
                                     <S.CardImage>
                                         <S.CardTechs>
@@ -62,7 +66,7 @@ export default function Challenges({ location }) {
                                 </S.Anchor>
                                 <S.CardContent>
                                     <S.Anchor
-                                        to={`/challenge/${challenge._id}/detail`}
+                                        to={`/challenges/${challenge._id}/details`}
                                     >
                                         <S.Level color={color}>
                                             {challenge.level}
@@ -72,7 +76,7 @@ export default function Challenges({ location }) {
                                     <p>{challenge.description}</p>{' '}
                                 </S.CardContent>
                                 <S.Anchor
-                                    to={`/challenge/${challenge._id}/detail`}
+                                    to={`/challenges/${challenge._id}/details`}
                                 >
                                     <S.Button>Abrir desafio</S.Button>
                                 </S.Anchor>

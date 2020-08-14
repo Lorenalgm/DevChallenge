@@ -22,13 +22,14 @@ function Routes() {
             <Container>
                 <Switch>
                     <Route path="/" exact component={Home} />
-                    <Route path="/challenges" component={Challenges} />
+                    <Route exact path="/challenges" component={Challenges} />
                     <Route
+                        exact
                         path="/challenges?type=[backend|mobile|frontend]"
                         component={Challenges}
                     />
 
-                    <Route path="/challenge/:id/detail" component={Detail} />
+                    <Route path="/challenges/:id/details" component={Detail} />
                     <Route path="/devs" component={Devs} />
                     <Route path="/login" component={Login} />
                     <Route path="/submit" component={Submit} />
