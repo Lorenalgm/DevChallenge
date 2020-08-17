@@ -10,30 +10,48 @@ export const Section = styled.section`
     justify-content: center;
 `;
 
-export const ChallengeCard = styled.div`
-    height: 21em;
-    width: 20em;
-    background-color: var(--dark-gray);
-    border-radius: 10px;
+export const Anchor = styled(Link)`
+    text-decoration: none;
     cursor: pointer;
-    margin: 0 .5em 2em .5em;
+
+    color: var(--white);
+`;
+
+export const Level = styled.span`
+    background-color: var(--${props => props.color});
+    padding: 3px 8px;
+    font-size: 11px;
+    height: 25px; 
+    border-radius: 20px;
+    font-weight: bold;
+`;
+
+export const ChallengeCard = styled.div`
+    height: 350px;
+    width: 300px;
+
+    background-color: var(--secondary);
+    border-radius: 16px;
+    
+    margin: 0 .5em 1em .5em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     position: relative;
     overflow: hidden;
 `;
 
-export const Anchor = styled(Link)`
-    text-decoration: none;
-`;
-
 export const CardImage = styled.div`
     overflow: hidden;
-    height: 12em;
-    width: 20em;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    height: 150px;
+    width: 300px;
+    background-color: #2B3035;
 
     img{
         transition: .3s;
+        width: 100%
     }
     img:hover{
         transform: scale(1.1);
@@ -41,45 +59,75 @@ export const CardImage = styled.div`
 `;
 
 export const CardContent = styled.div`
-    margin-top: 15px;
-    padding: 0 15px;
+    margin-top: 16px;
     color: var(--white);
-    text-align: center;
+    /* text-align: center; */
+    width: 100%;
+    padding: 0 16px;
     
     h1 {
-        font-size: 20px;
-        font-weight: bold;
-        
-        text-align: center;
-        margin-top: 2%;
-        margin-bottom: 2%;
+        font-size: 28px;
+        margin-top: 7px;
+        font-weight: 500;
     }
+
+    /* p {
+      margin-top: 10px;
+    } */
 `;
 
 export const CardTechs = styled.div`
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    padding: 0 15px;
-
     position: absolute;
-    bottom: 15px;
-
-    align-items: center;
-
+    right: 0;
+    top: 16px;
+    padding: 0 16px;
+    width: 45%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 999;
     .tech {
-        color: var(--yellow);
-        font-weight: bold;
-    }
-
-    .level {
-        background-color: var(--yellow);
-        filter: brightness(90%);
-        padding: 5px 20px;
+        background-color: var(--quaternary);
+        padding: 5px 10px;
+        margin-bottom: 5px;
         border-radius: 25px;
         text-align: center;
         font-weight: bold;
-        color: var(--black);
+        color: var(--white);
         align-items: center;
-        max-height: 30px;
+        height: 25px;
+        font-size: 13px;
+    }
+
+    .level {
+        color: var(--yellow);
+        font-weight: bold;
     }
 `;
+
+export const Button = styled.button`
+    width: 80%;
+    height: 46px;
+
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    
+    background: var(--purple);
+    color: var(--white);
+    font-weight: bold;
+    font-size: 18px;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    transition: .25s;
+
+    &:hover{
+        width: 83%;
+    }
+`
