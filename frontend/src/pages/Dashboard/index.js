@@ -2,7 +2,8 @@ import React from 'react';
 
 import DashboardDefault from '../../components/DashboardDefault';
 import StatusCard from '../../components/StatusCard';
-import { StatusCardWrapper } from './styled';
+import { StatusCardWrapper, Title } from './styled';
+import { ChallengeCard } from '../../components/ChallengeCard/styled';
 
 function Dashboard() {
     return (
@@ -12,7 +13,7 @@ function Dashboard() {
                     <StatusCard
                         border="var(--green)"
                         count="5"
-                        title="Desafios concluidos"
+                        title="Desafios concluídos"
                     />
                     <StatusCard
                         border="var(--yellow)"
@@ -20,7 +21,8 @@ function Dashboard() {
                         title="Desafios em andamento"
                     />
                 </StatusCardWrapper>
-                <h1>#WeeklyDevChallenge</h1>
+                <Title>#WeeklyDevChallenge</Title>
+                <ChallengeCard />
             </DashboardDefault>
         </>
     );

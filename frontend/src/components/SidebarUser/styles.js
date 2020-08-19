@@ -12,6 +12,7 @@ export const Aside = styled.aside`
     z-index: -1;
 
     width: 350px;
+    height: 100%;
     background: var(--secondary);
     color: var(--white);
 `;

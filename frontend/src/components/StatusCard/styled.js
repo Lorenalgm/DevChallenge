@@ -20,7 +20,6 @@ export const CardWrapper = styled.div`
     }
 
     & > h1 {
-        margin-left: 50px;
         font-size: 50px;
     }
 `;

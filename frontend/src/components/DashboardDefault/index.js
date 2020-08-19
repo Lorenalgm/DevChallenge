@@ -8,12 +8,10 @@ function DashboardDefault(props) {
     return (
         <>
             <SidebarUser />
-            <DashboardContent>
-                <DbHeader>
-                    <Logo />
-                </DbHeader>
-                {props.children}
-            </DashboardContent>
+            <DbHeader>
+                <Logo />
+            </DbHeader>
+            <DashboardContent>{props.children}</DashboardContent>
         </>
     );
 }
