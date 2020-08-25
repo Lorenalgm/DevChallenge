@@ -17,9 +17,18 @@ export const Anchor = styled(Link)`
     color: var(--white);
 `;
 
+export const Level = styled.span`
+    background-color: var(--${props => props.color});
+    padding: 3px 8px;
+    font-size: 11px;
+    height: 25px; 
+    border-radius: 20px;
+    font-weight: bold;
+`;
+
 export const ChallengeCard = styled.div`
-    height: 430px;
-    width: 380px;
+    height: 350px;
+    width: 300px;
 
     background-color: var(--secondary);
     border-radius: 16px;
@@ -36,8 +45,8 @@ export const ChallengeCard = styled.div`
 
 export const CardImage = styled.div`
     overflow: hidden;
-    height: 200px;
-    width: 380px;
+    height: 150px;
+    width: 300px;
     background-color: #2B3035;
 
     img{
@@ -52,45 +61,54 @@ export const CardImage = styled.div`
 export const CardContent = styled.div`
     margin-top: 16px;
     color: var(--white);
-    text-align: center;
-
+    /* text-align: center; */
+    width: 100%;
     padding: 0 16px;
     
     h1 {
         font-size: 28px;
-        margin-bottom: 12px;
+        margin-top: 7px;
         font-weight: 500;
     }
+
+    /* p {
+      margin-top: 10px;
+    } */
 `;
 
 export const CardTechs = styled.div`
     position: absolute;
+    right: 0;
     top: 16px;
     padding: 0 16px;
-    width: 100%;
+    width: 45%;
+    height: auto;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     z-index: 999;
     .tech {
-        color: var(--yellow);
-        font-weight: bold;
-    }
-
-    .level {
         background-color: var(--quaternary);
-        padding: 5px 20px;
+        padding: 5px 10px;
+        margin-bottom: 5px;
         border-radius: 25px;
         text-align: center;
         font-weight: bold;
         color: var(--white);
         align-items: center;
-        height: 30px;
+        height: 25px;
+        font-size: 13px;
+    }
+
+    .level {
+        color: var(--yellow);
+        font-weight: bold;
     }
 `;
 
 export const Button = styled.button`
-    width: 300px;
-    height: 56px;
+    width: 80%;
+    height: 46px;
 
     position: absolute;
     bottom: 16px;
@@ -106,4 +124,10 @@ export const Button = styled.button`
     border-radius: 50px;
 
     cursor: pointer;
+
+    transition: .25s;
+
+    &:hover{
+        width: 83%;
+    }
 `

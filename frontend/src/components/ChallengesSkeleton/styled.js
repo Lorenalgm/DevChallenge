@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Section = styled.section`
     margin-top: 3%;
@@ -13,9 +13,9 @@ export const ChallengeSkeleton = styled.div`
     border-radius: 16px;
     cursor: pointer;
 
-    height: 430px;
-    width: 380px;
-    margin: 0 .5em 1em .5em;
+    height: 350px;
+    width: 300px;
+    margin: 0 0.5em 1em 0.5em;
 
     overflow: hidden;
 `;
