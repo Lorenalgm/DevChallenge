@@ -1,13 +1,52 @@
 import React, { useState, useEffect } from 'react';
-import api from '../../services/api';
 import { useParams } from 'react-router-dom';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
+import api from '../../services/api';
 import DevCard from '../../components/DevCard';
 
 import * as S from './styled';
 import Header from '../../components/Header';
+
+const includes = [
+    {
+        id: 1,
+        instruction:
+            'Readme com instruções de requisitos e as rotas da aplicação',
+    },
+    {
+        id: 2,
+        instruction: 'Imagens para adicionar no projeto',
+    },
+    {
+        id: 3,
+        instruction: 'Modelo como design para utilizar como referência',
+    },
+    {
+        id: 4,
+        instruction: 'Arquivo contendo o texto que será utilizado',
+    },
+];
+
+const starts = [
+    {
+        id: 1,
+        steps: 'Clone o projeto com o código inicial',
+    },
+    {
+        id: 2,
+        steps: 'Leia as instruções disponíveis no readme',
+    },
+    {
+        id: 3,
+        steps: 'Inicie o desenvolvimento!',
+    },
+    {
+        id: 4,
+        steps: 'Compartilhe seus resultados com a comunidade',
+    },
+];
 
 export default function Detail() {
     const [challenge, setChallenge] = useState({});
@@ -17,6 +56,7 @@ export default function Detail() {
     const { id } = useParams();
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         async function loadChallenge() {
             const response = await api.get(`/challenges/${id}`);
             setChallenge(response.data[0]);
@@ -27,6 +67,11 @@ export default function Detail() {
 
         loadChallenge();
     }, [id]);
+
+    let color;
+    if (challenge?.level === 'beginner') color = 'nephritis';
+    else if (challenge?.level === 'intermediate') color = 'pumpkin';
+    else color = 'pomegranate';
 
     return (
         <>
@@ -43,9 +88,11 @@ export default function Detail() {
                         </S.ChallengeDescription>
 
                         <S.Infos>
-                            <S.InfosLevel>{challenge.level}</S.InfosLevel>
-                            {techs.map((item, id) => (
-                                <S.InfosTechs key={id}>{item}</S.InfosTechs>
+                            <S.InfosLevel color={color}>
+                                {challenge.level}
+                            </S.InfosLevel>
+                            {techs[0]?.split(', ').map((item, idx) => (
+                                <S.InfosTechs key={idx}>{item}</S.InfosTechs>
                             ))}
                         </S.Infos>
 
@@ -59,14 +106,14 @@ export default function Detail() {
                         </S.ChallengeLink>
                     </S.LeftColumn>
                     <S.Demo>
-                        <AwesomeSlider
-                            className="slider"
-                            bullets={true}
-                            mobileTouch={true}
-                        >
+                        <AwesomeSlider className="slider" bullets mobileTouch>
                             {images.map((image) => (
                                 <div key={image}>
-                                    <img src={image} alt="Challenge" />
+                                    <img
+                                        src={image}
+                                        className="image"
+                                        alt="Challenge"
+                                    />
                                 </div>
                             ))}
                         </AwesomeSlider>
@@ -91,44 +138,23 @@ export default function Detail() {
                                     </span>
                                 ) : (
                                     <>
-                                        <span>
-                                            <S.Icon icon={faCheck} /> Readme com
-                                            instruções de requisitos, cores e
-                                            fontes
-                                        </span>
-                                        <span>
-                                            <S.Icon icon={faCheck} /> Imagens
-                                            para adicionar no projeto
-                                        </span>
-                                        <span>
-                                            <S.Icon icon={faCheck} /> Modelo com
-                                            o design para utilizar como
-                                            referência
-                                        </span>
-                                        <span>
-                                            <S.Icon icon={faCheck} /> Arquivo
-                                            contendo o texto que será utilizado
-                                        </span>
+                                        {includes.map((include) => (
+                                            <span key={include.id}>
+                                                <S.Icon icon={faCheck} />{' '}
+                                                {include.instruction}
+                                            </span>
+                                        ))}
                                     </>
                                 )}
                             </S.ChallengeInclude>
                             <S.ChallengeStart>
                                 <h3>Como iniciar?</h3>
-                                <p>
-                                    <span>1 -</span> Clone o projeto com o
-                                    código inicial
-                                </p>
-                                <p>
-                                    <span>2 -</span> Leia as instruções
-                                    disponíveis no readme
-                                </p>
-                                <p>
-                                    <span>3 -</span> Inicie o desenvolvimento!
-                                </p>
-                                <p>
-                                    <span>4 -</span> Compartilhe seus resultados
-                                    com a comunidade
-                                </p>
+                                {starts.map((start) => (
+                                    <p key={start.id}>
+                                        <span>{start.id} - </span>
+                                        {start.steps}
+                                    </p>
+                                ))}
                             </S.ChallengeStart>
                         </S.ChallengeContainer>
                     </S.Content>
