@@ -7,7 +7,6 @@ export const Tech = styled.div`
     width: 300px;
     height: 300px;
     background-color: var(--gray);
-    margin: 50px;
     border-radius: 10px;
     cursor: pointer;
     display: flex;
@@ -19,10 +18,9 @@ export const Tech = styled.div`
     ${media.lessThan('medium')`
         height: 8em;
         width: 20em;
-        margin: 1.4em;
     `}
 
-    transition: 0.25s;
+    transition: background-color 0.25s;
 
     &:hover {
         background-color: var(--dark-gray);
@@ -39,5 +37,18 @@ export const TechName = styled.h2`
 `;
 
 export const Anchor = styled(Link)`
+    color: transparent;
     text-decoration: none;
+    margin: 50px;
+    display: inline-block;
+
+    ${media.lessThan('medium')`
+        margin: 1.4em;
+    `}
+
+    transition: outline-color 0.25s;
+
+    &:focus {
+        outline: 1px solid var(--white);
+    }
 `;
