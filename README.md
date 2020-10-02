@@ -12,11 +12,21 @@
 
   <p align="center">
     Site para desenvolvedores melhorarem suas habilidades através de desafios de front-end, back-end e mobile!<br><br>
-    A website for developers to improve their skills by doing front-end and back-end challenges
        <br />
     <br />
      <a href="https://www.devchallenge.com.br/">DevChallenge</a>    
   </p>
+
+<br />
+
+### *Ler em [outros idiomas](./translations)*
+
+<br />
+
+<kbd>[<img title="English" alt="English" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/us.svg" width="22">](./translations/README.en.md)</kbd>
+<kbd>[<img title="Español" alt="Español" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/es.svg" width="22">](./translations/README.es.md)</kbd> Indisponível
+
+<br />
 
 ## Índice
 
@@ -37,6 +47,7 @@ O <a href="https://www.devchallenge.com.br/" alt="DevChallenge">DevChallenge</a>
 <img src="https://i.ibb.co/nLGdpF4/novosdesafioss.gif" alt="DevChallenge" width="720" height="380">
 </p>
 
+
 ### Tecnologias:
 - Backend: Nodejs
 - Frontend: Reactjs
@@ -47,18 +58,11 @@ O <a href="https://www.devchallenge.com.br/" alt="DevChallenge">DevChallenge</a>
 2 - Leia as instruções no readme.md<br>
 3 - Comece a codar!<br>
 4 - Compartilhe seu resultado com a comunidade :)
-<br><br>
-1 - Use a <a href="https://devchallenge.now.sh/">DevChallenge</a> template with the starter code<br>
-2 - Read the instructions in readme.md<br>
-3 - Start coding!<br>
-4 - Share your results with the community :)<br>
 
 ## Como Contribuir
 Você pode ajudar com o projeto:<br>
 - Sugerindo e/ou criando novos desafios: esses desafios ficarão disponíveis e poderão ajudar todos os desenvolvedores a praticarem
 - Contribuindo com melhorias e correções no site: você poderá enviar uma pull request para que sua alteração fique disponível para todos os devs!
-<br><br>
-You can help by contributing with new challenges or improving the website
 
 ### Requisitos
 1. Nodejs

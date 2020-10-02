@@ -1,0 +1,8 @@
+# Translations
+
+|                                                                                                                                                                                                                                                                             |Link                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| <img alt="Español" title="Español" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/es.svg" width="22">                                                                                                                                                 | Español (Not available yet)                                               |
+| <img alt="Português (Brasil)" title="Português (Brasil)" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/br.svg" width="22">                                                                                                                           | [Português (Brasil)](README.pt_br.md)                                 |
+| <img alt="English" title="English" src="https://cdn.staticaly.com/gh/hjnilsson/country-flags/master/svg/gb.svg" width="22">                                                                                                                                                 | [English](../README.md)                                               |
+|
