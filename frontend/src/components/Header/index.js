@@ -1,8 +1,12 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import * as S from './styled';
 
 export default function Header(props) {
+    // i18n -> it'll get the translation
+    const { t } = useTranslation();
+
     return (
         <S.Header>
             <S.Title>
@@ -14,7 +18,7 @@ export default function Header(props) {
                 <ul>
                     <li>
                         <S.StyledLink activeClassName="is-active" to="/" exact>
-                            Início
+                            {t('Header.link_1')}
                         </S.StyledLink>
                     </li>
                     <li>
@@ -22,12 +26,12 @@ export default function Header(props) {
                             activeClassName="is-active"
                             to="/challenges"
                         >
-                            Desafios
+                            {t('Header.link_2')}
                         </S.StyledLink>
                     </li>
                     <li>
                         <S.StyledLink activeClassName="is-active" to="/devs">
-                            Comunidade
+                            {t('Header.link_3')}
                         </S.StyledLink>
                     </li>
                 </ul>

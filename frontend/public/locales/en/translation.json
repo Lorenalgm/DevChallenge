@@ -1,0 +1,22 @@
+{
+  "Header": {
+    "link_1": "Home",
+    "link_2": "Challenges",
+    "link_3": "Community"
+  },
+  "Banner": {
+    "title": "Improve your skills",
+    "description": "Front-end, back-end and mobile challenges",
+    "button": "Let's code!"
+  },
+  "Steps": {
+    "step_1": "Choose",
+    "step_2": "Develop",
+    "step_3": "Share"
+  },
+  "Newsletter": {
+    "title": "Get notified about new challenges!",
+    "description": "Subscribe to be the first to know about new challenges :)",
+    "button": "Subscribe"
+  }
+}

@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { GlobalStyles } from './GlobalStyles';
+import i18n from './i18n';
 
 ReactDOM.render(
     <React.StrictMode>
         <GlobalStyles />
-        <App />
+        <Suspense fallback={(<div>...</div>)}>
+            <App />
+        </Suspense>
     </React.StrictMode>,
     document.getElementById('root')
 );

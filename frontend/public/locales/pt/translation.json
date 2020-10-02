@@ -1,0 +1,22 @@
+{
+  "Header": {
+    "link_1": "Início",
+    "link_2": "Desafios",
+    "link_3": "Comunidade"
+  },
+  "Banner": {
+    "title": "Melhore suas habilidades",
+    "description": "Com desafios de front-end, back-end e mobile",
+    "button": "Bora codar!"
+  },
+  "Steps": {
+    "step_1": "Escolha",
+    "step_2": "Desenvolva",
+    "step_3": "Compartilhe"
+  },
+  "Newsletter": {
+    "title": "Seja notificado sobre novos desafios!",
+    "description": "Inscreva-se para ser o primeiro a saber sobre novos desafios :)",
+    "button": "Inscrever"
+  }
+}

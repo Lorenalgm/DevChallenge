@@ -4,8 +4,12 @@ import api from '../../services/api';
 import ToastNotification from '../../utils/toast';
 
 import * as S from './styled';
+import { useTranslation } from 'react-i18next';
 
 export default function Newsletter() {
+    // i18n -> it'll get the translation
+    const { t } = useTranslation();
+
     const [email, setEmail] = useState('');
 
     async function handleSubscribe(e) {
@@ -42,11 +46,10 @@ export default function Newsletter() {
             </div>
             <div>
                 <S.NewsletterTitle>
-                    Seja notificado sobre novos desafios!
+                    {t('Newsletter.title')}
                 </S.NewsletterTitle>
                 <S.NewsletterParagraph>
-                    Inscreva-se para ser o primeiro a saber sobre novos desafios
-                    :)
+                    {t('Newsletter.description')}
                 </S.NewsletterParagraph>
                 <S.NewsletterForm onSubmit={handleSubscribe}>
                     <input
@@ -56,7 +59,7 @@ export default function Newsletter() {
                         onChange={(e) => setEmail(e.target.value)}
                         required
                     />
-                    <button type="submit">Inscrever</button>
+                    <button type="submit">{t('Newsletter.button')}</button>
                 </S.NewsletterForm>
             </div>
         </S.NewsletterContainer>
