@@ -20,14 +20,15 @@
 
 ## Índice
 
-* [Sobre o Projeto](#sobre-o-projeto)
-  * [Demo](#demo)
-  * [Tecnologias](#tecnologias)
-* [Como Utilizar](#como-utilizar)
-* [Como Contribuir](#como-contribuir)
-  * [Requisitos](#requisitos)
-  * [Instalar](#instalar)
-* [Comunidade](#comunidade)
+- [Índice](#índice)
+- [Sobre o Projeto](#sobre-o-projeto)
+  - [Demo:](#demo)
+  - [Tecnologias:](#tecnologias)
+- [Como Utilizar](#como-utilizar)
+- [Como Contribuir](#como-contribuir)
+  - [Requisitos](#requisitos)
+  - [Instalar](#instalar)
+- [Comunidade](#comunidade)
 
 ## Sobre o Projeto
 O <a href="https://www.devchallenge.com.br/" alt="DevChallenge">DevChallenge</a> é um projeto que visa contrubuir com a evolução de desenvolvedores, disponibilizando desafios para que possam praticar, melhorar suas skills e criarem seus portfólios :)
@@ -115,4 +116,3 @@ Site: https://www.devchallenge.com.br/ <br>
 [stars-url]: https://github.com/Lorenalgm/DevChallenge/stargazers
 [issues-shield]: https://img.shields.io/github/issues/Lorenalgm/DevChallenge.svg?style=flat-square
 [issues-url]: https://github.com/Lorenalgm/DevChallenge/issues
-
