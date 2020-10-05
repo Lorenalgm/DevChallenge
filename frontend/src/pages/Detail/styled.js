@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import media from 'styled-media-query';
+
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
@@ -44,9 +45,15 @@ export const LeftColumn = styled.div`
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin-left: 0;
+        margin-right: 0;
+    `}
+
+    ${media.lessThan('small')`
+        margin-right: 4%;
+        margin-left: 4%;
     `}
 `;
-
 
 export const InfosType = styled.div`
     filter: brightness(90%);
@@ -58,11 +65,11 @@ export const InfosType = styled.div`
     margin-bottom: 1%;
     color: var(--purple);
     ${media.lessThan('medium')`
+        text-align: center;
         margin: 0;
         width: 5em;
     `};
 `;
-
 
 export const TitleContainer = styled.div`
     margin-left: 4%;
@@ -86,7 +93,7 @@ export const ChallengeDescription = styled.div`
     margin-bottom: 4%;
 
     ${media.lessThan('medium')`
-        text-align: center;
+        text-align: left;
         margin-left: 0;
         margin-top: 2%;
         margin-bottom: 4%;
@@ -95,46 +102,46 @@ export const ChallengeDescription = styled.div`
 
 export const Infos = styled.div`
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: left;
+    padding: 0 4%;
+
+    ${media.lessThan('medium')`
+        align-items: start;
+        width: 100%;
+        padding: 0;
+    `}
 `;
 
 export const InfosLevel = styled.div`
-    background-color: var(--gray);
+    background-color: var(--${(props) => props.color});
     filter: brightness(90%);
-    width: 7em;
-    padding: 5px;
-    margin-left: 4%;
+    padding: 7px 15px;
+    margin-right: 2%;
+    margin-bottom: 2%;
     border-radius: 20px;
     text-align: center;
     font-weight: bold;
     color: var(--white);
-    ${media.lessThan('medium')`
-        width: 6em;
-        margin-left: 0;
-    `}
 `;
 
 export const InfosTechs = styled.div`
-    background-color: var(--gray);
+    background-color: var(--quaternary);
     filter: brightness(90%);
-    width: 7em;
-    padding: 5px;
-    margin-left: 4%;
+    padding: 7px 15px;
+    margin-right: 2%;
+    margin-bottom: 2%;
     border-radius: 20px;
     text-align: center;
     font-weight: bold;
     color: var(--white);
-    ${media.lessThan('medium')`
-        width: 6em;
-        margin-left: 0;
-    `}
 `;
 
 export const ChallengeLink = styled.a`
     color: var(--white);
     background-color: var(--purple);
-    width: 20em;
+    width: 15em;
     height: 3em;
     font-weight: bold;
     font-size: 20px;
@@ -152,11 +159,13 @@ export const ChallengeLink = styled.a`
     }
 
     ${media.lessThan('medium')`
-        width: 15em;
-        height: 3em;
         margin: 0;
         margin-top: 5%;
         margin-bottom: 2%;
+    `}
+
+    ${media.between('large', 'huge')`
+        width: 20em;
     `}
 `;
 
@@ -164,14 +173,20 @@ export const Demo = styled.div`
     width: 50em;
     height: 30em;
 
-    .slider{
+    .slider {
         width: 100%;
         height: 100%;
     }
 
-    ${media.lessThan('medium')`
-        width: 80%;
+    .image {
         height: 100%;
+        width: 100%;
+    }
+
+    ${media.lessThan('medium')`
+        width: 90%;
+        height: 100%;
+        margin-bottom: 20px;
     `}
 `;
 
@@ -216,7 +231,6 @@ export const ChallengeAbout = styled.div`
     `}
 `;
 
-
 export const ChallengeContainer = styled.div`
     width: 100%;
     display: flex;
@@ -249,10 +263,16 @@ export const ChallengeInclude = styled.div`
     span {
         color: var(--white);
         padding: 0.2em;
+        display: block;
     }
 
     ${media.lessThan('medium')`
-        margin-right:0;
+        margin-right: 0;
+    `}
+
+    ${media.lessThan('small')`
+        margin-right: 4%;
+        margin-left: 4%;
     `}
 `;
 
@@ -276,57 +296,15 @@ export const ChallengeStart = styled.div`
         padding: 0.2em;
     }
 
-    span{
+    span {
         color: var(--yellow);
         font-weight: bold;
+        margin: 0;
+        padding: 0;
     }
 
-`;
-
-export const DevContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: var(--gray);
-    border-radius: 1em;
-    margin: 1em;
-    height: 5em;
-    width: 20em;
-    justify-content: center;
-
-    img {
-        height: 50px;
-        width: 50px;
-        border-radius: 2em;
-    }
-`;
-
-export const DevInformation = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-`;
-
-export const DevName = styled.span`
-    font-size: 18px;
-    color: var(--white);
-`;
-
-export const DevPosition = styled.span`
-    font-weight: bold;
-    font-size: 12px;
-    color: var(--white);
-`;
-
-export const DevSocialContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-`;
-
-export const AnchorIcon = styled.a`
-    text-decoration: none;
-    color: var(--white);
-    padding: 2px;
+    ${media.lessThan('small')`
+        margin-right: 4%;
+        margin-left: 4%;
+    `}
 `;
