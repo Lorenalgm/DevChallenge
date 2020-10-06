@@ -31,6 +31,7 @@
 
 ## Inhaltsverzeichnis
 
+- [Inhaltsverzeichnis](#inhaltsverzeichnis)
 - [Über das Projekt](#über-das-projekt)
   - [Demo](#demo)
   - [Technologien](#technologien)
