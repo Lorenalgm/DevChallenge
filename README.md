@@ -31,7 +31,7 @@
 - [Comunidade](#comunidade)
 
 ## Sobre o Projeto
-O <a href="https://www.devchallenge.com.br/" alt="DevChallenge">DevChallenge</a> é um projeto que visa contrubuir com a evolução de desenvolvedores, disponibilizando desafios para que possam praticar, melhorar suas skills e criarem seus portfólios :)
+O <a href="https://www.devchallenge.com.br/" alt="DevChallenge">DevChallenge</a> é um projeto que visa contribuir com a evolução de desenvolvedores, disponibilizando desafios para que possam praticar, melhorar suas skills e criarem seus portfólios :)
 
 ### Demo:
 <p align="center">
