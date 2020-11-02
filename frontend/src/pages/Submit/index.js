@@ -145,63 +145,6 @@ export default function Submit({ logged = false }) {
                                 onChange={(e) => setLink(e.target.value)}
                             />
                         </S.Field>
-                        {!logged ? (
-                            <>
-                                <S.Title>Informações adicionais</S.Title>
-                                {/* {additional.map(add => {
-                                return (
-                                    <S.Field>
-                                        <S.Label>{add.label}</S.Label>
-                                        <S.Input
-                                            placeholder={add.placeholder}
-                                            value={name}
-                                            onChange={e => add.func(e.target.value)}
-                                        />
-                                    </S.Field>
-                                )
-                            })} */}
-                                <S.Field>
-                                    <S.Label>Nome</S.Label>
-                                    <S.Input
-                                        placeholder="Ex: Lorena Góes"
-                                        value={name}
-                                        onChange={(e) =>
-                                            setName(e.target.value)
-                                        }
-                                    />
-                                </S.Field>
-                                <S.Field>
-                                    <S.Label>Email</S.Label>
-                                    <S.Input
-                                        placeholder="Ex: alguem@exemplo.com"
-                                        value={email}
-                                        onChange={(e) =>
-                                            setEmail(e.target.value)
-                                        }
-                                    />
-                                </S.Field>
-                                <S.Field>
-                                    <S.Label>Link do seu Github</S.Label>
-                                    <S.Input
-                                        placeholder="Ex: https://github.com/Lorenalgm"
-                                        value={github}
-                                        onChange={(e) =>
-                                            setGithub(e.target.value)
-                                        }
-                                    />
-                                </S.Field>
-                                <S.Field>
-                                    <S.Label>Link do seu Linkedin</S.Label>
-                                    <S.Input
-                                        placeholder="Ex: https://www.linkedin.com/in/lorenagmontes/"
-                                        value={linkedin}
-                                        onChange={(e) =>
-                                            setLinkedin(e.target.value)
-                                        }
-                                    />
-                                </S.Field>
-                            </>
-                        ) : null}
                     </S.Form>
                 </S.Container>
             </S.Section>
