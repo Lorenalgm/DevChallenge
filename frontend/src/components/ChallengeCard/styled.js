@@ -5,14 +5,17 @@ export const Anchor = styled(Link)`
     text-decoration: none;
     cursor: pointer;
 
-    color: var(--white);
+    color: var(--white-gray);
 `;
 
 export const Level = styled.span`
+    position: absolute;
+    top: 16px;
+    left: 10px;
     background-color: var(--${(props) => props.color});
-    padding: 3px 8px;
+    padding: 6px 16px;
     font-size: 11px;
-    height: 25px;
+    height: 23px;
     border-radius: 20px;
     font-weight: bold;
 `;
@@ -24,7 +27,7 @@ export const ChallengeCard = styled.div`
     background-color: var(--secondary);
     border-radius: 16px;
 
-    margin: 0 0.5em 1em 0.5em;
+    margin: 1em 1em 1em 1em;
 
     display: flex;
     flex-direction: column;
@@ -50,21 +53,21 @@ export const CardImage = styled.div`
 `;
 
 export const CardContent = styled.div`
-    margin-top: 16px;
-    color: var(--white);
-    /* text-align: center; */
+    margin-top: 10px;
+    color: var(--white-gray);
+    text-align: center;
     width: 100%;
     padding: 0 16px;
 
     h1 {
         font-size: 28px;
-        margin-top: 7px;
+        margin-top: 0px;
         font-weight: 500;
     }
 
-    /* p {
-      margin-top: 10px;
-    } */
+    p {
+        margin-top: 10px;
+    }
 `;
 
 export const CardTechs = styled.div`
@@ -72,22 +75,21 @@ export const CardTechs = styled.div`
     right: 0;
     top: 16px;
     padding: 0 16px;
-    width: 45%;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: flex-end;
     z-index: 999;
     .tech {
         background-color: var(--quaternary);
-        padding: 5px 10px;
+        padding: 5px 15px;
         margin-bottom: 5px;
         border-radius: 25px;
         text-align: center;
         font-weight: bold;
         color: var(--white);
         align-items: center;
-        height: 25px;
         font-size: 13px;
     }
 
@@ -119,5 +121,20 @@ export const Button = styled.button`
 
     &:hover {
         width: 83%;
+    }
+`;
+
+export const ProgressBar = styled.div`
+    width: 100%;
+    height: 8px;
+    background: var(--quinary);
+
+    &::after {
+        position: absolute;
+        content: ' ';
+        width: ${(props) => `${props.progress}%`};
+        height: 8px;
+        background: var(--green);
+        border-radius: 0 5px 5px 0;
     }
 `;
