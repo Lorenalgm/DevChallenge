@@ -37,7 +37,13 @@ export default function Challenges({ location }) {
             {!loading && (
                 <S.Section>
                     {challenges.map((challenge) => {
-                        return <ChallengeCard challenge={challenge} />;
+                        return (
+                            <ChallengeCard
+                                challenge={challenge}
+                                buttonText="ver detalhes"
+                                redirect={`/challenges/${challenge._id}/details`}
+                            />
+                        );
                     })}
                 </S.Section>
             )}
