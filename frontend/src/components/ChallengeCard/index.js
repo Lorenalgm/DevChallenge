@@ -2,7 +2,7 @@ import React from 'react';
 
 import * as S from './styled';
 
-function ChallengeCard({ challenge }) {
+function ChallengeCard({ challenge, progress, redirect, buttonText }) {
     const techs = challenge.techs.toString().split(', ');
     const color =
         challenge.level === 'beginner'
@@ -24,6 +24,7 @@ function ChallengeCard({ challenge }) {
                     </S.CardTechs>
                     <img src={challenge.background} alt="" />
                 </S.CardImage>
+                {progress && <S.ProgressBar progress={progress} />}
             </S.Anchor>
             <S.CardContent>
                 <S.Anchor to={`/challenges/${challenge._id}/details`}>
@@ -32,8 +33,8 @@ function ChallengeCard({ challenge }) {
                 </S.Anchor>
                 <p>{challenge.description}</p>{' '}
             </S.CardContent>
-            <S.Anchor to={`/challenges/${challenge._id}/details`}>
-                <S.Button>Abrir desafio</S.Button>
+            <S.Anchor to={`${redirect}`}>
+                <S.Button>{buttonText}</S.Button>
             </S.Anchor>
         </S.ChallengeCard>
     );
