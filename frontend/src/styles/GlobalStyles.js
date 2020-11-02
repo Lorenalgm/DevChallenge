@@ -1,5 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
     @font-face {
@@ -19,6 +18,8 @@ export const GlobalStyles = createGlobalStyle`
 
         --black: #110e0e;
         --dark-purple: #490861;
+        --white-gray: #e3e3e3;
+        --light-gray: #c1c1c1 ;
         --pale-gray: #333333;
         --dark-gray: #242020;
         --green: #adff2f;
@@ -63,7 +64,7 @@ export const GlobalStyles = createGlobalStyle`
         background-color: var(--primary);
 
         ::-webkit-scrollbar-track {
-            background-color: var(--secondary);
+            background-color: var(--dark-hover);
         }
         ::-webkit-scrollbar {
             width: 6px;
@@ -93,5 +94,5 @@ export const GlobalStyles = createGlobalStyle`
 `;
 
 export const Container = styled.main`
-      min-height: calc(100vh - 100px);
+    min-height: calc(100vh - 100px);
 `;
