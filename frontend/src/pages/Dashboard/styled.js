@@ -2,19 +2,14 @@ import styled from 'styled-components';
 import media from 'styled-media-query';
 
 export const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 2%;
-    flex: 1;
+    padding: 0px 80px 0 80px;
+
+    ${media.between('medium', 'large')`
+        padding: 0px 60px 0 60px;
+    `}
 
     ${media.lessThan('medium')`
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        margin: 0%;
-        margin-top: 5%;
+        padding: 0px 20px 0 20px;
     `}
 `;
 
@@ -25,6 +20,6 @@ export const StatusCardWrapper = styled.div`
     margin-bottom: 50px;
 `;
 
-export const Title = styled.h1`
+export const Title = styled.h2`
     margin-bottom: 20px;
 `;
