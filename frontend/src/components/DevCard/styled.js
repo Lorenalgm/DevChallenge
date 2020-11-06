@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import media from 'styled-media-query';
+
 
 export const Card = styled.div`
     min-width: 300px;
@@ -20,6 +22,10 @@ export const Card = styled.div`
         width: 70px;
         border-radius: 50%;
     }
+
+    ${media.lessThan('medium')`
+        margin-bottom: 5%;
+    `}
 `;
 
 
