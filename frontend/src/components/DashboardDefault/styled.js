@@ -1,22 +1,25 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
 
+export const DashboardWrapper = styled.div`
+    display: flex;
+    min-height: calc(100vh - 100px);
+`;
+
 export const DashboardContent = styled.div`
     display: flex;
+    flex: 1;
     flex-direction: column;
-    margin-left: 350px;
-    padding: 0px 80px 0 80px;
-    color: var(--white);
+    color: var(--light-gray);
 `;
 
 export const DbHeader = styled.header`
     display: flex;
     align-items: center;
     justify-content: flex-end;
-
     padding: 0px 80px 0 80px;
     margin-top: 40px;
-
+    
     font-weight: normal;
 
     ${media.between('medium', 'large')`
@@ -25,10 +28,10 @@ export const DbHeader = styled.header`
 
     ${media.lessThan('medium')`
         display: flex;
-        align-items: flex-start;
+        align-items: flex-end;
         flex-direction: column;
         justify-content: center;
-        padding: 0;
+        padding: 0 20px;
         position: relative;
     `}
 `;
