@@ -2,6 +2,14 @@ import React from 'react';
 
 import * as S from './styled';
 
+const colorMatch = {
+    beginner: 'nephritis',
+    intermediate: 'pumpkin',
+    advanced: 'pomegranate',
+    Mobile: 'blue',
+    Frontend: 'red',
+    Backend: 'light-purple',
+};
 function ChallengeCard({ challenge, progress, redirect, buttonText }) {
     const techs = challenge.techs.toString().split(', ');
     const color =
