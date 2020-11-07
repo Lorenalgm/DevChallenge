@@ -9,15 +9,13 @@ export const Anchor = styled(Link)`
 `;
 
 export const Level = styled.span`
-    position: absolute;
-    top: 16px;
-    left: 10px;
     background-color: var(--${(props) => props.color});
     padding: 6px 16px;
     font-size: 11px;
     height: 23px;
     border-radius: 20px;
     font-weight: bold;
+    margin-bottom: 5px;
 `;
 
 export const ChallengeCard = styled.div`
@@ -60,7 +58,7 @@ export const CardContent = styled.div`
     padding: 0 16px;
 
     h1 {
-        font-size: 28px;
+        font-size: 25px;
         margin-top: 0px;
         font-weight: 500;
     }
@@ -97,6 +95,19 @@ export const CardTechs = styled.div`
         color: var(--yellow);
         font-weight: bold;
     }
+`;
+
+export const CardPlatforms = styled.div`
+    position: absolute;
+    left: 0;
+    top: 16px;
+    padding: 0 16px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 999;
 `;
 
 export const Button = styled.button`

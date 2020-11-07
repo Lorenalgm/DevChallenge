@@ -30,6 +30,14 @@ function ChallengeCard({ challenge, progress, redirect, buttonText }) {
                             </p>
                         ))}
                     </S.CardTechs>
+                    <S.CardPlatforms>
+                        <S.Level color={colorMatch[challenge.type]}>
+                            {challenge.type}
+                        </S.Level>
+                        <S.Level color={colorMatch[challenge.level]}>
+                            {challenge.level}
+                        </S.Level>
+                    </S.CardPlatforms>
                     <img src={challenge.background} alt="" />
                 </S.CardImage>
                 {progress && <S.ProgressBar progress={progress} />}
