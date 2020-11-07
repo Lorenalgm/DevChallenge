@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import * as S from './styled';
 
@@ -10,14 +10,32 @@ const colorMatch = {
     Frontend: 'red',
     Backend: 'light-purple',
 };
+
 function ChallengeCard({ challenge, progress, redirect, buttonText }) {
-    const techs = challenge.techs.toString().split(', ');
-    const color =
-        challenge.level === 'beginner'
-            ? 'nephritis'
-            : challenge.level === 'intermediate'
-            ? 'pumpkin'
-            : 'pomegranate';
+    const [techs, setTechs] = useState([]);
+
+    function techOrder() {
+        const techsUnOrder = challenge.techs
+            .toString()
+            .split(',')
+            .map((element) => element.replace(/^[ ]/, ''));
+
+        techsUnOrder.forEach((techItem, i) => {
+            techsUnOrder.forEach((element, j) => {
+                if (j > i && element.length > techItem.length) {
+                    const aux = techItem;
+                    techsUnOrder[i] = element;
+                    techsUnOrder[j] = aux;
+                }
+            });
+        });
+
+        setTechs(techsUnOrder);
+    }
+
+    useEffect(() => {
+        techOrder();
+    }, []);
 
     return (
         <S.ChallengeCard key={challenge._id}>
@@ -44,7 +62,6 @@ function ChallengeCard({ challenge, progress, redirect, buttonText }) {
             </S.Anchor>
             <S.CardContent>
                 <S.Anchor to={`/challenges/${challenge._id}/details`}>
-                    <S.Level color={color}>{challenge.level}</S.Level>
                     <h1>{challenge.name}</h1>
                 </S.Anchor>
                 <p>{challenge.description}</p>{' '}
