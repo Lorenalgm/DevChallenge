@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const CardWrapper = styled.div`
     display: flex;
     width: 48%;
+    max-width: 350px;
     height: 110px;
     background: var(--secondary);
     border-radius: 11px;

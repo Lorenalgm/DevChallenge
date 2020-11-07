@@ -18,6 +18,10 @@ export const StatusCardWrapper = styled.div`
     justify-content: space-between;
     margin-top: 30px;
     margin-bottom: 50px;
+
+    ${media.greaterThan('large')`
+        justify-content: space-around;
+    `}
 `;
 
 export const Title = styled.h2`
