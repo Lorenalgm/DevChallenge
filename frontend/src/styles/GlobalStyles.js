@@ -28,6 +28,10 @@ export const GlobalStyles = createGlobalStyle`
         --pumpkin: #d35400;
         --pomegranate: #c0392b;
 
+        --blue: #47ADE1;
+        --red: #E63450;
+        --light-purple: #D427D8;
+
         --primary: #0e0f10;
         --secondary: #191b1d;
         --tertiary: #1A1C1F;
