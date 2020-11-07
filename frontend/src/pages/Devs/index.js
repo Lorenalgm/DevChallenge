@@ -4,6 +4,7 @@ import {
     faCodeBranch,
     faComment,
 } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 import * as S from './styled';
 
@@ -34,10 +35,9 @@ export default function Challenges() {
             {!loading && (
                 <S.Container>
                     <S.OptionsContainer>
-                        <a
-                            target="_blank"
+                        <Link
                             rel="noopener noreferrer"
-                            href="https://lgoesmontes.typeform.com/to/xKHESI"
+                            to="/submit"
                             alt="Criar novo desafio"
                         >
                             <S.Option>
@@ -47,10 +47,12 @@ export default function Challenges() {
                                 />
 
                                 <S.OptionTitle>
-                                    Submeter<br></br>novo desafio
+                                    Submeter
+                                    <br />
+                                    novo desafio
                                 </S.OptionTitle>
                             </S.Option>
-                        </a>
+                        </Link>
                         <a
                             target="_blank"
                             rel="noopener noreferrer"
@@ -63,7 +65,9 @@ export default function Challenges() {
                                     icon={faComment}
                                 />
                                 <S.OptionTitle>
-                                    Participar<br></br>da comunidade
+                                    Participar
+                                    <br />
+                                    da comunidade
                                 </S.OptionTitle>
                             </S.Option>
                         </a>
@@ -79,7 +83,9 @@ export default function Challenges() {
                                     icon={faCodeBranch}
                                 />
                                 <S.OptionTitle>
-                                    Contribuir<br></br>open source
+                                    Contribuir
+                                    <br />
+                                    open source
                                 </S.OptionTitle>
                             </S.Option>
                         </a>
