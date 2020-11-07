@@ -12,47 +12,14 @@ const categories = [
     { id: 2, title: 'Backend' },
     { id: 3, title: 'Mobile' },
 ];
-// const additional = [
-//     {
-//         id: 1,
-//         label: 'Nome',
-//         placeholder: 'Ex: Lorena Góes',
-//         func: 'setName()',
-//     },
-//     {
-//         id: 2,
-//         label: 'Email',
-//         placeholder: 'Ex: Lorena Góes',
-//         func: 'setEmail()',
-//     },
-//     {
-//         id: 3,
-//         label: 'Link do seu Github',
-//         placeholder: 'Ex: Lorena Góes',
-//         func: 'setGithub()',
-//     },
-//     {
-//         id: 4,
-//         label: 'Link do seu Linkedin',
-//         placeholder: 'Ex: Lorena Góes',
-//         func: 'setLinkedin()',
-//     },
-// ]
 
-export default function Submit({ logged = false }) {
+export default function Submit() {
     const [title, setTitle] = useState('');
     const [level, setLevel] = useState('iniciante');
     const [category, setCategory] = useState('');
     const [description, setDescription] = useState('');
     const [languages, setLanguages] = useState('');
     const [link, setLink] = useState('');
-    // const [images, setImages] = useState([]);
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [github, setGithub] = useState('');
-    const [linkedin, setLinkedin] = useState('');
-    // const [languages, setLanguages] = useState('');
-    // const [link, setLink] = useState('');
 
     function set(data) {
         let newString = '';
