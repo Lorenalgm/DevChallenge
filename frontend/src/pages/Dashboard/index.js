@@ -1,28 +1,41 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import DashboardDefault from '../../components/DashboardDefault';
 import StatusCard from '../../components/StatusCard';
-import { StatusCardWrapper } from './styled';
+import { StatusCardWrapper, Title, Container } from './styled';
+import { ChallengeCard } from '../../components/ChallengeCard/styled';
+
+const fakeData = {
+    complete: 5,
+    inProgress: 2,
+};
 
 function Dashboard() {
+    const [statusCount, setStatusCount] = useState({});
+
+    useEffect(() => {
+        setStatusCount(fakeData);
+    }, []);
+
     return (
-        <>
-            <DashboardDefault>
+        <DashboardDefault>
+            <Container>
                 <StatusCardWrapper>
                     <StatusCard
                         border="var(--green)"
-                        count="5"
-                        title="Desafios concluidos"
+                        count={statusCount.complete}
+                        title="Desafios concluídos"
                     />
                     <StatusCard
                         border="var(--yellow)"
-                        count="2"
+                        count={statusCount.inProgress}
                         title="Desafios em andamento"
                     />
                 </StatusCardWrapper>
-                <h1>#WeeklyDevChallenge</h1>
-            </DashboardDefault>
-        </>
+                <Title>#WeeklyDevChallenge</Title>
+                <ChallengeCard />
+            </Container>
+        </DashboardDefault>
     );
 }
 

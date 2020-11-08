@@ -43,9 +43,7 @@ export const Title = styled.div`
 export const MenuMobile = styled.div`
     display: none;
 
-    transition: .25s;
-
-    
+    transition: 0.25s;
 
     ${media.lessThan('medium')`
         display: block;
@@ -70,13 +68,14 @@ export const Menu = styled.div`
 
         font-size: 20px;
         color: var(--white);
+        font-weight: 400;
 
         li ~ li {
-          margin-left: 20px;
+            margin-left: 20px;
         }
 
-        li:hover{
-            opacity: .8;
+        li:hover {
+            opacity: 0.8;
         }
 
         ${media.lessThan('medium')`
@@ -89,7 +88,8 @@ export const Menu = styled.div`
             align-items: center;
             margin-top: 0.5em;
             top: -100%;
-            transform: ${({ open }) => open ? 'translateY(-100%)' : 'translateY(0)'};
+            transform: ${({ open }) =>
+                open ? 'translateY(-100%)' : 'translateY(0)'};
             transition: transform 0.5s ease;
             z-index: 1000;
             li ~ li {
@@ -114,7 +114,7 @@ export const ButtonLink = styled(NavLink)`
     background-color: var(--quaternary);
 
     width: 100px;
-    padding: 5px 20px;
+    padding: 5px 30px;
     border-radius: 25px;
 
     text-align: center;

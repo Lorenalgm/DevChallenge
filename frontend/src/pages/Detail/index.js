@@ -48,6 +48,15 @@ const starts = [
     },
 ];
 
+const colorMatch = {
+    beginner: 'nephritis',
+    intermediate: 'pumpkin',
+    advanced: 'pomegranate',
+    Mobile: 'blue',
+    Frontend: 'red',
+    Backend: 'light-purple',
+};
+
 export default function Detail() {
     const [challenge, setChallenge] = useState({});
     const [techs, setTechs] = useState([]);
@@ -68,33 +77,31 @@ export default function Detail() {
         loadChallenge();
     }, [id]);
 
-    let color;
-    if (challenge?.level === 'beginner') color = 'nephritis';
-    else if (challenge?.level === 'intermediate') color = 'pumpkin';
-    else color = 'pomegranate';
-
     return (
         <>
             <Header />
             <S.Container>
                 <S.Banner>
                     <S.LeftColumn>
-                        <S.InfosType>{challenge.type}</S.InfosType>
                         <S.TitleContainer>
                             <h1>{challenge.name}</h1>
                         </S.TitleContainer>
-                        <S.ChallengeDescription>
-                            {challenge.description}
-                        </S.ChallengeDescription>
 
                         <S.Infos>
-                            <S.InfosLevel color={color}>
+                            <S.InfosLevel color={colorMatch[challenge.level]}>
                                 {challenge.level}
+                            </S.InfosLevel>
+                            <S.InfosLevel color={colorMatch[challenge.type]}>
+                                {challenge.type}
                             </S.InfosLevel>
                             {techs[0]?.split(', ').map((item, idx) => (
                                 <S.InfosTechs key={idx}>{item}</S.InfosTechs>
                             ))}
                         </S.Infos>
+
+                        <S.ChallengeDescription>
+                            {challenge.description}
+                        </S.ChallengeDescription>
 
                         <S.ChallengeLink
                             target="_blank"
@@ -108,7 +115,7 @@ export default function Detail() {
                     <S.Demo>
                         <AwesomeSlider className="slider" bullets mobileTouch>
                             {images.map((image) => (
-                                <div key={image}>
+                                <div key={image} className="image">
                                     <img
                                         src={image}
                                         className="image"

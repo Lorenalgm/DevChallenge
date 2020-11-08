@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const CardWrapper = styled.div`
     display: flex;
-    width: 40%;
+    width: 48%;
+    max-width: 350px;
     height: 110px;
     background: var(--secondary);
     border-radius: 11px;
@@ -20,7 +21,6 @@ export const CardWrapper = styled.div`
     }
 
     & > h1 {
-        margin-left: 50px;
         font-size: 50px;
     }
 `;

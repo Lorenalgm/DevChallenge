@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import * as S from './styled';
 
 export default function Header() {
@@ -21,10 +22,14 @@ export default function Header() {
             </S.Title>
 
             <S.MenuMobile onClick={() => setClicked(!clicked)}>
-                {!clicked ? <FontAwesomeIcon icon={faBars} /> : <FontAwesomeIcon icon={faTimes} />}
+                {!clicked ? (
+                    <FontAwesomeIcon icon={faBars} />
+                ) : (
+                    <FontAwesomeIcon icon={faTimes} />
+                )}
             </S.MenuMobile>
 
-            <S.Menu open={!clicked} >
+            <S.Menu open={!clicked}>
                 <ul>
                     <li>
                         <S.StyledLink activeClassName="is-active" to="/" exact>
@@ -45,9 +50,13 @@ export default function Header() {
                         </S.StyledLink>
                     </li>
                     <li>
-                      <S.ButtonLink activeClassName="is-active" to="/login">
-                          Entrar
-                      </S.ButtonLink>
+                        <S.ButtonLink activeClassName="is-active" to="/login">
+                            Entrar
+                            <FontAwesomeIcon
+                                icon={faGithub}
+                                style={{ marginLeft: '10px' }}
+                            />
+                        </S.ButtonLink>
                     </li>
                 </ul>
             </S.Menu>

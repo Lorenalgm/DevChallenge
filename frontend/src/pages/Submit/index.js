@@ -12,47 +12,14 @@ const categories = [
     { id: 2, title: 'Backend' },
     { id: 3, title: 'Mobile' },
 ];
-// const additional = [
-//     {
-//         id: 1,
-//         label: 'Nome',
-//         placeholder: 'Ex: Lorena Góes',
-//         func: 'setName()',
-//     },
-//     {
-//         id: 2,
-//         label: 'Email',
-//         placeholder: 'Ex: Lorena Góes',
-//         func: 'setEmail()',
-//     },
-//     {
-//         id: 3,
-//         label: 'Link do seu Github',
-//         placeholder: 'Ex: Lorena Góes',
-//         func: 'setGithub()',
-//     },
-//     {
-//         id: 4,
-//         label: 'Link do seu Linkedin',
-//         placeholder: 'Ex: Lorena Góes',
-//         func: 'setLinkedin()',
-//     },
-// ]
 
-export default function Submit({ logged = false }) {
+export default function Submit() {
     const [title, setTitle] = useState('');
     const [level, setLevel] = useState('iniciante');
     const [category, setCategory] = useState('');
     const [description, setDescription] = useState('');
     const [languages, setLanguages] = useState('');
     const [link, setLink] = useState('');
-    // const [images, setImages] = useState([]);
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [github, setGithub] = useState('');
-    const [linkedin, setLinkedin] = useState('');
-    // const [languages, setLanguages] = useState('');
-    // const [link, setLink] = useState('');
 
     function set(data) {
         let newString = '';
@@ -145,63 +112,6 @@ export default function Submit({ logged = false }) {
                                 onChange={(e) => setLink(e.target.value)}
                             />
                         </S.Field>
-                        {!logged ? (
-                            <>
-                                <S.Title>Informações adicionais</S.Title>
-                                {/* {additional.map(add => {
-                                return (
-                                    <S.Field>
-                                        <S.Label>{add.label}</S.Label>
-                                        <S.Input
-                                            placeholder={add.placeholder}
-                                            value={name}
-                                            onChange={e => add.func(e.target.value)}
-                                        />
-                                    </S.Field>
-                                )
-                            })} */}
-                                <S.Field>
-                                    <S.Label>Nome</S.Label>
-                                    <S.Input
-                                        placeholder="Ex: Lorena Góes"
-                                        value={name}
-                                        onChange={(e) =>
-                                            setName(e.target.value)
-                                        }
-                                    />
-                                </S.Field>
-                                <S.Field>
-                                    <S.Label>Email</S.Label>
-                                    <S.Input
-                                        placeholder="Ex: alguem@exemplo.com"
-                                        value={email}
-                                        onChange={(e) =>
-                                            setEmail(e.target.value)
-                                        }
-                                    />
-                                </S.Field>
-                                <S.Field>
-                                    <S.Label>Link do seu Github</S.Label>
-                                    <S.Input
-                                        placeholder="Ex: https://github.com/Lorenalgm"
-                                        value={github}
-                                        onChange={(e) =>
-                                            setGithub(e.target.value)
-                                        }
-                                    />
-                                </S.Field>
-                                <S.Field>
-                                    <S.Label>Link do seu Linkedin</S.Label>
-                                    <S.Input
-                                        placeholder="Ex: https://www.linkedin.com/in/lorenagmontes/"
-                                        value={linkedin}
-                                        onChange={(e) =>
-                                            setLinkedin(e.target.value)
-                                        }
-                                    />
-                                </S.Field>
-                            </>
-                        ) : null}
                     </S.Form>
                 </S.Container>
             </S.Section>

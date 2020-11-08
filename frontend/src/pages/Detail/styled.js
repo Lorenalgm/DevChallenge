@@ -106,6 +106,8 @@ export const Infos = styled.div`
     align-items: center;
     justify-content: left;
     padding: 0 4%;
+    font-size: 14px;
+    margin-bottom: 10px;
 
     ${media.lessThan('medium')`
         align-items: start;
@@ -170,12 +172,40 @@ export const ChallengeLink = styled.a`
 `;
 
 export const Demo = styled.div`
-    width: 50em;
-    height: 30em;
+    width: 47em;
+    border-radius: 10px;
+
+    .image {
+        height: 100%;
+    }
 
     .slider {
         width: 100%;
         height: 100%;
+    }
+
+    .awssld__wrapper {
+        border-radius: 10px;
+    }
+
+    .awssld__bullets {
+        bottom: 0;
+        z-index: 9999;
+        padding: 10px 0;
+        transition: 0.4s;
+    }
+
+    .awssld__bullets:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .awssld__bullets button {
+        border: 3px solid var(--yellow);
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .awssld__bullets .awssld__bullets--active {
+        background-color: var(--yellow);
     }
 
     .image {
