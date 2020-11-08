@@ -29,7 +29,7 @@ function SidebarUser() {
                     <FontAwesomeIcon icon={faTimes} />
                 )}
             </MenuMobile>
-            <Aside open={!clicked}>
+            <Aside open={clicked}>
                 <UserInfo>
                     <Img
                         src={

@@ -17,7 +17,14 @@ export const Aside = styled.aside`
     `}
 
     ${media.lessThan('860px')`
-        display: none; 
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: 9998;
+
+        transform: ${({ open }) =>
+            open ? 'translateX(0)' : 'translateX(-350px)'};
+        transition: 0.5s ease;
     `}
 `;
 
@@ -85,7 +92,7 @@ export const MenuMobile = styled.div`
 
     transition: 0.25s;
 
-    ${media.lessThan('medium')`
+    ${media.lessThan('860px')`
         display: block;
         position: absolute;
         font-size: 25px;
