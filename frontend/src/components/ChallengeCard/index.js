@@ -14,7 +14,7 @@ const colorMatch = {
 function ChallengeCard({ challenge, progress, redirect, buttonText }) {
     const [techs, setTechs] = useState([]);
 
-    function techOrder() {
+    useEffect(() => {
         const techsUnOrder = challenge.techs
             .toString()
             .split(',')
@@ -31,19 +31,15 @@ function ChallengeCard({ challenge, progress, redirect, buttonText }) {
         });
 
         setTechs(techsUnOrder);
-    }
-
-    useEffect(() => {
-        techOrder();
-    }, []);
+    }, [challenge.techs]);
 
     return (
         <S.ChallengeCard key={challenge._id}>
             <S.Anchor to={`/challenges/${challenge._id}/details`}>
                 <S.CardImage>
                     <S.CardTechs>
-                        {techs.map((item, id) => (
-                            <p className="tech" key={id}>
+                        {techs.map((item) => (
+                            <p className="tech" key={item}>
                                 {item}
                             </p>
                         ))}
