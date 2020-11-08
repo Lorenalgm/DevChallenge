@@ -48,6 +48,15 @@ const starts = [
     },
 ];
 
+const colorMatch = {
+    beginner: 'nephritis',
+    intermediate: 'pumpkin',
+    advanced: 'pomegranate',
+    Mobile: 'blue',
+    Frontend: 'red',
+    Backend: 'light-purple',
+};
+
 export default function Detail() {
     const [challenge, setChallenge] = useState({});
     const [techs, setTechs] = useState([]);
