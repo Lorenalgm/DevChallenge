@@ -117,7 +117,7 @@ export default function Detail() {
                     <S.Demo>
                         <AwesomeSlider className="slider" bullets mobileTouch>
                             {images.map((image) => (
-                                <div key={image}>
+                                <div key={image} className="image">
                                     <img
                                         src={image}
                                         className="image"
