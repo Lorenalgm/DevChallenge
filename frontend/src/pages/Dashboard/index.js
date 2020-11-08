@@ -5,15 +5,17 @@ import StatusCard from '../../components/StatusCard';
 import { StatusCardWrapper, Title, Container } from './styled';
 import { ChallengeCard } from '../../components/ChallengeCard/styled';
 
+const fakeData = {
+    complete: 5,
+    inProgress: 2,
+};
+
 function Dashboard() {
     const [statusCount, setStatusCount] = useState({});
 
     useEffect(() => {
-        setStatusCount({
-            complete: 5,
-            inProgress: 2,
-        });
-    }, [statusCount]);
+        setStatusCount(fakeData);
+    }, []);
 
     return (
         <DashboardDefault>
