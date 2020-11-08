@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -15,6 +15,23 @@ import ToDoChallenge from './pages/ToDoChallenge';
 
 import { Container } from './styles/GlobalStyles';
 
+const logged = true;
+
+const LoggedRoute = ({ component: Component, ...rest }) => (
+    <Route
+        {...rest}
+        render={(props) =>
+            logged ? (
+                <Component {...props} />
+            ) : (
+                <Redirect
+                    to={{ pathname: '/login', state: { from: props.location } }}
+                />
+            )
+        }
+    />
+);
+
 function Routes() {
     return (
         <BrowserRouter>
@@ -26,15 +43,15 @@ function Routes() {
                     <Route path="/challenges/:id/details" component={Detail} />
                     <Route path="/devs" component={Devs} />
                     <Route path="/submit" component={Submit} />
-                    <Route
+                    <LoggedRoute
                         path="/dashboard/myChallenges/toDo/:id"
                         component={ToDoChallenge}
                     />
-                    <Route
+                    <LoggedRoute
                         path="/dashboard/myChallenges"
                         component={MyChallenges}
                     />
-                    <Route path="/dashboard" component={Dashboard} />
+                    <LoggedRoute path="/dashboard" component={Dashboard} />
                 </Switch>
             </Container>
             <Footer />
