@@ -19,18 +19,19 @@ export const Section = styled.section`
 export const Container = styled.div`
     background-color: var(--secondary);
     width: 50%;
+    max-width: 800px;
     height: 50%;
     padding: 36px 48px 31px;
     border-radius: 10px;
 
-    /* ${media.between("medium", "large")`
-        width: 50%;
-        height: 50%;
-    `} */
-
-    ${media.between("small", "medium")`
+    ${media.between('medium', 'large')`
         width: 70%;
         height: 70%;
+    `} 
+
+    ${media.between('small', 'medium')`
+        width: 80%;
+        height: 80%;
     `}
 
     ${media.lessThan('small')`
@@ -55,6 +56,7 @@ export const Field = styled.div`
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 15px;
+
     ${media.lessThan('small')`
         flex-direction: column;
         align-items: flex-start;
@@ -76,6 +78,11 @@ export const Input = styled.input`
     font-size: 14px;
     padding: 0 15px;
     border-radius: 40px;
+
+    & + Input {
+        margin-top: 10px;
+    }
+
     ${media.lessThan('small')`
         width: 100%;
     `}
@@ -83,11 +90,14 @@ export const Input = styled.input`
 
 export const Textarea = styled.textarea`
     width: 100%;
+    min-height: 200px;
     background: var(--quaternary);
     padding: 10px 15px;
     font-size: 16px;
     color: white;
     border-radius: 20px;
+
+    resize: vertical;
 `;
 
 export const Select = styled.div`
