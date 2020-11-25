@@ -101,6 +101,21 @@ export const Select = styled.div`
     `}
 `;
 
+const colorMatch = {
+    category: [
+        'var(--quaternary)',
+        'var(--red)',
+        'var(--light-purple)',
+        'var(--blue)',
+    ],
+    level: [
+        'var(--quaternary)',
+        'var(--nephritis)',
+        'var(--pumpkin)',
+        'var(--pomegranate)',
+    ],
+};
+
 export const Item = styled.button`
     width: 100%;
     padding: 5px 10px;
@@ -113,18 +128,27 @@ export const Item = styled.button`
     cursor: pointer;
 
     &:first-child {
-        background-color: ${props => props.type === 'category' ? props.selected ? 'var(--yellow)' : 'var(--quaternary)' : props.selected ? 'var(--nephritis)' : 'var(--quaternary)'};
+        background-color: ${(props) =>
+            props.selected
+                ? colorMatch[props.type][1]
+                : colorMatch[props.type][0]};
         border-top-left-radius: 25px;
         border-bottom-left-radius: 25px;
     }
 
     &:nth-child(2) {
-        background-color: ${props => props.type === 'category' ? props.selected ? 'var(--yellow)' : 'var(--quaternary)' : props.selected ? 'var(--pumpkin)' : 'var(--quaternary)'};
+        background-color: ${(props) =>
+            props.selected
+                ? colorMatch[props.type][2]
+                : colorMatch[props.type][0]};
         border-style: none solid;
     }
 
     &:last-child {
-        background-color: ${props => props.type === 'category' ? props.selected ? 'var(--yellow)' : 'var(--quaternary)' : props.selected ? 'var(--pomegranate)' : 'var(--quaternary)'};
+        background-color: ${(props) =>
+            props.selected
+                ? colorMatch[props.type][3]
+                : colorMatch[props.type][0]};
         border-top-right-radius: 25px;
         border-bottom-right-radius: 25px;
     }
