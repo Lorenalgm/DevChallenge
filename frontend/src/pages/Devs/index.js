@@ -4,7 +4,7 @@ import {
     faCodeBranch,
     faComment,
 } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 import * as S from './styled';
 
@@ -35,9 +35,10 @@ export default function Challenges() {
             {!loading && (
                 <S.Container>
                     <S.OptionsContainer>
-                        <Link
+                        <a
+                            target="_blank"
                             rel="noopener noreferrer"
-                            to="/submit"
+                            href="https://lgoesmontes.typeform.com/to/xKHESI"
                             alt="Criar novo desafio"
                         >
                             <S.Option>
@@ -52,7 +53,7 @@ export default function Challenges() {
                                     novo desafio
                                 </S.OptionTitle>
                             </S.Option>
-                        </Link>
+                        </a>
                         <a
                             target="_blank"
                             rel="noopener noreferrer"

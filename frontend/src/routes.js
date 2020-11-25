@@ -14,8 +14,9 @@ import Footer from './components/Footer';
 import ToDoChallenge from './pages/ToDoChallenge';
 
 import { Container } from './styles/GlobalStyles';
+import ConstructPage from './pages/ConstructPage';
 
-const logged = true;
+const logged = false;
 
 const LoggedRoute = ({ component: Component, ...rest }) => (
     <Route
@@ -42,7 +43,7 @@ function Routes() {
                     <Route path="/challenges" exact component={Challenges} />
                     <Route path="/challenges/:id/details" component={Detail} />
                     <Route path="/devs" component={Devs} />
-                    <Route path="/submit" component={Submit} />
+                    <LoggedRoute path="/submit" component={Submit} />
                     <LoggedRoute
                         path="/dashboard/myChallenges/toDo/:id"
                         component={ToDoChallenge}
@@ -52,6 +53,7 @@ function Routes() {
                         component={MyChallenges}
                     />
                     <LoggedRoute path="/dashboard" component={Dashboard} />
+                    <Route path="/login" component={ConstructPage} />
                 </Switch>
             </Container>
             <Footer />

@@ -19,18 +19,19 @@ export const Section = styled.section`
 export const Container = styled.div`
     background-color: var(--secondary);
     width: 50%;
+    max-width: 800px;
     height: 50%;
     padding: 36px 48px 31px;
     border-radius: 10px;
 
-    /* ${media.between("medium", "large")`
-        width: 50%;
-        height: 50%;
-    `} */
-
-    ${media.between("small", "medium")`
+    ${media.between('medium', 'large')`
         width: 70%;
         height: 70%;
+    `} 
+
+    ${media.between('small', 'medium')`
+        width: 80%;
+        height: 80%;
     `}
 
     ${media.lessThan('small')`
@@ -55,6 +56,7 @@ export const Field = styled.div`
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 15px;
+
     ${media.lessThan('small')`
         flex-direction: column;
         align-items: flex-start;
@@ -76,6 +78,11 @@ export const Input = styled.input`
     font-size: 14px;
     padding: 0 15px;
     border-radius: 40px;
+
+    & + Input {
+        margin-top: 10px;
+    }
+
     ${media.lessThan('small')`
         width: 100%;
     `}
@@ -83,11 +90,14 @@ export const Input = styled.input`
 
 export const Textarea = styled.textarea`
     width: 100%;
+    min-height: 200px;
     background: var(--quaternary);
     padding: 10px 15px;
     font-size: 16px;
     color: white;
     border-radius: 20px;
+
+    resize: vertical;
 `;
 
 export const Select = styled.div`
@@ -101,6 +111,21 @@ export const Select = styled.div`
     `}
 `;
 
+const colorMatch = {
+    category: [
+        'var(--quaternary)',
+        'var(--red)',
+        'var(--light-purple)',
+        'var(--blue)',
+    ],
+    level: [
+        'var(--quaternary)',
+        'var(--nephritis)',
+        'var(--pumpkin)',
+        'var(--pomegranate)',
+    ],
+};
+
 export const Item = styled.button`
     width: 100%;
     padding: 5px 10px;
@@ -113,18 +138,27 @@ export const Item = styled.button`
     cursor: pointer;
 
     &:first-child {
-        background-color: ${props => props.type === 'category' ? props.selected ? 'var(--yellow)' : 'var(--quaternary)' : props.selected ? 'var(--nephritis)' : 'var(--quaternary)'};
+        background-color: ${(props) =>
+            props.selected
+                ? colorMatch[props.type][1]
+                : colorMatch[props.type][0]};
         border-top-left-radius: 25px;
         border-bottom-left-radius: 25px;
     }
 
     &:nth-child(2) {
-        background-color: ${props => props.type === 'category' ? props.selected ? 'var(--yellow)' : 'var(--quaternary)' : props.selected ? 'var(--pumpkin)' : 'var(--quaternary)'};
+        background-color: ${(props) =>
+            props.selected
+                ? colorMatch[props.type][2]
+                : colorMatch[props.type][0]};
         border-style: none solid;
     }
 
     &:last-child {
-        background-color: ${props => props.type === 'category' ? props.selected ? 'var(--yellow)' : 'var(--quaternary)' : props.selected ? 'var(--pomegranate)' : 'var(--quaternary)'};
+        background-color: ${(props) =>
+            props.selected
+                ? colorMatch[props.type][3]
+                : colorMatch[props.type][0]};
         border-top-right-radius: 25px;
         border-bottom-right-radius: 25px;
     }
@@ -145,4 +179,63 @@ export const Item = styled.button`
             border-bottom-left-radius: 20px;
         }
     `}
+`;
+
+export const Actions = styled.div`
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: space-around;
+`;
+
+export const Button = styled.button`
+    padding: 10px 15px;
+    border-radius: 40px;
+    font-size: 18px;
+    cursor: pointer;
+
+    background-color: ${(props) =>
+        props.type === 'submit' ? 'var(--yellow)' : 'var(--quaternary)'};
+`;
+
+export const AddLinkButton = styled.button`
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    margin-top: 10px;
+    align-self: flex-end;
+    padding: 0 20px;
+    font-weight: bold;
+
+    color: var(--quaternary);
+`;
+
+export const ImagePreview = styled.img`
+    //width: 50px;
+    height: 50px;
+    border-radius: 10px;
+`;
+
+export const PreviewList = styled.ul`
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    max-width: 100%;
+
+    li {
+        width: 50px;
+        margin: 10px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    button {
+        position: relative;
+        background-color: rgba(0, 0, 0, 0);
+        color: var(--red);
+        top: 25px;
+        right: 15px;
+        cursor: pointer;
+    }
 `;
