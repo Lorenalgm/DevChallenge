@@ -36,8 +36,9 @@ export default function Challenges() {
                 <S.Container>
                     <S.OptionsContainer>
                         <Link
+                            target="_blank"
                             rel="noopener noreferrer"
-                            to="/submit"
+                            to="https://lgoesmontes.typeform.com/to/xKHESI"
                             alt="Criar novo desafio"
                         >
                             <S.Option>
