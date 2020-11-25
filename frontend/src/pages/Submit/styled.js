@@ -170,3 +170,62 @@ export const Item = styled.button`
         }
     `}
 `;
+
+export const Actions = styled.div`
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: space-around;
+`;
+
+export const Button = styled.button`
+    padding: 10px 15px;
+    border-radius: 40px;
+    font-size: 18px;
+    cursor: pointer;
+
+    background-color: ${(props) =>
+        props.type === 'submit' ? 'var(--yellow)' : 'var(--quaternary)'};
+`;
+
+export const AddLinkButton = styled.button`
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    margin-top: 10px;
+    align-self: flex-end;
+    padding: 0 20px;
+    font-weight: bold;
+
+    color: var(--quaternary);
+`;
+
+export const ImagePreview = styled.img`
+    //width: 50px;
+    height: 50px;
+    border-radius: 10px;
+`;
+
+export const PreviewList = styled.ul`
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    max-width: 100%;
+
+    li {
+        width: 50px;
+        margin: 10px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    button {
+        position: relative;
+        background-color: rgba(0, 0, 0, 0);
+        color: var(--red);
+        top: 25px;
+        right: 15px;
+        cursor: pointer;
+    }
+`;
