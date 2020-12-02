@@ -18,18 +18,20 @@
      <a href="https://www.devchallenge.com.br/">DevChallenge</a>    
   </p>
 
-**Nota:** este repositório trata-se apenas do front-end da aplicação. Acesse ao outro repositório [aqui](https://github.com/Lorenalgm/DevChallengeAPI).
+## Índice
 
-## Tabela de conteúdos
-* [Sobre](#sobre)
-* [Feito com](#feito-com)
-* [Instalação](#instalação)
-* [Contribuir](#contribuir)
-* [Autores](#autores)
-* [Comunidade](#comunidade)
+- [Índice](#índice)
+- [Sobre o Projeto](#sobre-o-projeto)
+  - [Demo:](#demo)
+  - [Tecnologias:](#tecnologias)
+- [Como Utilizar](#como-utilizar)
+- [Como Contribuir](#como-contribuir)
+  - [Requisitos](#requisitos)
+  - [Instalar](#instalar)
+- [Comunidade](#comunidade)
 
-## Sobre
-O DevChallenge é um projeto que visa contrubuir com a evolução de desenvolvedores, disponibilizando desafios para que possam praticar, melhorar suas skills e criarem seus portfólios.
+## Sobre o Projeto
+O <a href="https://www.devchallenge.com.br/" alt="DevChallenge">DevChallenge</a> é um projeto que visa contribuir com a evolução de desenvolvedores, disponibilizando desafios para que possam praticar, melhorar suas skills e criarem seus portfólios :)
 
 <p align="center">
 <img src="https://i.ibb.co/nLGdpF4/novosdesafioss.gif" alt="DevChallenge" width="720" height="380">
@@ -76,4 +78,3 @@ Nos siga nas redes sociais!
 [stars-url]: https://github.com/Lorenalgm/DevChallenge/stargazers
 [issues-shield]: https://img.shields.io/github/issues/Lorenalgm/DevChallenge.svg?style=flat-square
 [issues-url]: https://github.com/Lorenalgm/DevChallenge/issues
-
