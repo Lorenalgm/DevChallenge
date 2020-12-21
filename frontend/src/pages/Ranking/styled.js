@@ -284,6 +284,10 @@ export const ListItem = styled.article`
         align-self: center;
         padding: 12px;
     `}
+
+    ${media.lessThan('small')`
+       flex-direction: column;
+    `}
 `;
 
 export const ListItemInfo = styled.section`
@@ -304,6 +308,10 @@ export const ListItemInfo = styled.section`
         ${media.lessThan('medium')`
             margin-left:12px;
         `}
+
+        ${media.lessThan('small')`
+            margin-left:0px;
+        `}
     }
 
     > section:last-child h3 {
@@ -314,13 +322,27 @@ export const ListItemInfo = styled.section`
         ${media.lessThan('medium')`
             font-size: 20px; 
         `}
+
+        ${media.lessThan('small')`
+            align-self: center;
+        `}
     }
 
     > section:last-child p {
         ${tools.cardsText};
         background: #1f2124;
         padding: 5px 7px;
+
+        ${media.lessThan('small')`
+            margin-bottom: 12px;
+            align-self: center;
+        `}
     }
+
+    ${media.lessThan('small')`
+       flex-direction: column;
+       align-items: center;
+    `}
 `;
 
 export const ListRankIcon = styled(RankIcon)`
