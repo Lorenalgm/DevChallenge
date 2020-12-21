@@ -26,7 +26,7 @@ export const Head = styled.section`
     padding: 48px 80px 80px 80px;
     margin: 86px 0 35px 0;
 
-    background: repeat-x url(${bg}) var(--primary);
+    background: url(${bg}) var(--primary);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
     ${media.between('medium', 'large')`
@@ -38,7 +38,7 @@ export const Head = styled.section`
         flex-direction: column;
         padding: 48px 0 0 0;
         position: relative;
-        width: 85%;
+        width: 100%;
         margin: 0 auto;
     `}
 `;
