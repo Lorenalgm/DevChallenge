@@ -10,6 +10,7 @@ import Devs from './pages/Devs';
 import Submit from './pages/Submit';
 import MyChallenges from './pages/MyChallenges';
 import Dashboard from './pages/Dashboard';
+import Ranking from './pages/Ranking';
 import Footer from './components/Footer';
 import ToDoChallenge from './pages/ToDoChallenge';
 
@@ -43,6 +44,7 @@ function Routes() {
                     <Route path="/challenges" exact component={Challenges} />
                     <Route path="/challenges/:id/details" component={Detail} />
                     <Route path="/devs" component={Devs} />
+                    <Route path="/ranking" component={Ranking} />
                     <LoggedRoute path="/submit" component={Submit} />
                     <LoggedRoute
                         path="/dashboard/myChallenges/toDo/:id"
