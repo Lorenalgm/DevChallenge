@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import api from '../../services/api';
 import ChallengesSkeleton from '../../components/ChallengesSkeleton';
 import ChallengeCard from '../../components/ChallengeCard';
 import Header from '../../components/Header';
 import * as S from './styled';
+import loadChallenges from '../../services/loadChallenges';
 
 const languages = [
     { id: 1, name: 'React Native' },
@@ -25,26 +25,17 @@ export default function Challenges({ location }) {
     const [languageFilter, setLanguageFilter] = useState('');
     const [typeFilter, setTypeFilter] = useState(location.search.split('=')[1]);
 
-    function capitalize(s) {
-        return s && s[0].toUpperCase() + s.slice(1);
-    }
+    const loadChallengesFromApi = async () => {
+        const res = await loadChallenges({ typeFilter });
+
+        setChallenges(res.challenges);
+        setLoading(false);
+    };
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        async function loadChallenges() {
-            let response = [];
-            if (typeFilter) {
-                const type = capitalize(typeFilter);
-                response = await api.get(`/challenges/?type=${type}`);
-            } else {
-                response = await api.get('/challenges');
-            }
-            setChallenges(response.data);
 
-            setLoading(false);
-        }
-
-        loadChallenges();
+        loadChallengesFromApi();
     }, [location, typeFilter, languageFilter]);
 
     return (
