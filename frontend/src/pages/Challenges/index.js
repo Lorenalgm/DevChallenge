@@ -4,6 +4,7 @@ import ChallengeCard from '../../components/ChallengeCard';
 import Header from '../../components/Header';
 import * as S from './styled';
 import loadChallenges from '../../services/loadChallenges';
+import capitalize from '../../utils/capitalize';
 
 const languages = [
     { id: 1, name: 'React Native' },
