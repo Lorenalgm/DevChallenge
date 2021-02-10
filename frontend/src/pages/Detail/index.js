@@ -64,19 +64,16 @@ export default function Detail() {
     const [images, setImages] = useState([]);
     const { id } = useParams();
 
-    const loadChallenge = async () => {
-        // eslint-disable-next-line camelcase
-        const { first_challenge } = await loadChallengesById({ id });
-
-        setChallenge(first_challenge);
-        setDev(first_challenge.dev_id);
-        setImages(first_challenge.images);
-        setTechs(first_challenge.techs);
-    };
-
     useEffect(() => {
         window.scrollTo(0, 0);
-        loadChallenge();
+
+        // eslint-disable-next-line camelcase
+        loadChallengesById({ id }).then(({ first_challenge }) => {
+            setChallenge(first_challenge);
+            setDev(first_challenge.dev_id);
+            setImages(first_challenge.images);
+            setTechs(first_challenge.techs);
+        });
     }, [id]);
 
     return (

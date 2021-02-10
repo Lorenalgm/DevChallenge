@@ -26,17 +26,13 @@ export default function Challenges({ location }) {
     const [languageFilter, setLanguageFilter] = useState('');
     const [typeFilter, setTypeFilter] = useState(location.search.split('=')[1]);
 
-    const loadChallengesFromApi = async () => {
-        const res = await loadChallenges({ typeFilter });
-
-        setChallenges(res.challenges);
-        setLoading(false);
-    };
-
     useEffect(() => {
         window.scrollTo(0, 0);
 
-        loadChallengesFromApi();
+        loadChallenges({ typeFilter }).then((res) => {
+            setChallenges(res.challenges);
+            setLoading(false);
+        });
     }, [location, typeFilter, languageFilter]);
 
     return (
