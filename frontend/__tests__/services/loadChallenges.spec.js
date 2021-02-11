@@ -27,6 +27,7 @@ describe(loadChallenges, () => {
             const { challenges } = await loadChallenges({
                 typeFilter: mock.filter.undefined,
             });
+            expect(capitalize).not.toHaveBeenCalled();
             expect(challenges).toEqual(mock.response.with_no_filters);
         });
     });
@@ -36,6 +37,7 @@ describe(loadChallenges, () => {
             const { challenges } = await loadChallenges({
                 typeFilter: mock.filter.any,
             });
+            expect(capitalize).toHaveBeenCalledWith(mock.filter.any);
             expect(challenges).toEqual(mock.response.with_filters);
         });
     });
