@@ -15,15 +15,11 @@ export default function Challenges() {
     const [devs, setDevs] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    const loadChallenges = async () => {
-        const res = await loadChallengesDevs();
-
-        setDevs(res.devs);
-        setLoading(false);
-    };
-
     useEffect(() => {
-        loadChallenges();
+        loadChallengesDevs().then((res) => {
+            setDevs(res.devs);
+            setLoading(false);
+        });
     }, []);
 
     return (
