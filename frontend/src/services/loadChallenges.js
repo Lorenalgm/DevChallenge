@@ -1,17 +1,20 @@
 import api from './api';
 import capitalize from '../utils/capitalize';
 
-export default async function loadChallenges({ typeFilter }) {
-    let response = [];
-
-    if (typeFilter) {
-        const type = capitalize(typeFilter);
-        response = await api.get(`/challenges/?type=${type}`);
-    } else {
-        response = await api.get('/challenges');
-    }
+async function load({ url }) {
+    const response = await api.get(url);
 
     return {
         challenges: response.data,
     };
+}
+
+export default async function loadChallenges({ typeFilter }) {
+    if (typeFilter) {
+        const url = `/challenges/?type=${capitalize(typeFilter)}`;
+
+        return load({ url });
+    }
+
+    return load({ url: 'challenges' });
 }
