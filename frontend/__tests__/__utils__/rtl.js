@@ -15,3 +15,5 @@ export const render = (Component, props, wrapper) => {
         },
     };
 };
+
+export const waitForUseEffect = Rtl.wait;
