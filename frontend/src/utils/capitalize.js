@@ -1,3 +1,8 @@
-export default function capitalize(string) {
-    return string && string[0].toUpperCase() + string.slice(1);
+export default function capitalize(word) {
+    if (!word) return undefined;
+
+    const firstLetter = word[0];
+    const restOfWord = word.slice(1);
+
+    return firstLetter.toUpperCase() + restOfWord;
 }
