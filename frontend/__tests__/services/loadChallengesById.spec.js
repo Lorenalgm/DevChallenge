@@ -1,8 +1,5 @@
-import MockAdapter from 'axios-mock-adapter';
 import loadChallengesById from '../../src/services/loadChallengesById';
-import api from '../../src/services/api';
-
-const apiMock = new MockAdapter(api, { delayResponse: 1000 });
+import { mockApi } from '../__utils__/mock-api';
 
 describe(loadChallengesById, () => {
     const mock = {
@@ -13,7 +10,9 @@ describe(loadChallengesById, () => {
     };
 
     beforeEach(() => {
-        apiMock.onGet(`/challenges/${mock.id}`).reply(200, mock.response.data);
+        mockApi()
+            .onGet(`/challenges/${mock.id}`)
+            .reply(200, mock.response.data);
     });
 
     it('should get the data from api with right id', async () => {

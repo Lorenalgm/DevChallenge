@@ -1,10 +1,8 @@
-import MockAdapter from 'axios-mock-adapter';
 import loadChallenges from '../../src/services/loadChallenges';
-import api from '../../src/services/api';
 import capitalize from '../../src/utils/capitalize';
+import { mockApi } from '../__utils__/mock-api';
 
 jest.mock('../../src/utils/capitalize');
-const apiMock = new MockAdapter(api, { delayResponse: 1000 });
 
 describe(loadChallenges, () => {
     const mock = {
@@ -13,6 +11,7 @@ describe(loadChallenges, () => {
     };
 
     beforeEach(() => {
+        const apiMock = mockApi();
         capitalize.mockImplementation((word) => word);
 
         apiMock.onGet('challenges').reply(200, mock.response.with_no_filters);

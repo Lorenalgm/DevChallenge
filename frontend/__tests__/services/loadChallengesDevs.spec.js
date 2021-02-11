@@ -1,14 +1,11 @@
-import MockAdapter from 'axios-mock-adapter';
 import loadChallengesDevs from '../../src/services/loadChallengesDevs';
-import api from '../../src/services/api';
-
-const apiMock = new MockAdapter(api, { delayResponse: 1000 });
+import { mockApi } from '../__utils__/mock-api';
 
 describe(loadChallengesDevs, () => {
     const mock = { response: { data: [] } };
 
     beforeEach(() => {
-        apiMock.onGet('devs').reply(200, mock.response.data);
+        mockApi().onGet('devs').reply(200, mock.response.data);
     });
 
     it('should get the data from api', async () => {
