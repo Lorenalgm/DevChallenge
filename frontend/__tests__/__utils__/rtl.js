@@ -17,3 +17,14 @@ export const render = (Component, props, wrapper) => {
 };
 
 export const waitForUseEffect = Rtl.wait;
+
+export const waitForStateUpdate = Rtl.wait;
+
+export const applySelect = (select) => {
+    return {
+        withOption: (option) =>
+            Rtl.fireEvent.change(select, {
+                target: { value: option },
+            }),
+    };
+};

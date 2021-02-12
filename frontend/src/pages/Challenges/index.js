@@ -50,10 +50,11 @@ export default function Challenges({ location }) {
                                     setTypeFilter(e.target.value);
                                 }}
                                 defaultValue={capitalize(typeFilter)}
+                                data-testid="challenges__type-select-input"
                             >
                                 <option value="">All</option>
                                 {types.map((type) => (
-                                    <option key={type.id} value={type.nam}>
+                                    <option key={type.id} value={type.name}>
                                         {type.name}
                                     </option>
                                 ))}
