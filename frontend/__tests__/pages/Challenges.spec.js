@@ -9,15 +9,20 @@ import {
 import loadChallenges from '../../src/services/loadChallenges';
 import Header from '../../src/components/Header';
 import capitalize from '../../src/utils/capitalize';
+import ChallengeCard from '../../src/components/ChallengeCard';
 
 jest.mock('../../src/services/loadChallenges');
 jest.mock('../../src/components/Header');
 jest.mock('../../src/utils/capitalize');
+jest.mock('../../src/components/ChallengeCard');
 
 describe(Challenges, () => {
     let sut;
     const mock = {
-        challenges: [],
+        challenges: [
+            { _id: 1, name: 'ch-1' },
+            { _id: 2, name: 'ch-2' },
+        ],
         filter: {
             default: 'All',
             type: 'Frontend',
@@ -30,6 +35,9 @@ describe(Challenges, () => {
     beforeEach(async () => {
         jest.spyOn(window, 'scrollTo').mockImplementation(jest.fn());
         capitalize.mockImplementation((word) => word);
+        ChallengeCard.mockImplementation(({ challenge }) => (
+            <div>{challenge.name}</div>
+        ));
         Header.mockReturnValue(<header />);
         loadChallenges.mockResolvedValue({
             challenges: mock.challenges,
@@ -57,6 +65,12 @@ describe(Challenges, () => {
 
         expect(loadChallenges).toHaveBeenCalledWith({
             typeFilter: mock.filter.type,
+        });
+    });
+
+    it('should render all the challenges', () => {
+        mock.challenges.forEach((challenge) => {
+            expect(sut.element.withText(challenge.name)).toBeTruthy();
         });
     });
 });
