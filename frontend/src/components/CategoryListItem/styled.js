@@ -7,8 +7,14 @@ export const Anchor = styled(Link)`
     text-decoration: none;
     margin: 0 25px 0 25px;
 
+    @media(max-width: 1053px) and (min-width: 700px) {
+        &:last-child {
+            margin-top: 30px
+        }
+    }
+
     ${media.lessThan('medium')`
-        margin: 15px 0px 10px 0px;
+        margin: 15px 25px 10px 25px;
     `}
 `;
 
