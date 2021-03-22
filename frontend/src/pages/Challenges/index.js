@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import api from '../../services/api';
 import ChallengesSkeleton from '../../components/ChallengesSkeleton';
 import ChallengeCard from '../../components/ChallengeCard';
 import Header from '../../components/Header';
 import * as S from './styled';
+import loadChallenges from '../../services/loadChallenges';
+import capitalize from '../../utils/capitalize';
 
 const languages = [
     { id: 1, name: 'React Native' },
@@ -25,26 +26,13 @@ export default function Challenges({ location }) {
     const [languageFilter, setLanguageFilter] = useState('');
     const [typeFilter, setTypeFilter] = useState(location.search.split('=')[1]);
 
-    function capitalize(s) {
-        return s && s[0].toUpperCase() + s.slice(1);
-    }
-
     useEffect(() => {
         window.scrollTo(0, 0);
-        async function loadChallenges() {
-            let response = [];
-            if (typeFilter) {
-                const type = capitalize(typeFilter);
-                response = await api.get(`/challenges/?type=${type}`);
-            } else {
-                response = await api.get('/challenges');
-            }
-            setChallenges(response.data);
 
+        loadChallenges({ typeFilter }).then((res) => {
+            setChallenges(res.challenges);
             setLoading(false);
-        }
-
-        loadChallenges();
+        });
     }, [location, typeFilter, languageFilter]);
 
     return (
@@ -62,10 +50,11 @@ export default function Challenges({ location }) {
                                     setTypeFilter(e.target.value);
                                 }}
                                 defaultValue={capitalize(typeFilter)}
+                                data-testid="challenges__type-select-input"
                             >
                                 <option value="">All</option>
                                 {types.map((type) => (
-                                    <option key={type.id} value={type.nam}>
+                                    <option key={type.id} value={type.name}>
                                         {type.name}
                                     </option>
                                 ))}

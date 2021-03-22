@@ -3,11 +3,11 @@ import { useParams } from 'react-router-dom';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
-import api from '../../services/api';
 import DevCard from '../../components/DevCard';
 
 import * as S from './styled';
 import Header from '../../components/Header';
+import loadChallengesById from '../../services/loadChallengesById';
 
 const includes = [
     {
@@ -66,15 +66,14 @@ export default function Detail() {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        async function loadChallenge() {
-            const response = await api.get(`/challenges/${id}`);
-            setChallenge(response.data[0]);
-            setDev(response.data[0].dev_id);
-            setImages(response.data[0].images);
-            setTechs(response.data[0].techs);
-        }
 
-        loadChallenge();
+        // eslint-disable-next-line camelcase
+        loadChallengesById({ id }).then(({ first_challenge }) => {
+            setChallenge(first_challenge);
+            setDev(first_challenge.dev_id);
+            setImages(first_challenge.images);
+            setTechs(first_challenge.techs);
+        });
     }, [id]);
 
     return (

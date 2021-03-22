@@ -5,6 +5,7 @@ import * as S from './styled';
 
 export default function CategoryListItem({ category }) {
     const type = category.name.replace('-', '').toLowerCase();
+
     return (
         <S.Anchor
             className="challenge-link"

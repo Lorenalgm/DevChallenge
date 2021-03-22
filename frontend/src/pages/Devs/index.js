@@ -4,29 +4,22 @@ import {
     faCodeBranch,
     faComment,
 } from '@fortawesome/free-solid-svg-icons';
-// import { Link } from 'react-router-dom';
 
 import * as S from './styled';
 
-import api from '../../services/api';
-
 import DevCard from '../../components/DevCard';
 import Header from '../../components/Header';
+import loadChallengesDevs from '../../services/loadChallengesDevs';
 
 export default function Challenges() {
     const [devs, setDevs] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        async function loadChallenges() {
-            const response = await api.get('/devs');
-            // console.log(response.data);
-            setDevs(response.data);
-
+        loadChallengesDevs().then((res) => {
+            setDevs(res.devs);
             setLoading(false);
-        }
-
-        loadChallenges();
+        });
     }, []);
 
     return (
