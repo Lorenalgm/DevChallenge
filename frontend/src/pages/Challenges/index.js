@@ -94,7 +94,7 @@ export default function Challenges({ location }) {
                 </S.Filters>
             </S.Head>
 
-            {loading && <S.Alert>Em manutenção! Os desafios estarão disponíveis novamente em breve :)</S.Alert>}
+            {loading && <ChallengesSkeleton />}
             {!loading && (
                 <S.Section>
                     {challenges.map((challenge) => {
