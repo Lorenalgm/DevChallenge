@@ -31,8 +31,7 @@ export default function Challenges() {
 
     return (
         <>
-            <Header />
-            {!loading && (
+            <Header />            
                 <S.Container>
                     <S.OptionsContainer>
                         <a
@@ -91,23 +90,24 @@ export default function Challenges() {
                             </S.Option>
                         </a>
                     </S.OptionsContainer>
-                    <S.DevsContainer>
-                        <h1>Últimas contribuições</h1>
-                        <S.Devs>
-                            {devs.map((dev) => (
-                                <DevCard
-                                    key={dev._id}
-                                    name={dev.name}
-                                    position={dev.position}
-                                    avatar={dev.avatar}
-                                    github={dev.github}
-                                    linkedin={dev.linkedin}
-                                />
-                            ))}
-                        </S.Devs>
-                    </S.DevsContainer>
+                    {!loading && (
+                        <S.DevsContainer>
+                            <h1>Últimas contribuições</h1>
+                            <S.Devs>
+                                {devs.map((dev) => (
+                                    <DevCard
+                                        key={dev._id}
+                                        name={dev.name}
+                                        position={dev.position}
+                                        avatar={dev.avatar}
+                                        github={dev.github}
+                                        linkedin={dev.linkedin}
+                                    />
+                                ))}
+                            </S.Devs>
+                        </S.DevsContainer>
+                    )}
                 </S.Container>
-            )}
         </>
     );
 }
