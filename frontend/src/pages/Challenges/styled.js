@@ -2,6 +2,12 @@ import styled from 'styled-components';
 import media from 'styled-media-query';
 import chevronDown from '../../assets/chevron-down.svg';
 
+export const Alert = styled.form`
+    color: white;
+    text-align: center;
+    margin-top: 3em;
+`;
+
 export const Section = styled.section`
     margin-top: 3%;
     display: flex;
