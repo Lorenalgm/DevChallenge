@@ -37,6 +37,8 @@ O <a href="https://www.devchallenge.com.br/" alt="DevChallenge">DevChallenge</a>
 <img src="https://i.ibb.co/nLGdpF4/novosdesafioss.gif" alt="DevChallenge" width="720" height="380">
 </p>
 
+Além disso, somos uma projeto open source onde você pode contribuir na evolução do backend, frontend e criação de novos desafios. Para saber mais, participe da nossa comunidade :)
+
 ## Feito com
   * [ReactJS](https://pt-br.reactjs.org/) - Biblioteca para criar interfaces de usuário
   * [Yarn](https://yarnpkg.com/) - Gerenciador de pacotes e dependências
