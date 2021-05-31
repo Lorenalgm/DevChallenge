@@ -26,20 +26,6 @@ export const Header = styled.header`
     `}
 `;
 
-export const Title = styled.div`
-    font-size: 30px;
-    font-weight: bold;
-    color: var(--white);
-
-    span {
-        color: var(--yellow);
-    }
-
-    ${media.lessThan('medium')`
-        margin-left: 20px;
-    `}
-`;
-
 export const MenuMobile = styled.div`
     display: none;
 

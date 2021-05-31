@@ -3,6 +3,9 @@ import { useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+
+import Logo from '../Logo'
+
 import * as S from './styled';
 
 export default function Header() {
@@ -15,11 +18,7 @@ export default function Header() {
 
     return (
         <S.Header>
-            <S.Title>
-                <S.StyledLink to="/" exact>
-                    Dev<span>Challenge</span>
-                </S.StyledLink>
-            </S.Title>
+            <Logo />
 
             <S.MenuMobile onClick={() => setClicked(!clicked)}>
                 {!clicked ? (
