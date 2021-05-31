@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Logo /> should render as link to home 1`] = `
+<div
+  class="sc-Axmtr kaMUpM"
+>
+  <a
+    aria-current="page"
+    class="sc-AxgMl dba-Dlw active"
+    href="/"
+  >
+    Dev
+    <span>
+      Challenge
+    </span>
+  </a>
+</div>
+`;
