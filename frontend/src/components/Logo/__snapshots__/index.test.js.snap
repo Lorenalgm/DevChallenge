@@ -1,12 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Logo /> should render as link to home 1`] = `
+.c1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.c1.is-active {
+  color: var(--yellow);
+}
+
+.c0 {
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--white);
+}
+
+.c0 span {
+  color: var(--yellow);
+}
+
 <div
-  class="sc-Axmtr kaMUpM"
+  class="c0"
 >
   <a
     aria-current="page"
-    class="sc-AxgMl dba-Dlw active"
+    class="c1 active"
     href="/"
   >
     Dev
