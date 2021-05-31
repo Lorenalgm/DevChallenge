@@ -23,9 +23,9 @@ export default function Header() {
 
             <S.MenuMobile onClick={() => setClicked(!clicked)}>
                 {!clicked ? (
-                    <FontAwesomeIcon icon={faBars} />
+                    <FontAwesomeIcon icon={faBars} aria-label="menu closed" />
                 ) : (
-                    <FontAwesomeIcon icon={faTimes} />
+                    <FontAwesomeIcon icon={faTimes} aria-label="menu opened" />
                 )}
             </S.MenuMobile>
 
