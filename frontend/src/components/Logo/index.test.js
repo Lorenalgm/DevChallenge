@@ -13,4 +13,12 @@ describe('<Logo />', () => {
 
         expect(container.firstChild).toMatchSnapshot();
     });
+
+    it('should render "challenge" in yellow', () => {
+        render(<Logo />);
+
+        expect(screen.getByText('Challenge')).toHaveStyle({
+            color: 'var(--yellow)',
+        });
+    });
 });
