@@ -1,0 +1,348 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Newsletter /> should render correctly 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-margin-start: auto;
+  margin-inline-start: auto;
+  -webkit-margin-end: auto;
+  margin-inline-end: auto;
+}
+
+@media screen and (min-width: 30em) {
+  .emotion-0 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .emotion-0 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+.emotion-1 {
+  height: 300px;
+  width: 300px;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-left: 0px;
+}
+
+@media screen and (min-width: 30em) {
+  .emotion-2 {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .emotion-2 {
+    margin-left: var(--chakra-space-6);
+  }
+}
+
+@media screen and (min-width: 62em) {
+  .emotion-2 {
+    margin-left: var(--chakra-space-10);
+  }
+}
+
+.emotion-3 {
+  font-family: var(--chakra-fonts-heading);
+  font-weight: var(--chakra-fontWeights-bold);
+  font-size: var(--chakra-fontSizes-2xl);
+  line-height: 1.33;
+}
+
+@media screen and (min-width: 30em) {
+  .emotion-3 {
+    font-size: var(--chakra-fontSizes-3xl);
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .emotion-3 {
+    font-size: var(--chakra-fontSizes-3xl);
+    line-height: 1.2;
+  }
+}
+
+@media screen and (min-width: 62em) {
+  .emotion-3 {
+    font-size: var(--chakra-fontSizes-4xl);
+  }
+}
+
+.emotion-4 {
+  color: var(--chakra-colors-primary-500);
+  font-size: var(--chakra-fontSizes-md);
+}
+
+@media screen and (min-width: 30em) {
+  .emotion-4 {
+    font-size: var(--chakra-fontSizes-lg);
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .emotion-4 {
+    font-size: var(--chakra-fontSizes-lg);
+  }
+}
+
+@media screen and (min-width: 62em) {
+  .emotion-4 {
+    font-size: var(--chakra-fontSizes-xl);
+  }
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: var(--chakra-space-6);
+}
+
+.emotion-5>*:not(style)~*:not(style) {
+  margin-top: var(--chakra-space-4);
+  -webkit-margin-end: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  -webkit-margin-start: 0px;
+  margin-inline-start: 0px;
+}
+
+.emotion-6 {
+  width: 100%;
+  position: relative;
+}
+
+.emotion-7 {
+  width: 100%;
+  min-width: 0px;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  font-size: var(--chakra-fontSizes-lg);
+  -webkit-padding-start: var(--chakra-space-4);
+  padding-inline-start: var(--chakra-space-4);
+  -webkit-padding-end: var(--chakra-space-4);
+  padding-inline-end: var(--chakra-space-4);
+  height: var(--chakra-sizes-12);
+  border-radius: var(--chakra-radii-md);
+  border: 2px solid;
+  border-color: var(--chakra-colors-transparent);
+  background: var(--chakra-colors-white);
+  color: var(--chakra-colors-black);
+}
+
+.emotion-7:hover,
+.emotion-7[data-hover] {
+  background: var(--chakra-colors-whiteAlpha-900);
+}
+
+.emotion-7[aria-readonly=true],
+.emotion-7[readonly],
+.emotion-7[data-readonly] {
+  box-shadow: none!important;
+  -webkit-user-select: all;
+  -moz-user-select: all;
+  -ms-user-select: all;
+  user-select: all;
+}
+
+.emotion-7[disabled],
+.emotion-7[aria-disabled=true],
+.emotion-7[data-disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.emotion-7[aria-invalid=true],
+.emotion-7[data-invalid] {
+  border-color: #FC8181;
+}
+
+.emotion-7:focus,
+.emotion-7[data-focus] {
+  background: var(--chakra-colors-whiteAlpha-900);
+  border-color: #fbbf24;
+  box-shadow: 0 0 0 3px #f1d537;
+}
+
+.emotion-7::-webkit-input-placeholder {
+  color: var(--chakra-colors-blackAlpha-500);
+}
+
+.emotion-7::-moz-placeholder {
+  color: var(--chakra-colors-blackAlpha-500);
+}
+
+.emotion-7:-ms-input-placeholder {
+  color: var(--chakra-colors-blackAlpha-500);
+}
+
+.emotion-7::placeholder {
+  color: var(--chakra-colors-blackAlpha-500);
+}
+
+.emotion-8 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  width: 100%;
+  line-height: 1.2;
+  border-radius: var(--chakra-radii-md);
+  font-weight: var(--chakra-fontWeights-bold);
+  height: var(--chakra-sizes-12);
+  min-width: var(--chakra-sizes-12);
+  font-size: var(--chakra-fontSizes-lg);
+  -webkit-padding-start: var(--chakra-space-6);
+  padding-inline-start: var(--chakra-space-6);
+  -webkit-padding-end: var(--chakra-space-6);
+  padding-inline-end: var(--chakra-space-6);
+  background: #5c0d78;
+  color: var(--chakra-colors-white);
+}
+
+.emotion-8:focus,
+.emotion-8[data-focus] {
+  box-shadow: 0 0 0 3px #a523d4;
+}
+
+.emotion-8[disabled],
+.emotion-8[aria-disabled=true],
+.emotion-8[data-disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: var(--chakra-shadows-none);
+}
+
+.emotion-8:hover,
+.emotion-8[data-hover] {
+  background: #721494;
+}
+
+.emotion-8:hover[disabled],
+.emotion-8[data-hover][disabled],
+.emotion-8:hover[aria-disabled=true],
+.emotion-8[data-hover][aria-disabled=true],
+.emotion-8:hover[data-disabled],
+.emotion-8[data-hover][data-disabled] {
+  background: var(--chakra-colors-whiteAlpha-200);
+}
+
+.emotion-8:active,
+.emotion-8[data-active] {
+  background: #D427D8;
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    class="lf-player-container"
+  >
+    <div
+      class="emotion-1"
+      id="lottie"
+      style="background: transparent; margin: 0px auto; outline: none; overflow: hidden;"
+    />
+  </div>
+  <div
+    class="emotion-2"
+  >
+    <h3
+      class="chakra-heading emotion-3"
+    >
+      Seja notificado sobre novos desafios!
+    </h3>
+    <p
+      class="chakra-text emotion-4"
+    >
+      Inscreva-se para ser o primeiro a saber sobre novos desafios :)
+    </p>
+    <form
+      class="chakra-stack emotion-5"
+    >
+      <div
+        class="chakra-form-control emotion-6"
+        role="group"
+      >
+        <input
+          aria-label="Email"
+          aria-required="true"
+          class="chakra-input emotion-7"
+          id="email"
+          placeholder="Email"
+          required=""
+          type="email"
+          value=""
+        />
+      </div>
+      <button
+        class="chakra-button emotion-8"
+        type="submit"
+      >
+        Inscrever
+      </button>
+    </form>
+  </div>
+</div>
+`;

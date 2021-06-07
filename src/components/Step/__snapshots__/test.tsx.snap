@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Step /> should render correctly 1`] = `
+.emotion-0 {
+  width: var(--chakra-sizes-48);
+  height: var(--chakra-sizes-48);
+  padding: var(--chakra-space-4);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: var(--chakra-colors-white);
+}
+
+.emotion-1 {
+  font-family: var(--chakra-fonts-heading);
+  font-weight: var(--chakra-fontWeights-bold);
+  font-size: var(--chakra-fontSizes-md);
+  line-height: 1.33;
+  margin-top: var(--chakra-space-5);
+  color: var(--chakra-colors-primary-500);
+}
+
+@media screen and (min-width: 30em) {
+  .emotion-1 {
+    font-size: var(--chakra-fontSizes-xl);
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .emotion-1 {
+    font-size: var(--chakra-fontSizes-2xl);
+    line-height: 1.2;
+  }
+}
+
+<div
+  class="emotion-0"
+>
+  <div
+    data-testid="mock icon"
+  />
+  <h2
+    class="chakra-heading emotion-1"
+  >
+    mock text
+  </h2>
+</div>
+`;

@@ -1,0 +1,11 @@
+import { render, screen } from 'utils/test-utils'
+
+import {{pascalCase name}}Template from '.'
+
+describe('<{{pascalCase name}}Template />', () => {
+  it('should render the heading', () => {
+    render(<{{pascalCase name}}Template />)
+
+    expect(screen.getByRole('heading', { name: /{{pascalCase name}}Template/i })).toBeInTheDocument()
+  })
+})

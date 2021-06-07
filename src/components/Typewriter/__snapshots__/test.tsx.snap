@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Typewriter /> should render the text passed 1`] = `
+.emotion-0 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-1 {
+  font-family: var(--chakra-fonts-heading);
+  font-weight: var(--chakra-fontWeights-bold);
+  font-size: var(--chakra-fontSizes-3xl);
+  line-height: 1.33;
+  border-right: 0.15em solid var(--chakra-colors-secondary-600);
+  overflow: hidden;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-animation: typing 3.5s steps(30, end),blink-caret 0.5s step-end infinite;
+  animation: typing 3.5s steps(30, end),blink-caret 0.5s step-end infinite;
+}
+
+@media screen and (min-width: 48em) {
+  .emotion-1 {
+    font-size: var(--chakra-fontSizes-4xl);
+    line-height: 1.2;
+  }
+}
+
+<div
+  class="emotion-0"
+>
+  <h2
+    class="chakra-heading emotion-1"
+  >
+    Typewriter Example
+  </h2>
+</div>
+`;
