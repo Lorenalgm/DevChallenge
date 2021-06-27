@@ -1,0 +1,31 @@
+{
+  "name": "DevChallenge",
+  "short_name": "DevChallenge",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "type": "image/x-icon",
+      "sizes": "16x16"
+    },
+    {
+      "src": "/logo.png",
+      "type": "image/png",
+      "sizes": "500x500"
+    },
+    {
+      "src": "/logo-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/banner.png",
+      "type": "image/png",
+      "sizes": "1200x620"
+    }
+  ],
+  "description": "DevChallenge",
+  "display": "fullscreen",
+  "start_url": "/",
+  "theme_color": "#f4cf0a",
+  "background_color": "#0e0f10"
+}

@@ -22,6 +22,6 @@ Ex: Seu desafio será criar uma landing page sobre um site de criação de gráf
 Ex: HTML, CSS
 
 <b>5 - Informe o link do desafio no github:</b>
-O seu desafio deverá ser um template no github, contendo texto utilizado, imagens, fontes e cores. 
-Ex padrão: <a href="https://github.com/Lorenalgm/AmazingGraph">Amazing Graph</a>. 
+O seu desafio deverá ser um template no github, contendo texto utilizado, imagens, fontes e cores.
+Ex padrão: <a href="https://github.com/Lorenalgm/AmazingGraph">Amazing Graph</a>.
 Caso você não possua, pode informar mais detalhes do desafio aqui que te auxilio ou crio o repositório pra você :)

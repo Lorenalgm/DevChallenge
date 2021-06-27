@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HeaderLink /> should render active link 1`] = `
+.emotion-1 {
+  -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+  cursor: pointer;
+  -webkit-text-decoration: none!important;
+  text-decoration: none!important;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  color: var(--chakra-colors-primary-400);
+  font-size: var(--chakra-fontSizes-xl);
+}
+
+.emotion-1:hover,
+.emotion-1[data-hover] {
+  opacity: 0.8;
+}
+
+.emotion-1:focus,
+.emotion-1[data-focus] {
+  box-shadow: var(--chakra-shadows-outline);
+}
+
+<li
+  class="emotion-0"
+>
+  <a
+    class="chakra-link emotion-1"
+    href="/"
+  >
+    my link
+  </a>
+</li>
+`;
