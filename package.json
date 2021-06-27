@@ -33,7 +33,7 @@
     "@lottiefiles/react-lottie-player": "^3.3.1",
     "axios": "^0.21.1",
     "framer-motion": "4.1.11",
-    "next": "latest",
+    "next": "^11.0.0",
     "next-pwa": "^5.2.21",
     "next-seo": "^4.24.0",
     "next-sitemap": "^1.6.102",
@@ -63,6 +63,7 @@
     "@typescript-eslint/parser": "^4.24.0",
     "babel-loader": "^8.2.2",
     "eslint": "^7.26.0",
+    "eslint-config-next": "^11.0.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.23.2",
@@ -75,7 +76,7 @@
     "plop": "^2.7.4",
     "prettier": "^2.3.0",
     "storybook-addon-next-router": "^2.0.4",
-    "typescript": "4.2.3"
+    "typescript": "^4.3.2"
   },
   "license": "MIT"
 }

@@ -1,4 +1,5 @@
-import { FlexProps, Image } from '@chakra-ui/react'
+import Image from 'next/image'
+import { FlexProps } from '@chakra-ui/react'
 
 import * as S from './styles'
 import 'react-awesome-slider/dist/styles.css'
@@ -18,9 +19,9 @@ const ChallengeImagesPresentation = ({
           <Image
             src={image}
             alt={`Challenge image presentation ${index + 1}`}
-            height="full"
-            width="full"
-            objectFit="cover"
+            layout="fill"
+            placeholder="blur"
+            blurDataURL={image}
           />
         </div>
       ))}

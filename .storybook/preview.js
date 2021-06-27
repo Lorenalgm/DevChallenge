@@ -1,3 +1,4 @@
+import '../.jest/next-image.mock'
 import { ChakraProvider } from '@chakra-ui/react'
 
 import theme from '../src/theme'

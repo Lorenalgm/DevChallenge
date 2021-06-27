@@ -27,9 +27,23 @@ export const Slider = styled(AwesomeSlider)`
     background-color: rgba(0, 0, 0, 0.3);
   }
 
+  button.awssld__prev,
+  button.awssld__next {
+    transition: box-shadow 0.3s ease;
+
+    &:focus-visible {
+      box-shadow: 0 0 0 3px var(--chakra-colors-secondary-200);
+    }
+  }
+
   .awssld__bullets button {
     border: 3px solid var(--chakra-colors-primary-400);
     background-color: rgba(0, 0, 0, 0);
+    transition: box-shadow 0.3s ease;
+
+    &:focus-visible {
+      box-shadow: 0 0 0 3px var(--chakra-colors-secondary-200);
+    }
   }
 
   .awssld__bullets .awssld__bullets--active {

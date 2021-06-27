@@ -13,6 +13,11 @@
       "sizes": "500x500"
     },
     {
+      "src": "/logo-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
       "src": "/banner.png",
       "type": "image/png",
       "sizes": "1200x620"

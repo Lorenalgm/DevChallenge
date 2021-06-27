@@ -28,6 +28,7 @@ const ContributorCard = ({
     justifyContent="space-between"
     alignItems="center"
     maxWidth="300px"
+    height="full"
     borderRadius="md"
     paddingX="4"
     paddingY="5"

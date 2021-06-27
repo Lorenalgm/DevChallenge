@@ -14,8 +14,9 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ChakraProvider resetCSS theme={theme}>
       <Head>
         <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/logo.png" />
+        <link rel="apple-touch-icon" href="/logo-512.png" />
         <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#0e0f10" />
       </Head>
       <DefaultSeo {...SEO} />
       <Fonts />

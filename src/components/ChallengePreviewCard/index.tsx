@@ -2,7 +2,6 @@ import Link from 'next/link'
 import {
   Flex,
   Link as ChakraLink,
-  Image,
   Heading,
   Box,
   Button,
@@ -13,6 +12,8 @@ import {
 
 import ColorTools from 'services/tools/color'
 import TechTools from 'services/tools/techs'
+
+import * as S from './styles'
 
 export type ChallengePreviewProps = {
   id: string
@@ -58,13 +59,13 @@ const ChallengePreviewCard = ({
             borderTopRightRadius="md"
             overflow="hidden"
           >
-            <Image
+            <S.Image
               src={background}
               alt={name}
-              borderTopLeftRadius="md"
-              borderTopRightRadius="md"
-              transition="transform 0.3s ease"
-              _hover={{ transform: 'scale(1.1)' }}
+              width="300px"
+              height="150px"
+              placeholder="blur"
+              blurDataURL={background}
             />
           </Box>
         </ChakraLink>
