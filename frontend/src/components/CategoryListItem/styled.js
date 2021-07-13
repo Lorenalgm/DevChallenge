@@ -21,15 +21,21 @@ export const Anchor = styled(Link)`
 export const Card = styled.div`
     width: 300px;
     height: 300px;
-    background-color: var(--secondary);
-    border-radius: 20px;
-    
+    background-color: var(--gray);
+    border-radius: 10px;
+
     cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: 0.25s;
+
+    ${media.lessThan('medium')`
+        height: 8em;
+        width: 20em;
+    `}
+
+    transition: background-color 0.25s;
 
     &:hover {
         background-color: var(--dark-hover);
@@ -45,4 +51,19 @@ export const Title = styled.h2`
     `}
 `;
 
+export const Anchor = styled(Link)`
+    color: transparent;
+    text-decoration: none;
+    margin: 50px;
+    display: inline-block;
 
+    ${media.lessThan('medium')`
+        margin: 1.4em;
+    `}
+
+    transition: outline-color 0.25s;
+
+    &:focus {
+        outline: 1px solid var(--white);
+    }
+`;
