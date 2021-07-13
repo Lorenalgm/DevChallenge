@@ -4,12 +4,14 @@ import {
     faCodeBranch,
     faComment,
 } from '@fortawesome/free-solid-svg-icons';
+// import { Link } from 'react-router-dom';
 
 import * as S from './styled';
 
 import api from '../../services/api';
+
+import DevCard from '../../components/DevCard';
 import Header from '../../components/Header';
-import Dev from '../../components/Dev';
 
 export default function Challenges() {
     const [devs, setDevs] = useState([]);
@@ -29,9 +31,7 @@ export default function Challenges() {
 
     return (
         <>
-            <Header />
-
-            {!loading && (
+            <Header />            
                 <S.Container>
                     <S.OptionsContainer>
                         <a
@@ -47,7 +47,9 @@ export default function Challenges() {
                                 />
 
                                 <S.OptionTitle>
-                                    Submeter<br></br>novo desafio
+                                    Submeter
+                                    <br />
+                                    novo desafio
                                 </S.OptionTitle>
                             </S.Option>
                         </a>
@@ -63,7 +65,9 @@ export default function Challenges() {
                                     icon={faComment}
                                 />
                                 <S.OptionTitle>
-                                    Participar<br></br>da comunidade
+                                    Participar
+                                    <br />
+                                    da comunidade
                                 </S.OptionTitle>
                             </S.Option>
                         </a>
@@ -79,21 +83,31 @@ export default function Challenges() {
                                     icon={faCodeBranch}
                                 />
                                 <S.OptionTitle>
-                                    Contribuir<br></br>open source
+                                    Contribuir
+                                    <br />
+                                    open source
                                 </S.OptionTitle>
                             </S.Option>
                         </a>
                     </S.OptionsContainer>
-                    <S.DevsContainer>
-                        <S.DevsTitle>Últimas contribuições</S.DevsTitle>
-                        <S.Devs>
-                            {devs.map((dev) => (
-                                <Dev info={dev} />
-                            ))}
-                        </S.Devs>
-                    </S.DevsContainer>
+                    {!loading && (
+                        <S.DevsContainer>
+                            <h1>Últimas contribuições</h1>
+                            <S.Devs>
+                                {devs.map((dev) => (
+                                    <DevCard
+                                        key={dev._id}
+                                        name={dev.name}
+                                        position={dev.position}
+                                        avatar={dev.avatar}
+                                        github={dev.github}
+                                        linkedin={dev.linkedin}
+                                    />
+                                ))}
+                            </S.Devs>
+                        </S.DevsContainer>
+                    )}
                 </S.Container>
-            )}
         </>
     );
 }

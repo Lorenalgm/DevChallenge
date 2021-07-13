@@ -124,4 +124,3 @@ Site: https://www.devchallenge.com.br/ <br>
 [stars-url]: https://github.com/Lorenalgm/DevChallenge/stargazers
 [issues-shield]: https://img.shields.io/github/issues/Lorenalgm/DevChallenge.svg?style=flat-square
 [issues-url]: https://github.com/Lorenalgm/DevChallenge/issues
-
