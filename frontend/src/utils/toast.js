@@ -11,9 +11,10 @@ const messages = {
 
 const ToastNotification = {
     notify: (method, msg) => {
-        const methodStr = method;
-        method = toast[method];
-        method(messages[methodStr](msg));
+        const toastFn = toast[method];
+        const message = messages[method](msg);
+
+        toastFn(message);
     },
 };
 
