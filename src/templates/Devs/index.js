@@ -20,8 +20,7 @@ export default function Challenges() {
   useEffect(() => {
     async function loadChallenges() {
       const response = await api.get('/devs');
-      // console.log(response.data);
-      setDevs(response.data);
+      setDevs(Array.isArray(response.data) ? response.data : []);
 
       setLoading(false);
     }

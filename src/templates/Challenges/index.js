@@ -35,15 +35,18 @@ export default function Challenges({ location }) {
   useEffect(() => {
     window.scrollTo(0, 0);
     async function loadChallenges() {
-      let response = [];
-      if (typeFilter) {
-        const type = capitalize(typeFilter);
-        response = await api.get(`/challenges/?type=${type}`);
-      } else {
-        response = await api.get('/challenges');
+      try {
+        if (typeFilter) {
+          const type = capitalize(typeFilter);
+          const response = await api.get(`/challenges/?type=${type}`);
+          setChallenges(Array.isArray(response.data) ? response.data : []);
+        } else {
+          const response = await api.get('/challenges');
+          setChallenges(Array.isArray(response.data) ? response.data : []);
+        }
+      } catch (error) {
+        console.log(error);
       }
-      console.log(response.data);
-      setChallenges(response.data);
 
       setLoading(false);
     }
