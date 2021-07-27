@@ -13,6 +13,8 @@ function MyApp({ Component, pageProps }: AppProps) {
 
         <meta charSet="utf-8" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/img/logo.png" />
+        <link rel="apple-touch-icon" href="/img/logo.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
         <meta
