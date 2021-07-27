@@ -1,7 +1,7 @@
 import React from 'react';
 
-import pageInConstruction from '../../assets/page-under-construction.png';
 import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 function ConstructPage() {
   return (
@@ -18,11 +18,12 @@ function ConstructPage() {
       >
         <img
           style={{ height: '50vh', maxHeight: '912px' }}
-          src={pageInConstruction}
-          alt=""
+          src="/img/page-under-construction.png"
+          alt="Página em construção"
         />
         <h2 style={{ color: '#c4c4c4' }}>Pagina em Construção</h2>
       </div>
+      <Footer />
     </>
   );
 }
