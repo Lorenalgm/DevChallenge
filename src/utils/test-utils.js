@@ -1,9 +1,8 @@
 import React from 'react';
-import { MemoryRouter } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import { render } from '@testing-library/react';
 
-import { GlobalStyles } from '../styles/GlobalStyles';
+import GlobalStyles from '../styles/global';
 
 const customRender = (component, { ...renderOptions } = {}) =>
   render(
@@ -12,7 +11,7 @@ const customRender = (component, { ...renderOptions } = {}) =>
       {component}
       <ToastContainer />
     </>,
-    { wrapper: MemoryRouter, ...renderOptions }
+    { ...renderOptions }
   );
 
 export * from '@testing-library/react';
