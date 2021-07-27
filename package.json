@@ -15,11 +15,23 @@
     "build-storybook": "build-storybook -s ./public"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "@lottiefiles/react-lottie-player": "^3.3.1",
+    "axios": "^0.21.1",
     "next": "^11.0.1",
     "next-pwa": "^5.0.5",
     "react": "^17.0.2",
+    "react-awesome-slider": "^4.1.0",
     "react-dom": "^17.0.2",
-    "styled-components": "^5.2.1"
+    "react-icons": "^4.2.0",
+    "react-loading-skeleton": "^2.2.0",
+    "react-toastify": "^7.0.4",
+    "react-web-vector-icons": "^1.0.2",
+    "styled-components": "^5.2.1",
+    "styled-media-query": "^2.1.2"
   },
   "husky": {
     "hooks": {
