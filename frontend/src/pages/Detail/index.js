@@ -68,10 +68,10 @@ export default function Detail() {
         window.scrollTo(0, 0);
         async function loadChallenge() {
             const response = await api.get(`/challenges/${id}`);
-            setChallenge(response.data[0]);
-            setDev(response.data[0].dev_id);
-            setImages(response.data[0].images);
-            setTechs(response.data[0].techs);
+            setChallenge(response.data);
+            setDev(response.data.dev_id);
+            setImages(response.data.images);
+            setTechs(response.data.techs);
         }
 
         loadChallenge();
