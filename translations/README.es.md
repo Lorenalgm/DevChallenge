@@ -11,14 +11,12 @@
   <h3 align="center">DevChallenge</h3>
 
   <p align="center">
-    El sitio para desarrolladores mejorar sus habilidades a través de front-end, back-end y desafíos móviles.<br><br>
-    El sitio de web para desarrolladores mejorar sus habilidades haciendo desafíos front-end y back-end.
-       <br />
+    Un sitio de desarrolladores para mejorar sus habilidades a través de front-end, back-end y desafíos móviles.<br><br>
     <br />
      <a href="https://www.devchallenge.com.br/">DevChallenge</a>    
   </p>
 
-# Translations
+# Traducciones
 
 |                                                                                                                                                   | Link                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
@@ -29,17 +27,17 @@
 
 ## Índice
 
-* [Sobre el proyecto](#sobre-o-projeto)
+* [Sobre el proyecto](#sobre-el-proyecto)
   * [Demo](#demo)
-  * [Tecnología](#tecnologias)
+  * [Tecnología](#tecnología)
 * [Cómo utilizar](#como-utilizar)
 * [Cómo contribuir](#como-contribuir)
   * [Requisitos](#requisitos)
   * [Instalar](#instalar)
-* [Comunidad](#comunidade)
+* [Comunidad](#comunidad)
 
 ## Sobre el proyecto
-El <a href="https://www.devchallenge.com.br/" alt="DevChallenge">DevChallenge</a> es un proyecto que tiene como objetivo contribuir a la evolución de los desarrolladores, proporcionar desafíos para que puedan practicar, mejorar sus habilidades y crear sus carteras. :)
+<a href="https://www.devchallenge.com.br/" alt="DevChallenge">DevChallenge</a> es un proyecto que tiene como objetivo contribuir a la evolución de los desarrolladores, proporcionar desafíos para que puedan practicar, mejorar sus habilidades y crear sus portafolios. :)
 
 ### Demo:
 <p align="center">
@@ -49,28 +47,25 @@ El <a href="https://www.devchallenge.com.br/" alt="DevChallenge">DevChallenge</a
 ### Tecnología:
 - Backend: Nodejs
 - Frontend: Reactjs
-- Banco: MongoDB
+- Database: MongoDB
 
 ## Como utilizar
-1 - Utilizar una plantilla <a href="https://devchallenge.now.sh/">DevChallenge</a> con el código inicial<br>
+1 - Utilizar una plantilla de <a href="https://devchallenge.now.sh/">DevChallenge</a> como código inicial<br>
 2 - Lee las instrucciones en readme.md<br>
-3 - ¡Iniciar codificación!<br>
+3 - ¡Inicia a hacer código!<br>
 4 - Comparta sus resultados con la comunidad :)
 <br><br>
-1 - Use a <a href="https://devchallenge.now.sh/">DevChallenge</a> template with the starter code<br>
-2 - Read the instructions in readme.md<br>
-3 - Start coding!<br>
-4 - Share your results with the community :)<br>
 
 ## Como contribuir
 Puedes ayudar con el proyecto:<br>
 - Sugerir y/o crear nuevos retos: estos desafíos estarán disponibles y pueden ayudar a todos los desarrollares a practicar 
-- Mejoras que contribuyen y correcciónes al sitio: puede enviar un pull request para que su cambio esté disponible para todos los desarrolladores
+- Mejoras que contribuyen y corrigen al sitio: puede enviar una Pull Request para que su cambio esté disponible para todos los desarrolladores
 <br><br>
-You can help by contributing with new challenges or improving the website
 
 ### Requisitos
-1. Nodejs
+1. [Node.js](https://nodejs.org)
+2. [Yarn](https://yarnpkg.com)
+3. [Git](https://git-scm.com)
 
 ### Instalar
 
@@ -80,7 +75,7 @@ You can help by contributing with new challenges or improving the website
 ```sh 
 git clone git@github.com:Lorenalgm/DevChallenge.git
 ```
-2. Abrir el proyecto en su editor.
+2. Abrir el proyecto en su editor preferido.
 3. En su terminal, instalar los paquetes necesarios:
 ```sh 
 yarn 
@@ -89,7 +84,7 @@ o
 ```sh 
 npm install 
 ```
-4. Mostrar! Ahora puede ir a la carpeta frontend y iniciar el servidor:
+4. Listo! Ahora puede ir a la carpeta frontend y iniciar el servidor:
 ```sh 
 cd frontend
 ```
@@ -101,13 +96,13 @@ yarn start
 
 <b>Back-end</b>
 
-El backend está disponible en repositorio: <a href="https://github.com/Lorenalgm/DevChallengeAPI" alt="DevChallengeAPI">DevChallengeAPI</a>
+El backend está disponible en el siguiente repositorio: <a href="https://github.com/Lorenalgm/DevChallengeAPI" alt="DevChallengeAPI">DevChallengeAPI</a>
 
 
 ## Comunidad
-¡Nuestra meta es ayudar más y más en la evolución de los desarrolladores!. Tenemos una exclusiva comunidad DevChallenge en Discord. https://discord.gg/yvYXhGj <br>
+¡Nuestra meta es ayudar más y más en la evolución de los desarrolladores!. Tenemos una exclusiva comunidad de DevChallenge en Discord. https://discord.gg/yvYXhGj <br>
 <br>
-Site: https://www.devchallenge.com.br/ <br>
+Sitio web: https://www.devchallenge.com.br/ <br>
 
 <table style="border-color:transparent">
     <th>
