@@ -35,6 +35,7 @@
 - [Como Contribuir](#contribuir)
 - [Autores](#autores)
 - [Comunidade](#comunidade)
+- [Redes sociais](#redes-sociais)
 
 ## Sobre o Projeto
 
@@ -76,6 +77,8 @@ Veja também a lista de [contribuidores](https://devchallenge.now.sh/devs) que p
 Nosso objetivo é ajudar cada vez mais na evolução de desenvolvedores! Por isso, temos uma comunidade exclusiva do DevChallenge no Discord. Interessado? [Participe](https://discord.gg/yvYXhGj)!
 
 Acesse nossa [plataforma](https://devchallenge.now.sh/)!
+
+## Redes sociais
 
 Nos siga nas redes sociais!
 
