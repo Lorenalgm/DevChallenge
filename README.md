@@ -7,7 +7,7 @@
   <a href="https://www.devchallenge.com.br/">
     <img 
       src="https://trello-attachments.s3.amazonaws.com/590fa896d2d25e50583de620/500x500/0bdcc819ea145cb0167619c6d00f2174/D.png"
-      alt="DevChallenge logo, ou seja, quadrado amarelo com D maiusculo preto na cor preta" 
+      alt="DevChallenge logo, ou seja, quadrado amarelo com D maiusculo na cor preta" 
       width="100" 
       height="100"
     />
