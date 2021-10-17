@@ -52,7 +52,19 @@ export default function Challenges({ location }) {
                     challenge.type.toLowerCase() === typeFilter.toLowerCase()
             );
         }
-        // TODO languageFilter
+        if (languageFilter) {
+            filtered = filtered.filter((challenge) => {
+                let techs = challenge.techs
+                    .map((tech) => tech.trim().split(','))
+                    .flat();
+
+                let hasTech =
+                    techs.includes(languageFilter) ||
+                    techs.includes('Free Choice');
+
+                return hasTech;
+            });
+        }
         setFilteredChallenges(filtered);
     }, [typeFilter, languageFilter, challenges]);
 
