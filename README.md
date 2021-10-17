@@ -4,7 +4,7 @@
 
 <br />
 <p align="center">
-  <a href="https://devchallenge.now.sh/">
+  <a href="https://www.devchallenge.com.br/">
     <img 
       src="https://trello-attachments.s3.amazonaws.com/590fa896d2d25e50583de620/500x500/0bdcc819ea145cb0167619c6d00f2174/D.png"
       alt="DevChallenge logo, ou seja, quadrado amarelo com D maiusculo preto na cor preta" 
@@ -70,13 +70,13 @@ Gostaria de contribuir com o projeto? Por favor acesse [CONTRIBUTING.md](CONTRIB
 
 - **Lorena Montes** - _Trabalho inicial_ - [Lorenalgm](https://github.com/Lorenalgm)
 
-Veja também a lista de [contribuidores](https://devchallenge.now.sh/devs) que participaram do projeto.
+Veja também a lista de [contribuidores](https://www.devchallenge.com.br/devs) que participaram do projeto.
 
 ## Comunidade
 
 Nosso objetivo é ajudar cada vez mais na evolução de desenvolvedores! Por isso, temos uma comunidade exclusiva do DevChallenge no Discord. Interessado? [Participe](https://discord.gg/yvYXhGj)!
 
-Acesse nossa [plataforma](https://devchallenge.now.sh/)!
+Acesse nossa [plataforma](https://www.devchallenge.com.br/)!
 
 ## Redes sociais
 
