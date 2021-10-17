@@ -20,26 +20,24 @@
 
 ## Índice
 
-- [Índice](#índice)
 - [Sobre o Projeto](#sobre-o-projeto)
-  - [Demo:](#demo)
-  - [Tecnologias:](#tecnologias)
-- [Como Utilizar](#como-utilizar)
-- [Como Contribuir](#como-contribuir)
-  - [Requisitos](#requisitos)
-  - [Instalar](#instalar)
+  - [Demo](#demo)
+  - [Tecnologias](#feito-com)
+- [Como Utilizar](#instalação)
+- [Como Contribuir](#contribuir)
+- [Autores](#autores)
 - [Comunidade](#comunidade)
 
 ## Sobre o Projeto
 O <a href="https://www.devchallenge.com.br/" alt="DevChallenge">DevChallenge</a> é um projeto que visa contribuir com a evolução de desenvolvedores, disponibilizando desafios para que possam praticar, melhorar suas skills e criarem seus portfólios :)
 
 <p align="center">
-<img src="https://i.ibb.co/nLGdpF4/novosdesafioss.gif" alt="DevChallenge" width="720" height="380">
+  <img id="demo" src="https://i.ibb.co/nLGdpF4/novosdesafioss.gif" alt="DevChallenge" width="720" height="380">
 </p>
 
 Além disso, somos uma projeto open source onde você pode contribuir na evolução do backend, frontend e criação de novos desafios. Para saber mais, participe da nossa comunidade :)
 
-## Feito com
+### Feito com
   * [ReactJS](https://pt-br.reactjs.org/) - Biblioteca para criar interfaces de usuário
   * [Yarn](https://yarnpkg.com/) - Gerenciador de pacotes e dependências
 
