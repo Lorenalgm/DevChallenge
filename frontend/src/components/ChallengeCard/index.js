@@ -39,7 +39,10 @@ function ChallengeCard({ challenge, progress, redirect, buttonText }) {
                 <S.CardImage>
                     <S.CardTechs>
                         {techs.map((item) => (
-                            <p className="tech" key={item}>
+                            <p
+                                className="tech"
+                                key={`${item}-${challenge._id}`}
+                            >
                                 {item}
                             </p>
                         ))}

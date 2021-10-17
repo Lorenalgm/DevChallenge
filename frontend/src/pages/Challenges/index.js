@@ -21,6 +21,7 @@ const types = [
 
 export default function Challenges({ location }) {
     const [challenges, setChallenges] = useState([]);
+    const [filteredChallenges, setFilteredChallenges] = useState([]);
     const [loading, setLoading] = useState(true);
     const [languageFilter, setLanguageFilter] = useState('');
     const [typeFilter, setTypeFilter] = useState(location.search.split('=')[1]);
@@ -32,20 +33,28 @@ export default function Challenges({ location }) {
     useEffect(() => {
         window.scrollTo(0, 0);
         async function loadChallenges() {
-            let response = [];
-            if (typeFilter) {
-                const type = capitalize(typeFilter);
-                response = await api.get(`/challenges/?type=${type}`);
-            } else {
-                response = await api.get('/challenges');
-            }
+            const response = await api.get('/challenges');
+
             setChallenges(response.data);
+            setFilteredChallenges(response.data);
 
             setLoading(false);
         }
 
         loadChallenges();
-    }, [location, typeFilter, languageFilter]);
+    }, [location]);
+
+    useEffect(() => {
+        let filtered = challenges;
+        if (typeFilter) {
+            filtered = filtered.filter(
+                (challenge) =>
+                    challenge.type.toLowerCase() === typeFilter.toLowerCase()
+            );
+        }
+        // TODO languageFilter
+        setFilteredChallenges(filtered);
+    }, [typeFilter, languageFilter, challenges]);
 
     return (
         <>
@@ -97,7 +106,7 @@ export default function Challenges({ location }) {
             {loading && <ChallengesSkeleton />}
             {!loading && (
                 <S.Section>
-                    {challenges.map((challenge) => {
+                    {filteredChallenges.map((challenge) => {
                         return (
                             <ChallengeCard
                                 challenge={challenge}
