@@ -54,7 +54,8 @@ export default function Challenges({ location }) {
         }
         if (languageFilter) {
             filtered = filtered.filter((challenge) => {
-                const serializedTechs = challenge.techs[0].split(', ');
+                const [ techs ] = challenge.techs;
+                const serializedTechs = techs.split(', ');
                 const hasSelectedTech =
                     serializedTechs.includes(languageFilter) ||
                     serializedTechs.includes('Free Choice');
