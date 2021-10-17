@@ -47,13 +47,12 @@ export default function Challenges({ location }) {
 
         if (languageFilter) {
             filtered = filtered.filter((challenge) => {
-                let techs = challenge.techs
-                    .map((tech) => tech.trim().split(','))
-                    .flat();
+                const [techs] = challenge.techs
+                const serializedTechs = techs.split(', ')
 
-                let hasTech =
-                    techs.includes(languageFilter) ||
-                    techs.includes('Free Choice');
+                const hasTech =
+                    serializedTechs.includes(languageFilter) ||
+                    serializedTechs.includes('Free Choice');
 
                 return hasTech;
             });
