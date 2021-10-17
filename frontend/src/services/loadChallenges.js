@@ -1,5 +1,4 @@
 import api from './api';
-import capitalize from '../utils/capitalize';
 
 async function load({ url }) {
     const response = await api.get(url);
@@ -9,12 +8,6 @@ async function load({ url }) {
     };
 }
 
-export default async function loadChallenges({ typeFilter }) {
-    if (typeFilter) {
-        const url = `/challenges/?type=${capitalize(typeFilter)}`;
-
-        return load({ url });
-    }
-
+export default async function loadChallenges() {
     return load({ url: 'challenges' });
 }
