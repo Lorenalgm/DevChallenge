@@ -54,15 +54,13 @@ export default function Challenges({ location }) {
         }
         if (languageFilter) {
             filtered = filtered.filter((challenge) => {
-                let techs = challenge.techs
-                    .map((tech) => tech.trim().split(','))
-                    .flat();
+                const [ techs ] = challenge.techs;
+                const serializedTechs = techs.split(', ');
+                const hasSelectedTech =
+                    serializedTechs.includes(languageFilter) ||
+                    serializedTechs.includes('Free Choice');
 
-                let hasTech =
-                    techs.includes(languageFilter) ||
-                    techs.includes('Free Choice');
-
-                return hasTech;
+                return hasSelectedTech;
             });
         }
         setFilteredChallenges(filtered);
