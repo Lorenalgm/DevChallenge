@@ -7,9 +7,9 @@ export const Anchor = styled(Link)`
     text-decoration: none;
     margin: 0 25px 0 25px;
 
-    @media(max-width: 1053px) and (min-width: 700px) {
+    @media (max-width: 1053px) and (min-width: 700px) {
         &:last-child {
-            margin-top: 30px
+            margin-top: 30px;
         }
     }
 
@@ -51,7 +51,7 @@ export const Title = styled.h2`
     `}
 `;
 
-export const Anchor = styled(Link)`
+export const Anchor1 = styled(Link)`
     color: transparent;
     text-decoration: none;
     margin: 50px;

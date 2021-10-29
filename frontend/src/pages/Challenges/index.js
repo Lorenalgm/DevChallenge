@@ -22,6 +22,7 @@ const types = [
 
 export default function Challenges({ location }) {
     const [challenges, setChallenges] = useState([]);
+    const [filteredChallenges, setFilteredChallenges] = useState([]);
     const [loading, setLoading] = useState(true);
     const [languageFilter, setLanguageFilter] = useState('');
     const [typeFilter, setTypeFilter] = useState(location.search.split('=')[1]);
@@ -29,11 +30,35 @@ export default function Challenges({ location }) {
     useEffect(() => {
         window.scrollTo(0, 0);
 
-        loadChallenges({ typeFilter }).then((res) => {
+        loadChallenges().then((res) => {
             setChallenges(res.challenges);
             setLoading(false);
         });
-    }, [location, typeFilter, languageFilter]);
+    }, [location]);
+
+    useEffect(() => {
+        let filtered = challenges;
+        if (typeFilter) {
+            filtered = filtered.filter(
+                (challenge) =>
+                    challenge.type.toLowerCase() === typeFilter.toLowerCase()
+            );
+        }
+
+        if (languageFilter) {
+            filtered = filtered.filter((challenge) => {
+                const [techs] = challenge.techs
+                const serializedTechs = techs.split(', ')
+
+                const hasTech =
+                    serializedTechs.includes(languageFilter) ||
+                    serializedTechs.includes('Free Choice');
+
+                return hasTech;
+            });
+        }
+        setFilteredChallenges(filtered);
+    }, [typeFilter, languageFilter, challenges]);
 
     return (
         <>
@@ -86,7 +111,7 @@ export default function Challenges({ location }) {
             {loading && <ChallengesSkeleton cards={6} />}
             {!loading && (
                 <S.Section>
-                    {challenges.map((challenge) => {
+                    {filteredChallenges.map((challenge) => {
                         return (
                             <ChallengeCard
                                 challenge={challenge}
