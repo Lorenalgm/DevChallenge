@@ -96,7 +96,7 @@ export const StyledLink = styled(NavLink)`
     }
 `;
 
-export const ButtonLink = styled(NavLink)`
+export const ButtonLink = styled.a`
     background-color: var(--quaternary);
 
     width: 100px;

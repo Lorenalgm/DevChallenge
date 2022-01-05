@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-import Logo from '../Logo'
+import Logo from '../Logo';
 
 import * as S from './styled';
 
@@ -49,7 +49,10 @@ export default function Header() {
                         </S.StyledLink>
                     </li>
                     <li>
-                        <S.ButtonLink activeClassName="is-active" to="/login">
+                        <S.ButtonLink
+                            activeClassName="is-active"
+                            href={`https://github.com/login/oauth/authorize?scope=userl&client_id=${process.env.REACT_APP_CLIENT_ID}`}
+                        >
                             Entrar
                             <FontAwesomeIcon
                                 icon={faGithub}
