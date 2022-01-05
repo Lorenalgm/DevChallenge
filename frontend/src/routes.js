@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
+import { isAuthenticated as logged } from './services/authentication';
+
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Home from './pages/Home';
@@ -15,15 +17,15 @@ import Footer from './components/Footer';
 import ToDoChallenge from './pages/ToDoChallenge';
 
 import { Container } from './styles/GlobalStyles';
-import ConstructPage from './pages/ConstructPage';
+import CallbackPage from './pages/CallbackPage';
 
-const logged = false;
 
 const LoggedRoute = ({ component: Component, ...rest }) => (
+
     <Route
         {...rest}
         render={(props) =>
-            logged ? (
+            logged() ? (
                 <Component {...props} />
             ) : (
                 <Redirect
@@ -41,6 +43,7 @@ function Routes() {
             <Container>
                 <Switch>
                     <Route path="/" exact component={Home} />
+                    <Route path="/callback" component={CallbackPage} />
                     <Route path="/challenges" exact component={Challenges} />
                     <Route path="/challenges/:id/details" component={Detail} />
                     <Route path="/devs" component={Devs} />
@@ -55,7 +58,6 @@ function Routes() {
                         component={MyChallenges}
                     />
                     <LoggedRoute path="/dashboard" component={Dashboard} />
-                    <Route path="/login" component={ConstructPage} />
                 </Switch>
             </Container>
             <Footer />
