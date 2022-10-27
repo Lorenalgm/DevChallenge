@@ -4,20 +4,7 @@ import ChallengesSkeleton from '../../components/ChallengesSkeleton';
 import ChallengeCard from '../../components/ChallengeCard';
 import Header from '../../components/Header';
 import * as S from './styled';
-
-const languages = [
-    { id: 1, name: 'React Native' },
-    { id: 2, name: 'Free Choice' },
-    { id: 3, name: 'Javascript' },
-    { id: 4, name: 'HTML' },
-    { id: 5, name: 'CSS' },
-];
-
-const types = [
-    { id: 1, name: 'Frontend' },
-    { id: 2, name: 'Backend' },
-    { id: 3, name: 'Mobile' },
-];
+import { languages, types, frontEnd, backEnd, mobileLanguage } from './data';
 
 export default function Challenges({ location }) {
     const [challenges, setChallenges] = useState([]);
@@ -25,10 +12,30 @@ export default function Challenges({ location }) {
     const [loading, setLoading] = useState(true);
     const [languageFilter, setLanguageFilter] = useState('');
     const [typeFilter, setTypeFilter] = useState(location.search.split('=')[1]);
+    const [languageOptions, setLanguageOptions] = useState([]);
 
     function capitalize(s) {
         return s && s[0].toUpperCase() + s.slice(1);
     }
+
+    const renderOptionsLaguage = (categorie) => {
+        switch (categorie) {
+            case 'All':
+                setLanguageOptions(languages);
+                break;
+            case 'Frontend':
+                setLanguageOptions(frontEnd);
+                break;
+            case 'Backend':
+                setLanguageOptions(backEnd);
+                break;
+            case 'Mobile':
+                setLanguageFilter(mobileLanguage);
+            default:
+                setLanguageOptions(languages);
+                break;
+        }
+    };
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -43,9 +50,9 @@ export default function Challenges({ location }) {
 
         loadChallenges();
     }, [location]);
-
     useEffect(() => {
         let filtered = challenges;
+        renderOptionsLaguage(typeFilter);
         if (typeFilter) {
             filtered = filtered.filter(
                 (challenge) =>
@@ -54,7 +61,7 @@ export default function Challenges({ location }) {
         }
         if (languageFilter) {
             filtered = filtered.filter((challenge) => {
-                const [ techs ] = challenge.techs;
+                const [techs] = challenge.techs;
                 const serializedTechs = techs.split(', ');
                 const hasSelectedTech =
                     serializedTechs.includes(languageFilter) ||
@@ -82,7 +89,7 @@ export default function Challenges({ location }) {
                                 }}
                                 defaultValue={capitalize(typeFilter)}
                             >
-                                <option value="">All</option>
+                                <option value="All">All</option>
                                 {types.map((type) => (
                                     <option key={type.id} value={type.nam}>
                                         {type.name}
@@ -102,7 +109,7 @@ export default function Challenges({ location }) {
                                 }
                             >
                                 <option value="">All</option>
-                                {languages.map((lang) => (
+                                {languageOptions.map((lang) => (
                                     <option key={lang.id} value={lang.name}>
                                         {lang.name}
                                     </option>
