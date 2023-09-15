@@ -6,4 +6,5 @@ export const Techs = styled.section`
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    gap: 16px;
 `;
