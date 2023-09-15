@@ -12,11 +12,14 @@ export default function Newsletter() {
         e.preventDefault();
 
         try {
-            await addEmailIntoNewsletter(email);
-            ToastNotification.notify(
-                'success',
-                'Feito! Você será o primeiro a saber sobre novos desafios :)'
-            );
+            const response = await addEmailIntoNewsletter(email);
+            if (response) {
+                ToastNotification.notify(
+                    'success',
+                    'Feito! Você será o primeiro a saber sobre novos desafios :)'
+                );
+                setEmail('');
+            }
         } catch (err) {
             ToastNotification.notify(
                 'error',
