@@ -1,3 +1,4 @@
+import './services/firebase-config';
 import React from 'react';
 import Routes from './routes';
 

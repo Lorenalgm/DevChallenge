@@ -37,7 +37,7 @@ export const NewsletterTitle = styled.h1`
     `}
 `;
 
-export const NewsletterParagraph = styled.p`
+export const NewsletterParagraph = styled.span`
     color: var(--yellow);
     font-size: 1em;
 
