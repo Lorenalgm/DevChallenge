@@ -13,6 +13,7 @@
         "@testing-library/user-event": "^7.1.2",
         "axios": "^0.21.2",
         "dotenv": "^8.2.0",
+        "firebase": "^10.4.0",
         "react": "^16.13.1",
         "react-awesome-slider": "^4.1.0",
         "react-dom": "^16.13.1",
