@@ -172,11 +172,14 @@ export const ChallengeLink = styled.a`
 `;
 
 export const Demo = styled.div`
-    width: 47em;
+    width: 42em;
+    padding: 0 8px;
     border-radius: 10px;
 
     .image {
         height: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
     }
 
     .slider {

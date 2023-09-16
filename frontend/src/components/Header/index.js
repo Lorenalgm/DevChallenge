@@ -49,7 +49,7 @@ export default function Header() {
                             Comunidade
                         </S.StyledLink>
                     </li>
-                    <li>
+                    {/* <li>
                         <S.ButtonLink activeClassName="is-active" to="/login">
                             Entrar
                             <FontAwesomeIcon
@@ -57,7 +57,7 @@ export default function Header() {
                                 style={{ marginLeft: '10px' }}
                             />
                         </S.ButtonLink>
-                    </li>
+                    </li> */}
                 </ul>
             </S.Menu>
         </S.Header>

@@ -34,15 +34,12 @@ function ChallengeCard({ challenge, progress, redirect, buttonText }) {
     }, [challenge.techs]);
 
     return (
-        <S.ChallengeCard key={challenge._id}>
-            <S.Anchor to={`/challenges/${challenge._id}/details`}>
+        <S.ChallengeCard key={challenge.id}>
+            <S.Anchor to={`/challenges/${challenge.id}/details`}>
                 <S.CardImage>
                     <S.CardTechs>
                         {techs.map((item) => (
-                            <p
-                                className="tech"
-                                key={`${item}-${challenge._id}`}
-                            >
+                            <p className="tech" key={`${item}-${challenge.id}`}>
                                 {item}
                             </p>
                         ))}
@@ -60,10 +57,14 @@ function ChallengeCard({ challenge, progress, redirect, buttonText }) {
                 {progress && <S.ProgressBar progress={progress} />}
             </S.Anchor>
             <S.CardContent>
-                <S.Anchor to={`/challenges/${challenge._id}/details`}>
+                <S.Anchor to={`/challenges/${challenge.id}/details`}>
                     <h1>{challenge.name}</h1>
                 </S.Anchor>
-                <p>{challenge.description}</p>{' '}
+                <p>
+                    {challenge.description.length > 120
+                        ? challenge.description.substr(0, 120) + '...'
+                        : challenge.description}
+                </p>{' '}
             </S.CardContent>
             <S.Anchor to={`${redirect}`}>
                 <S.Button>{buttonText}</S.Button>
