@@ -18,7 +18,6 @@ import { Container } from './styles/GlobalStyles';
 
 import { useAuth } from './hooks/useAuth';
 import AdminChallenges from './pages/Admin/Challenges';
-import AdminHome from './pages/Admin/Home';
 import AdminLogin from './pages/Admin/Login';
 
 const logged = false;
@@ -67,12 +66,7 @@ function Routes() {
             <Container>
                 <Switch>
                     <Route path="/login" exact component={AdminLogin} />
-                    <ProtectedRoute
-                        path="/admin/home"
-                        exact
-                        isLogged={isLogged}
-                        component={AdminHome}
-                    />
+
                     <ProtectedRoute
                         path="/admin/challenges"
                         exact

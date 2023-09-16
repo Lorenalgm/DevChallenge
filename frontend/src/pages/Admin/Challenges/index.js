@@ -487,7 +487,7 @@ export default function AdminChallenges() {
 
                 <S.Menu open={!clicked}>
                     <ul>
-                        <li>
+                        {/* <li>
                             <S.StyledLink
                                 activeClassName="is-active"
                                 to="/admin/home"
@@ -495,7 +495,7 @@ export default function AdminChallenges() {
                             >
                                 Início
                             </S.StyledLink>
-                        </li>
+                        </li> */}
                         <li>
                             <S.StyledLink
                                 activeClassName="is-active"
@@ -504,14 +504,14 @@ export default function AdminChallenges() {
                                 Desafios
                             </S.StyledLink>
                         </li>
-                        <li>
+                        {/* <li>
                             <S.StyledLink
                                 activeClassName="is-active"
                                 to="/admin/devs"
                             >
                                 Comunidade
                             </S.StyledLink>
-                        </li>
+                        </li> */}
                     </ul>
                 </S.Menu>
             </S.Header>

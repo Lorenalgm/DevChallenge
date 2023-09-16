@@ -46,7 +46,7 @@ export default function AdminLogin() {
             );
             if (isLogged.status) {
                 if (isLogged.user.active) {
-                    history.push('/admin/home');
+                    history.push('/admin/challenges');
                 } else {
                     alert(
                         'Solicite permissão ao administrador para acessar o sistema'
