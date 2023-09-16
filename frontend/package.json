@@ -14,6 +14,7 @@
         "axios": "^0.21.2",
         "dotenv": "^8.2.0",
         "firebase": "^10.4.0",
+        "formik": "^2.4.4",
         "react": "^16.13.1",
         "react-awesome-slider": "^4.1.0",
         "react-dom": "^16.13.1",
@@ -24,7 +25,8 @@
         "react-toastify": "^6.0.5",
         "react-web-vector-icons": "^1.0.2",
         "styled-components": "^5.1.1",
-        "styled-media-query": "^2.1.2"
+        "styled-media-query": "^2.1.2",
+        "yup": "^1.2.0"
     },
     "scripts": {
         "start": "react-scripts --openssl-legacy-provider start ",

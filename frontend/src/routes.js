@@ -15,6 +15,8 @@ import ToDoChallenge from './pages/ToDoChallenge';
 
 import { Container } from './styles/GlobalStyles';
 import ConstructPage from './pages/ConstructPage';
+import AdminHome from './pages/Admin/Home';
+import AdminChallenges from './pages/Admin/Challenges';
 
 const logged = false;
 
@@ -39,6 +41,12 @@ function Routes() {
             <ToastContainer />
             <Container>
                 <Switch>
+                    <Route path="/admin/home" exact component={AdminHome} />
+                    <Route
+                        path="/admin/challenges"
+                        exact
+                        component={AdminChallenges}
+                    />
                     <Route path="/" exact component={Home} />
                     <Route path="/challenges" exact component={Challenges} />
                     <Route path="/challenges/:id/details" component={Detail} />
