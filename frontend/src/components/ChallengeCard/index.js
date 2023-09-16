@@ -2,13 +2,23 @@ import React, { useState, useEffect } from 'react';
 
 import * as S from './styled';
 
-const colorMatch = {
-    beginner: 'nephritis',
-    intermediate: 'pumpkin',
-    advanced: 'pomegranate',
-    Mobile: 'blue',
-    Frontend: 'red',
-    Backend: 'light-purple',
+const colorMatch = (option) => {
+    switch (option) {
+        case 'Iniciante':
+            return 'nephritis';
+        case 'Intermediário':
+            return 'pumpkin';
+        case 'Avançado':
+            return 'pomegranate';
+        case 'Mobile':
+            return 'blue';
+        case 'Front-end':
+            return 'red';
+        case 'Back-end':
+            return 'light-purple';
+        default:
+            return 'green';
+    }
 };
 
 function ChallengeCard({ challenge, progress, redirect, buttonText }) {
@@ -45,10 +55,10 @@ function ChallengeCard({ challenge, progress, redirect, buttonText }) {
                         ))}
                     </S.CardTechs>
                     <S.CardPlatforms>
-                        <S.Level color={colorMatch[challenge.type]}>
+                        <S.Level color={colorMatch(challenge.type)}>
                             {challenge.type}
                         </S.Level>
-                        <S.Level color={colorMatch[challenge.level]}>
+                        <S.Level color={colorMatch(challenge.level)}>
                             {challenge.level}
                         </S.Level>
                     </S.CardPlatforms>

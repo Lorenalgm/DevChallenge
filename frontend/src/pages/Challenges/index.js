@@ -1,10 +1,9 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import api from '../../services/api';
-import ChallengesSkeleton from '../../components/ChallengesSkeleton';
 import ChallengeCard from '../../components/ChallengeCard';
+import ChallengesSkeleton from '../../components/ChallengesSkeleton';
 import Header from '../../components/Header';
-import * as S from './styled';
 import { useChallenges } from '../../hooks/useChallenges';
+import * as S from './styled';
 
 const languages = [
     { id: 1, name: 'React Native' },
@@ -15,8 +14,8 @@ const languages = [
 ];
 
 const types = [
-    { id: 1, name: 'Frontend' },
-    { id: 2, name: 'Backend' },
+    { id: 1, name: 'Front-end' },
+    { id: 2, name: 'Back-end' },
     { id: 3, name: 'Mobile' },
 ];
 
@@ -28,7 +27,7 @@ export default function Challenges({ location }) {
 
     const filteredChallenges = useMemo(() => {
         const activeOnly = challengesList.filter((item) => item.active);
-        
+
         const languageFiltered =
             languageFilter === ''
                 ? activeOnly
@@ -45,6 +44,13 @@ export default function Challenges({ location }) {
 
         return typeFiltered;
     }, [challengesList, languageFilter, typeFilter]);
+
+    useEffect(() => {
+        if (location.search.includes('?type=')) {
+            const queryTypeParam = location.search.replace('?type=', '');
+            setTypeFilter(queryTypeParam);
+        }
+    }, [location]);
 
     return (
         <>
@@ -100,7 +106,7 @@ export default function Challenges({ location }) {
                         return (
                             <ChallengeCard
                                 challenge={challenge}
-                                buttonText="ver detalhes"
+                                buttonText="Ver detalhes"
                                 redirect={`/challenges/${challenge.id}/details`}
                                 key={challenge.id}
                             />

@@ -49,37 +49,48 @@ const starts = [
     },
 ];
 
-const colorMatch = {
-    beginner: 'nephritis',
-    intermediate: 'pumpkin',
-    advanced: 'pomegranate',
-    Mobile: 'blue',
-    Frontend: 'red',
-    Backend: 'light-purple',
+const colorMatch = (option) => {
+    switch (option) {
+        case 'Iniciante':
+            return 'nephritis';
+        case 'Intermediário':
+            return 'pumpkin';
+        case 'Avançado':
+            return 'pomegranate';
+        case 'Mobile':
+            return 'blue';
+        case 'Front-end':
+            return 'red';
+        case 'Back-end':
+            return 'light-purple';
+        default:
+            return 'green';
+    }
 };
 
 export default function Detail() {
     const { challengesList } = useChallenges();
     const [challenge, setChallenge] = useState({});
     const [techs, setTechs] = useState([]);
-    const [dev, setDev] = useState({});
+    // const [dev, setDev] = useState({});
     const [images, setImages] = useState([]);
     const { id } = useParams();
 
     useEffect(() => {
         window.scrollTo(0, 0);
         async function loadChallenge() {
-            console.log('response', challengesList, id);
             const response = challengesList.filter((item) => item.id === id);
 
             setChallenge(response[0]);
             // setDev(response.data.dev_id);
-            setImages([response[0].background]);
-            setTechs(response[0].techs);
+            setImages([response[0]?.background]);
+            setTechs(response[0]?.techs);
         }
 
         loadChallenge();
     }, [id, challengesList]);
+
+    if (!challenge || !techs || !images) return null;
 
     return (
         <>
@@ -92,11 +103,10 @@ export default function Detail() {
                         </S.TitleContainer>
 
                         <S.Infos>
-                            {console.log(challenge)}
-                            <S.InfosLevel color={colorMatch[challenge?.level]}>
+                            <S.InfosLevel color={colorMatch(challenge?.level)}>
                                 {challenge?.level}
                             </S.InfosLevel>
-                            <S.InfosLevel color={colorMatch[challenge?.type]}>
+                            <S.InfosLevel color={colorMatch(challenge?.type)}>
                                 {challenge?.type}
                             </S.InfosLevel>
                             {techs?.map((item, idx) => (
