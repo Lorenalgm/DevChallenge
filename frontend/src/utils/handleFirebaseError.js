@@ -9,6 +9,7 @@ export const AuthErrorHandler = {
     'auth/internal-error':
         'Erro interno do servidor. Tente novamente mais tarde.',
     'auth/invalid-email': 'Email inválido.',
+    'auth/invalid-login-credentials': 'Email ou senha inválido.',
     'auth/user-not-found':
         'Não há registro de usuário existente correspondente ao identificador fornecido.',
     'auth/wrong-password': 'Senha digitada não esta correta',

@@ -448,7 +448,10 @@ export default function AdminChallenges() {
                                         </S.Paragraph>
                                     )}
                                 </S.InputGroup>
-                                <S.Button style={{ justifyContent: 'center' }}>
+                                <S.Button
+                                    type="submit"
+                                    style={{ justifyContent: 'center' }}
+                                >
                                     Adicionar desafio
                                 </S.Button>
                             </S.Form>
