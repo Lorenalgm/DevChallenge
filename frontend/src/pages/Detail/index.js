@@ -8,6 +8,7 @@ import DevCard from '../../components/DevCard';
 
 import * as S from './styled';
 import Header from '../../components/Header';
+import { useChallenges } from '../../hooks/useChallenges';
 
 const includes = [
     {
@@ -48,34 +49,48 @@ const starts = [
     },
 ];
 
-const colorMatch = {
-    beginner: 'nephritis',
-    intermediate: 'pumpkin',
-    advanced: 'pomegranate',
-    Mobile: 'blue',
-    Frontend: 'red',
-    Backend: 'light-purple',
+const colorMatch = (option) => {
+    switch (option) {
+        case 'Iniciante':
+            return 'nephritis';
+        case 'Intermediário':
+            return 'pumpkin';
+        case 'Avançado':
+            return 'pomegranate';
+        case 'Mobile':
+            return 'blue';
+        case 'Front-end':
+            return 'red';
+        case 'Back-end':
+            return 'light-purple';
+        default:
+            return 'green';
+    }
 };
 
 export default function Detail() {
+    const { challengesList } = useChallenges();
     const [challenge, setChallenge] = useState({});
     const [techs, setTechs] = useState([]);
-    const [dev, setDev] = useState({});
+    // const [dev, setDev] = useState({});
     const [images, setImages] = useState([]);
     const { id } = useParams();
 
     useEffect(() => {
         window.scrollTo(0, 0);
         async function loadChallenge() {
-            const response = await api.get(`/challenges/${id}`);
-            setChallenge(response.data);
-            setDev(response.data.dev_id);
-            setImages(response.data.images);
-            setTechs(response.data.techs);
+            const response = challengesList.filter((item) => item.id === id);
+
+            setChallenge(response[0]);
+            // setDev(response.data.dev_id);
+            setImages([response[0]?.background]);
+            setTechs(response[0]?.techs);
         }
 
         loadChallenge();
-    }, [id]);
+    }, [id, challengesList]);
+
+    if (!challenge || !techs || !images) return null;
 
     return (
         <>
@@ -84,30 +99,30 @@ export default function Detail() {
                 <S.Banner>
                     <S.LeftColumn>
                         <S.TitleContainer>
-                            <h1>{challenge.name}</h1>
+                            <h1>{challenge?.name}</h1>
                         </S.TitleContainer>
 
                         <S.Infos>
-                            <S.InfosLevel color={colorMatch[challenge.level]}>
-                                {challenge.level}
+                            <S.InfosLevel color={colorMatch(challenge?.level)}>
+                                {challenge?.level}
                             </S.InfosLevel>
-                            <S.InfosLevel color={colorMatch[challenge.type]}>
-                                {challenge.type}
+                            <S.InfosLevel color={colorMatch(challenge?.type)}>
+                                {challenge?.type}
                             </S.InfosLevel>
-                            {techs[0]?.split(', ').map((item, idx) => (
+                            {techs?.map((item, idx) => (
                                 <S.InfosTechs key={idx}>{item}</S.InfosTechs>
                             ))}
                         </S.Infos>
 
                         <S.ChallengeDescription>
-                            {challenge.description}
+                            {challenge?.description}
                         </S.ChallengeDescription>
 
                         <S.ChallengeLink
                             target="_blank"
                             rel="noopener noreferrer"
                             className="start-challenge"
-                            href={challenge.github_url}
+                            href={challenge?.githubRepository}
                         >
                             Iniciar desafio
                         </S.ChallengeLink>
@@ -131,13 +146,13 @@ export default function Detail() {
                     <S.Content>
                         <S.ChallengeAbout>
                             <h1>Sobre o desafio</h1>
-                            <p>Seu desafio é {challenge.brief}.</p>
+                            <p>Seu desafio é {challenge?.brief}.</p>
                         </S.ChallengeAbout>
                         <S.ChallengeContainer>
                             <S.ChallengeInclude>
                                 <h3>O que está incluso?</h3>
 
-                                {challenge.type === 'Backend' ? (
+                                {challenge?.type === 'Backend' ? (
                                     <span>
                                         <S.Icon icon={faCheck} /> Readme com
                                         instruções de requisitos e as rotas da
@@ -166,11 +181,11 @@ export default function Detail() {
                         </S.ChallengeContainer>
                     </S.Content>
                     <DevCard
-                        name={dev.name}
-                        position={dev.position}
-                        avatar={dev.avatar}
-                        github={dev.github}
-                        linkedin={dev.linkedin}
+                        name={challenge.username}
+                        position={'Desenvolvedor'}
+                        avatar={`https://github.com/${challenge.username}.png`}
+                        github={`https://github.com/${challenge.username}`}
+                        linkedin={''}
                     />
                 </S.FlexContainer>
             </S.Container>

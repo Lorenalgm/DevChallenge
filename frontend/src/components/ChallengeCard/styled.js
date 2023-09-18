@@ -44,6 +44,8 @@ export const CardImage = styled.div`
     img {
         transition: 0.3s;
         width: 100%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
     }
     img:hover {
         transform: scale(1.1);

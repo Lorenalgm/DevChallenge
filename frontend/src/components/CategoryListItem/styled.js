@@ -5,11 +5,7 @@ import { Link } from 'react-router-dom';
 
 export const Anchor = styled(Link)`
     text-decoration: none;
-    margin: 0 25px 0 25px;
 
-    ${media.lessThan('medium')`
-        margin: 15px 0px 10px 0px;
-    `}
 `;
 
 export const Card = styled.div`
@@ -17,7 +13,7 @@ export const Card = styled.div`
     height: 300px;
     background-color: var(--secondary);
     border-radius: 20px;
-    
+
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -38,5 +34,3 @@ export const Title = styled.h2`
         margin-top: 0.6em;
     `}
 `;
-
-

@@ -14,7 +14,6 @@ export const Section = styled.section`
     flex-wrap: wrap;
     max-width: 100vw;
     align-items: center;
-    justify-content: center;
 `;
 
 export const Head = styled.div`

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Player } from '@lottiefiles/react-lottie-player';
-import api from '../../services/api';
 import ToastNotification from '../../utils/toast';
+import { addEmailIntoNewsletter } from '../../services/NewsLetterFunctions';
 
 import * as S from './styled';
 
@@ -11,16 +11,15 @@ export default function Newsletter() {
     async function handleSubscribe(e) {
         e.preventDefault();
 
-        const data = {
-            email,
-        };
-
         try {
-            await api.post('newsletter', data);
-            ToastNotification.notify(
-                'success',
-                'Feito! Você será o primeiro a saber sobre novos desafios :)'
-            );
+            const response = await addEmailIntoNewsletter(email);
+            if (response) {
+                ToastNotification.notify(
+                    'success',
+                    'Feito! Você será o primeiro a saber sobre novos desafios :)'
+                );
+                setEmail('');
+            }
         } catch (err) {
             ToastNotification.notify(
                 'error',
@@ -46,7 +45,7 @@ export default function Newsletter() {
                 </S.NewsletterTitle>
                 <S.NewsletterParagraph>
                     Inscreva-se para ser o primeiro a saber sobre novos desafios
-                    :)
+                    😀
                 </S.NewsletterParagraph>
                 <S.NewsletterForm onSubmit={handleSubscribe}>
                     <input

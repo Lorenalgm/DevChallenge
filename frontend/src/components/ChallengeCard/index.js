@@ -2,13 +2,23 @@ import React, { useState, useEffect } from 'react';
 
 import * as S from './styled';
 
-const colorMatch = {
-    beginner: 'nephritis',
-    intermediate: 'pumpkin',
-    advanced: 'pomegranate',
-    Mobile: 'blue',
-    Frontend: 'red',
-    Backend: 'light-purple',
+const colorMatch = (option) => {
+    switch (option) {
+        case 'Iniciante':
+            return 'nephritis';
+        case 'Intermediário':
+            return 'pumpkin';
+        case 'Avançado':
+            return 'pomegranate';
+        case 'Mobile':
+            return 'blue';
+        case 'Front-end':
+            return 'red';
+        case 'Back-end':
+            return 'light-purple';
+        default:
+            return 'green';
+    }
 };
 
 function ChallengeCard({ challenge, progress, redirect, buttonText }) {
@@ -34,24 +44,21 @@ function ChallengeCard({ challenge, progress, redirect, buttonText }) {
     }, [challenge.techs]);
 
     return (
-        <S.ChallengeCard key={challenge._id}>
-            <S.Anchor to={`/challenges/${challenge._id}/details`}>
+        <S.ChallengeCard key={challenge.id}>
+            <S.Anchor to={`/challenges/${challenge.id}/details`}>
                 <S.CardImage>
                     <S.CardTechs>
                         {techs.map((item) => (
-                            <p
-                                className="tech"
-                                key={`${item}-${challenge._id}`}
-                            >
+                            <p className="tech" key={`${item}-${challenge.id}`}>
                                 {item}
                             </p>
                         ))}
                     </S.CardTechs>
                     <S.CardPlatforms>
-                        <S.Level color={colorMatch[challenge.type]}>
+                        <S.Level color={colorMatch(challenge.type)}>
                             {challenge.type}
                         </S.Level>
-                        <S.Level color={colorMatch[challenge.level]}>
+                        <S.Level color={colorMatch(challenge.level)}>
                             {challenge.level}
                         </S.Level>
                     </S.CardPlatforms>
@@ -60,10 +67,14 @@ function ChallengeCard({ challenge, progress, redirect, buttonText }) {
                 {progress && <S.ProgressBar progress={progress} />}
             </S.Anchor>
             <S.CardContent>
-                <S.Anchor to={`/challenges/${challenge._id}/details`}>
+                <S.Anchor to={`/challenges/${challenge.id}/details`}>
                     <h1>{challenge.name}</h1>
                 </S.Anchor>
-                <p>{challenge.description}</p>{' '}
+                <p>
+                    {challenge.description.length > 120
+                        ? challenge.description.substr(0, 120) + '...'
+                        : challenge.description}
+                </p>{' '}
             </S.CardContent>
             <S.Anchor to={`${redirect}`}>
                 <S.Button>{buttonText}</S.Button>

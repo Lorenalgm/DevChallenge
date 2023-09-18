@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import api from '../../services/api';
-import ChallengesSkeleton from '../../components/ChallengesSkeleton';
+import React, { useEffect, useMemo, useState } from 'react';
 import ChallengeCard from '../../components/ChallengeCard';
+import ChallengesSkeleton from '../../components/ChallengesSkeleton';
 import Header from '../../components/Header';
+import { useChallenges } from '../../hooks/useChallenges';
 import * as S from './styled';
 
 const languages = [
@@ -14,57 +14,43 @@ const languages = [
 ];
 
 const types = [
-    { id: 1, name: 'Frontend' },
-    { id: 2, name: 'Backend' },
+    { id: 1, name: 'Front-end' },
+    { id: 2, name: 'Back-end' },
     { id: 3, name: 'Mobile' },
 ];
 
 export default function Challenges({ location }) {
-    const [challenges, setChallenges] = useState([]);
-    const [filteredChallenges, setFilteredChallenges] = useState([]);
+    const { challengesList } = useChallenges();
     const [loading, setLoading] = useState(true);
     const [languageFilter, setLanguageFilter] = useState('');
-    const [typeFilter, setTypeFilter] = useState(location.search.split('=')[1]);
+    const [typeFilter, setTypeFilter] = useState('');
 
-    function capitalize(s) {
-        return s && s[0].toUpperCase() + s.slice(1);
-    }
+    const filteredChallenges = useMemo(() => {
+        const activeOnly = challengesList.filter((item) => item.active);
+
+        const languageFiltered =
+            languageFilter === ''
+                ? activeOnly
+                : activeOnly.filter((item) =>
+                      item.techs.includes(languageFilter)
+                  );
+
+        const typeFiltered =
+            typeFilter === ''
+                ? languageFiltered
+                : languageFiltered.filter((item) => item.type === typeFilter);
+
+        setLoading(false);
+
+        return typeFiltered;
+    }, [challengesList, languageFilter, typeFilter]);
 
     useEffect(() => {
-        window.scrollTo(0, 0);
-        async function loadChallenges() {
-            const response = await api.get('/challenges');
-
-            setChallenges(response.data);
-            setFilteredChallenges(response.data);
-
-            setLoading(false);
+        if (location.search.includes('?type=')) {
+            const queryTypeParam = location.search.replace('?type=', '');
+            setTypeFilter(queryTypeParam);
         }
-
-        loadChallenges();
     }, [location]);
-
-    useEffect(() => {
-        let filtered = challenges;
-        if (typeFilter) {
-            filtered = filtered.filter(
-                (challenge) =>
-                    challenge.type.toLowerCase() === typeFilter.toLowerCase()
-            );
-        }
-        if (languageFilter) {
-            filtered = filtered.filter((challenge) => {
-                const [ techs ] = challenge.techs;
-                const serializedTechs = techs.split(', ');
-                const hasSelectedTech =
-                    serializedTechs.includes(languageFilter) ||
-                    serializedTechs.includes('Free Choice');
-
-                return hasSelectedTech;
-            });
-        }
-        setFilteredChallenges(filtered);
-    }, [typeFilter, languageFilter, challenges]);
 
     return (
         <>
@@ -80,11 +66,11 @@ export default function Challenges({ location }) {
                                 onChange={(e) => {
                                     setTypeFilter(e.target.value);
                                 }}
-                                defaultValue={capitalize(typeFilter)}
+                                value={typeFilter}
                             >
                                 <option value="">All</option>
                                 {types.map((type) => (
-                                    <option key={type.id} value={type.nam}>
+                                    <option key={type.id} value={type.name}>
                                         {type.name}
                                     </option>
                                 ))}
@@ -120,9 +106,9 @@ export default function Challenges({ location }) {
                         return (
                             <ChallengeCard
                                 challenge={challenge}
-                                buttonText="ver detalhes"
-                                redirect={`/challenges/${challenge._id}/details`}
-                                key={challenge._id}
+                                buttonText="Ver detalhes"
+                                redirect={`/challenges/${challenge.id}/details`}
+                                key={challenge.id}
                             />
                         );
                     })}
