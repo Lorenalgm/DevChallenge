@@ -1,8 +1,9 @@
-import { updateSession } from "@/lib/supabase/proxy";
-import { type NextRequest } from "next/server";
+import { NextResponse, type NextRequest } from "next/server";
 
 export async function proxy(request: NextRequest) {
-  return await updateSession(request);
+  // Since authentication is not required for this project, 
+  // just return the normal response without any auth checks
+  return NextResponse.next();
 }
 
 export const config = {
