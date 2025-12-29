@@ -1,11 +1,12 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import { useParams } from 'next/navigation';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { DevCard } from '@/components/DevCard';
 import { ChevronLeftIcon, ChevronRightIcon, CheckIcon } from '@heroicons/react/24/outline';
+
 
 interface Challenge {
   _id: string;
@@ -78,7 +79,7 @@ const starts = [
   },
 ];
 
-export default function ChallengeDetails() {
+function ChallengeDetailsContent() {
   const [challenge, setChallenge] = useState<Challenge | null>(null);
   const [loading, setLoading] = useState(true);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -147,7 +148,7 @@ export default function ChallengeDetails() {
 
   const techs = Array.isArray(challenge.techs) 
     ? challenge.techs 
-    : challenge.techs.toString().split(',').map(t => t.trim());
+    : (challenge.techs as string).toString().split(',').map(t => t.trim());
 
   return (
     <>
@@ -312,4 +313,8 @@ export default function ChallengeDetails() {
       <Footer />
     </>
   );
+}
+
+export default function ChallengeDetails() {
+  return <ChallengeDetailsContent />;
 }

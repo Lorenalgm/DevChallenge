@@ -36,7 +36,7 @@ export function ChallengeCard({ challenge, progress, redirect, buttonText }: Cha
     if (Array.isArray(challenge.techs)) {
       techsArray = challenge.techs;
     } else {
-      techsArray = challenge.techs
+      techsArray = (challenge.techs as string)
         .toString()
         .split(',')
         .map((element) => element.replace(/^[ ]/, ''));

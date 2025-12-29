@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
+
 import { useSearchParams, useRouter } from 'next/navigation';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -32,7 +33,7 @@ const types = [
 ];
 
 
-export default function Challenges() {
+function ChallengesContent() {
   const [challenges, setChallenges] = useState<Challenge[]>([]);
   const [filteredChallenges, setFilteredChallenges] = useState<Challenge[]>([]);
   const [loading, setLoading] = useState(true);
@@ -90,7 +91,7 @@ export default function Challenges() {
       filtered = filtered.filter((challenge) => {
         const techs = Array.isArray(challenge.techs) 
           ? challenge.techs 
-          : challenge.techs.toString().split(',').map(t => t.trim());
+          : (challenge.techs as string).toString().split(',').map(t => t.trim());
         
         const hasSelectedTech =
           techs.includes(languageFilter) ||
@@ -194,5 +195,21 @@ export default function Challenges() {
 
       <Footer />
     </>
+  );
+}
+
+export default function Challenges() {
+  return (
+    <Suspense fallback={
+      <>
+        <Header />
+        <div className="min-h-screen bg-gray-900 flex items-center justify-center">
+          <div className="text-white text-xl">Carregando desafios...</div>
+        </div>
+        <Footer />
+      </>
+    }>
+      <ChallengesContent />
+    </Suspense>
   );
 }
