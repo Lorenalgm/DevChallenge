@@ -2,8 +2,8 @@ import React from 'react';
 
 interface DevCardProps {
   name: string;
-  position: string;
-  avatar: string;
+  position?: string;
+  avatar?: string;
   github?: string;
   linkedin?: string;
 }
@@ -12,14 +12,14 @@ export function DevCard({ name, position, avatar, github, linkedin }: DevCardPro
   return (
     <div className="min-w-[300px] h-[90px] box-border px-2 bg-gray-800 rounded-2xl flex items-center relative mb-4 md:mb-0">
       <img 
-        src={avatar} 
+        src={avatar || 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face&auto=format'} 
         alt={`Avatar: ${name}`}
-        className="h-[70px] w-[70px] rounded-full"
+        className="h-[70px] w-[70px] rounded-full object-cover"
       />
       
       <div className="max-w-[200px] flex-wrap flex flex-col justify-center items-start mx-4">
         <h1 className="text-lg font-bold text-white">{name}</h1>
-        <span className="text-sm font-medium text-yellow-400">{position}</span>
+        {position && <span className="text-sm font-medium text-yellow-400">{position}</span>}
       </div>
       
       <div className="flex flex-col absolute right-4">
