@@ -35,9 +35,9 @@ function CategoryListItem({ category }: { category: Category }) {
       href={`/challenges?type=${type}`}
       className="challenge-link"
     >
-      <div className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center cursor-pointer">
+      <div className="bg-neutral-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center cursor-pointer">
         {getIcon()}
-        <h3 className="text-gray-800 text-xl font-semibold mt-4">{category.name}</h3>
+        <h3 className="text-white text-xl font-semibold mt-4">{category.name}</h3>
       </div>
     </Link>
   );

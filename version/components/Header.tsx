@@ -32,7 +32,7 @@ export function Header() {
         )}
       </div>
 
-      <nav className={`max-md:bg-blue-600 max-md:flex-col max-md:w-full max-md:absolute max-md:justify-around max-md:h-[300px] max-md:items-center max-md:mt-2 max-md:transition-transform max-md:duration-500 max-md:ease-in-out max-md:z-[1000] ${
+      <nav className={`max-md:bg-neutral-600 max-md:flex-col max-md:w-full max-md:absolute max-md:justify-around max-md:h-[300px] max-md:items-center max-md:mt-2 max-md:transition-transform max-md:duration-500 max-md:ease-in-out max-md:z-[1000] ${
         clicked ? 'max-md:translate-y-0' : 'max-md:-translate-y-full'
       }`}>
         <ul className="flex items-center list-none text-xl text-white font-normal space-x-5 max-md:flex-col max-md:space-x-0 max-md:space-y-4">

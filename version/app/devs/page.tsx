@@ -64,7 +64,7 @@ export default function Devs() {
     <>
       <Header />
       
-      <div className="flex flex-col justify-center mx-[6%] flex-1 md:mx-[6%] max-md:flex-col max-md:items-center max-md:justify-center max-md:w-full max-md:mx-0 max-md:mt-[5%]">
+      <div className="min-h-screen flex flex-col justify-center mx-[6%] flex-1 md:mx-[6%] max-md:flex-col max-md:items-center max-md:justify-center max-md:w-full max-md:mx-0 max-md:mt-[5%]">
         {/* Options Container */}
         <div className="flex flex-row flex-wrap items-center justify-center">
           <a
@@ -117,31 +117,6 @@ export default function Devs() {
             </div>
           </a>
         </div>
-
-        {/* Devs Container */}
-        {!loading && (
-          <div className="mt-16 text-white flex flex-col items-center">
-            <h1 className="mb-4 text-3xl font-bold">Últimas contribuições</h1>
-            <div className="flex flex-row justify-evenly flex-wrap gap-4">
-              {devs.map((dev) => (
-                <DevCard
-                  key={dev._id}
-                  name={dev.name}
-                  position={dev.position}
-                  avatar={dev.avatar}
-                  github={dev.github}
-                  linkedin={dev.linkedin}
-                />
-              ))}
-            </div>
-          </div>
-        )}
-        
-        {loading && (
-          <div className="mt-16 text-white flex flex-col items-center">
-            <h1 className="mb-4 text-3xl font-bold">Carregando...</h1>
-          </div>
-        )}
       </div>
 
       <Footer />
