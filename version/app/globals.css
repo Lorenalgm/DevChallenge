@@ -70,16 +70,17 @@
 
 @layer utilities {
   .animate-typing {
-    animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+    animation: typing 3.5s steps(25, end) forwards, blink-caret 0.5s step-end infinite 3.5s;
+    max-width: 0;
   }
 }
 
 @keyframes typing {
   from {
-    width: 0;
+    max-width: 0;
   }
   to {
-    width: 100%;
+    max-width: 100%;
   }
 }
 
